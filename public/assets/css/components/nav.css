@@ -16,19 +16,6 @@
 
 }
 
-.nav::before {
-  content: '';
-  position: absolute;
-  top: -80px;
-  left: -60px;
-  width: 500px;
-  height: 180px;
-  background:
-    radial-gradient(ellipse at 30% 50%, rgba(255, 255, 255, 0.05), transparent 65%),
-    radial-gradient(ellipse at 55% 45%, rgba(255, 255, 255, 0.02), transparent 75%);
-  pointer-events: none;
-  z-index: -1;
-}
 .nav.nav-scrolled {
 
   box-shadow: var(--shadow-soft);
@@ -59,18 +46,6 @@
   position: relative;
 }
 
-.nav-logo::after {
-  content: '';
-  position: absolute;
-  left: 0;
-  top: 50%;
-  width: 280px;
-  height: 80px;
-  transform: translateY(-50%);
-  background: radial-gradient(ellipse at left center, rgba(255, 255, 255, 0.05), transparent 70%);
-  pointer-events: none;
-  z-index: -1;
-}
 
 .nav-logo-img {
   width: 36px;

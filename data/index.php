@@ -76,7 +76,7 @@ try { $datasetCounts['attendance'] = (int)Database::fetchColumn("SELECT COUNT(*)
 
 try { $datasetCounts['sped'] = (int)Database::fetchColumn("SELECT COUNT(*) FROM sped_results LIMIT 1"); } catch (Exception $e) {}
 
-try { $datasetCounts['prs'] = (int)Database::fetchColumn("SELECT COUNT(*) FROM prs_data LIMIT 1"); } catch (Exception $e) {}
+try { $datasetCounts['prs'] = (int)Database::fetchColumn("SELECT COUNT(*) FROM prs_intakes_data LIMIT 1"); } catch (Exception $e) {}
 
 
 
