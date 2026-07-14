@@ -4,10 +4,25 @@ advisors:
     tools: 
       - read
       - ask
-      - debug
-      - eval
       - glob
       - grep
-      - inspect_image
       - browser
-      - web_search
+  - name: Advisor 2
+    model: ollama/gemma4:12b-256k
+    tools: 
+      - read
+      - edit
+      - github
+      - glob
+      - grep
+      - browser
+      - write
+    instructions: "control github readmes and wikis updates, and versions... and create branches when working on new features\n\n\n"
+  - name: Advisor 3
+    model: deepseek/deepseek-v4-pro
+    tools: 
+      - read
+      - debug
+      - glob
+      - grep
+    instructions: assist the main agent by watching debug and reporting on it
