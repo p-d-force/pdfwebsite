@@ -11,9 +11,8 @@
   border-bottom: 1px solid rgba(255, 255, 255, 0.08);
 
   backdrop-filter: blur(13px);
-
   background: rgba(11, 11, 11, 0.86);
-
+  box-shadow: 0 1px 0 rgba(255, 255, 255, 0.04), 0 4px 24px rgba(0, 0, 0, 0.3);
 }
 
 .nav.nav-scrolled {
@@ -43,7 +42,6 @@
   align-items: center;
   gap: 0.7rem;
   min-width: 0;
-  position: relative;
 }
 
 
@@ -52,7 +50,7 @@
   height: 36px;
   border-radius: 50%;
   border: 1px solid var(--border);
-  box-shadow: var(--glow), 0 0 60px rgba(255, 255, 255, 0.04);
+  box-shadow: 0 0 20px rgba(255, 90, 31, 0.15);
 }
 
 .nav-logo-text {
@@ -60,7 +58,6 @@
   letter-spacing: 0.08em;
   font-weight: 700;
   white-space: nowrap;
-  text-shadow: 0 0 28px rgba(255, 255, 255, 0.06);
 }
 
 .nav-menu {

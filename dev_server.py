@@ -734,14 +734,6 @@ def get_header(path='/'):
                 </li>
                 <li><a href="/submit/" class="nav-link nav-link-tip">Submit a Tip</a></li>
                 <li><a href="/donate/" class="nav-link nav-link-donate">❤ Donate</a></li>
-                <li><button class="theme-toggle" id="themeToggle" aria-label="Toggle theme" title="Switch between Dark and Paper theme">
-                    <svg class="theme-icon-dark" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" width="18" height="18">
-                        <circle cx="12" cy="12" r="5"/><path d="M12 1v2M12 21v2M4.22 4.22l1.42 1.42M18.36 18.36l1.42 1.42M1 12h2M21 12h2M4.22 19.78l1.42-1.42M18.36 5.64l1.42-1.42"/>
-                    </svg>
-                    <svg class="theme-icon-paper" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" width="18" height="18" class="theme-icon-hidden">
-                        <path d="M21 12.79A9 9 0 1111.21 3 7 7 0 0021 12.79z"/>
-                    </svg>
-                </button></li>
             </ul>
         </div>
     </nav>

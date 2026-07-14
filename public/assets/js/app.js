@@ -2,20 +2,6 @@
 (function () {
     'use strict';
 
-    function initThemeToggle() {
-        const toggle = document.getElementById('themeToggle');
-        if (!toggle) return;
-
-        const stored = localStorage.getItem('pdf-theme') || 'dark';
-        document.documentElement.setAttribute('data-theme', stored);
-
-        toggle.addEventListener('click', () => {
-            const current = document.documentElement.getAttribute('data-theme');
-            const next = current === 'paper' ? 'dark' : 'paper';
-            document.documentElement.setAttribute('data-theme', next);
-            localStorage.setItem('pdf-theme', next);
-        });
-    }
 
     function initNav() {
         const nav = document.getElementById('nav');
@@ -230,7 +216,6 @@
     }
 
     function init() {
-        initThemeToggle();
         initNav();
         initRevealAnimations();
         initDataBrowser();
