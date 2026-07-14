@@ -632,7 +632,7 @@ def render_shortcodes(content):
 </div>'''
 
     def chart_embed(match):
-        return f'<div class="shortcode-chart" data-chart-type="{match.group(1)}"><canvas style="min-height:300px;"></canvas></div>'
+        return f'<div class="shortcode-chart" data-chart-type="{match.group(1)}"><canvas class="chart-min-h"></canvas></div>'
 
     def youtube_embed(match):
         vid = h(match.group(1))
@@ -643,7 +643,7 @@ def render_shortcodes(content):
     <div class="shortcode-video-wrapper">
         <iframe src="https://www.youtube.com/embed/{vid}" allowfullscreen
             allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture"
-            loading="lazy" style="border:none;"></iframe>
+            loading="lazy" class="border-none"></iframe>
     </div>
 </div>'''
 
@@ -720,7 +720,7 @@ def get_header(path='/'):
             <ul class="nav-menu" id="navMenu">
                 {nav_links}
                 <li><a href="/search/" class="nav-link">
-                    <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" width="16" height="16" style="vertical-align:-3px;">
+                    <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" width="16" height="16" class="nav-icon">
                         <path d="M21 21l-6-6m2-5a7 7 0 11-14 0 7 7 0 0114 0z"/>
                     </svg>
                 </a></li>
@@ -737,7 +737,7 @@ def get_header(path='/'):
                     <svg class="theme-icon-dark" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" width="18" height="18">
                         <circle cx="12" cy="12" r="5"/><path d="M12 1v2M12 21v2M4.22 4.22l1.42 1.42M18.36 18.36l1.42 1.42M1 12h2M21 12h2M4.22 19.78l1.42-1.42M18.36 5.64l1.42-1.42"/>
                     </svg>
-                    <svg class="theme-icon-paper" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" width="18" height="18" style="display:none;">
+                    <svg class="theme-icon-paper" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" width="18" height="18" class="theme-icon-hidden">
                         <path d="M21 12.79A9 9 0 1111.21 3 7 7 0 0021 12.79z"/>
                     </svg>
                 </button></li>
@@ -745,7 +745,7 @@ def get_header(path='/'):
         </div>
     </nav>
     <main>
-    <div class="beta-banner" style="text-align:center;padding:0.45rem 1rem;background:rgba(255,90,31,0.08);border-bottom:1px solid rgba(255,90,31,0.15);font-size:0.78rem;color:#ff5a1f;letter-spacing:0.01em;">
+    <div class="beta-banner">
         Beta Preview &mdash; data and features are under active development.
     </div>'''
 
@@ -787,8 +787,8 @@ def get_footer():
                 <div class="footer-contact">
                     <h4 class="footer-nav-title">Stay Updated</h4>
                     <form class="subscribe-form" action="/api/subscribe/" method="post" id="footerSubscribe">
-                        <input type="email" name="email" class="form-input" placeholder="Your email address" required style="margin-bottom:0.5rem;">
-                        <button type="submit" class="btn btn-primary" style="width:100%;">Subscribe</button>
+                        <input type="email" name="email" class="form-input" placeholder="Your email address" required class="mb-sm">
+                        <button type="submit" class="btn btn-primary" class="w-full">Subscribe</button>
                     </form>
                 </div>
             </div>
@@ -941,7 +941,7 @@ def handle_home():
         </div>
     </div>
 </article>'''
-        body += f'</div><div style="text-align:center;margin-top:2rem;"><a href="/articles/" class="btn btn-secondary">View All Articles</a></div></div></section>'
+        body += f'</div><div class="text-center-mt"><a href="/articles/" class="btn btn-secondary">View All Articles</a></div></div></section>'
 
     # Quick links
     body += '''<section class="section section-dark" id="quick-links"><div class="container"><div class="section-header"><span class="section-tag">Explore</span><h2 class="section-title">What We Track</h2><p class="section-subtitle">Every investigation, public records request, state determination, and systemic pattern - organized and accessible.</p></div>
@@ -965,42 +965,42 @@ def handle_home():
             <div class="stat">
                 <span class="stat-value">{data_stats.get('prs_intakes', 0):,}</span>
                 <span class="stat-label">PRS Complaint Records</span>
-                <a href="/data/prs/" style="font-size:0.75rem;color:var(--accent);display:block;margin-top:0.25rem;">View PRS Data &rarr;</a>
+                <a href="/data/prs/" class="stat-link text-accent mt-025">View PRS Data &rarr;</a>
             </div>
             <div class="stat">
                 <span class="stat-value">{data_stats.get('restraint_records', 0):,}</span>
                 <span class="stat-label">Restraint Records ({data_stats.get('restraint_year_count', 0)} Years)</span>
-                <a href="/data/restraints/" style="font-size:0.75rem;color:var(--accent);display:block;margin-top:0.25rem;">View Restraint Data &rarr;</a>
+                <a href="/data/restraints/" class="stat-link text-accent mt-025">View Restraint Data &rarr;</a>
             </div>
             <div class="stat">
                 <span class="stat-value">{data_stats.get('discipline_districts', 0):,}</span>
                 <span class="stat-label">Districts w/ Discipline Data</span>
-                <a href="/data/discipline/" style="font-size:0.75rem;color:var(--accent);display:block;margin-top:0.25rem;">View Discipline Data &rarr;</a>
+                <a href="/data/discipline/" class="stat-link text-accent mt-025">View Discipline Data &rarr;</a>
             </div>
             <div class="stat">
                 <span class="stat-value">{data_stats.get('enrollment_districts', 0):,}</span>
                 <span class="stat-label">Districts w/ Enrollment Data</span>
-                <a href="/data/enrollment/" style="font-size:0.75rem;color:var(--accent);display:block;margin-top:0.25rem;">View Enrollment Data &rarr;</a>
+                <a href="/data/enrollment/" class="stat-link text-accent mt-025">View Enrollment Data &rarr;</a>
             </div>
             <div class="stat">
                 <span class="stat-value">{data_stats.get('resources_count', 0):,}</span>
                 <span class="stat-label">Advocacy Resources</span>
-                <a href="/resources/" style="font-size:0.75rem;color:var(--accent);display:block;margin-top:0.25rem;">Browse Resources &rarr;</a>
+                <a href="/resources/" class="stat-link text-accent mt-025">Browse Resources &rarr;</a>
             </div>
         </div>'''
         if data_stats.get('restraint_latest_count', 0) > 0:
-            body += f'''<div style="margin-top:1rem;padding:1rem;background:rgba(239,68,68,0.05);border:1px solid rgba(239,68,68,0.15);border-radius:8px;">
-                <p style="margin:0;font-size:0.85rem;color:var(--text-muted);">
+            body += f'''<div class="alert-danger">
+                <p class="m-0 font-sm text-muted">
                     <strong>{data_stats['restraint_latest_year']}</strong>: 
-                    <span style="color:var(--danger);">{data_stats['restraint_latest_count']:,} restraints</span> 
+                    <span class="text-danger">{data_stats['restraint_latest_count']:,} restraints</span> 
                     reported across Massachusetts schools, with 
-                    <span style="color:var(--danger);">{data_stats['restraint_latest_injuries']:,} injuries</span>.
+                    <span class="text-danger">{data_stats['restraint_latest_injuries']:,} injuries</span>.
                 </p>
             </div>'''
         body += '\n    </div>\n</section>\n'
 
     # Bottom CTA
-    body += '<section class="section section-accent" id="cta-bottom"><div class="container"><div class="cta-banner"><h2 class="section-title">Have Information to Share?</h2><p class="section-subtitle" style="max-width:100%;">If you have tips, documents, or data about special education practices, public records concerns, or systemic issues in Massachusetts school districts, we want to hear from you.</p><div class="hero-cta" style="margin-top:1rem;"><a href="/submit/" class="btn btn-primary">Submit a Tip</a><a href="/submit/" class="btn btn-secondary">Request Help</a></div></div></div></section>'
+    body += '<section class="section section-accent" id="cta-bottom"><div class="container"><div class="cta-banner"><h2 class="section-title">Have Information to Share?</h2><p class="section-subtitle" class="max-w-full">If you have tips, documents, or data about special education practices, public records concerns, or systemic issues in Massachusetts school districts, we want to hear from you.</p><div class="hero-cta" class="mt-1"><a href="/submit/" class="btn btn-primary">Submit a Tip</a><a href="/submit/" class="btn btn-secondary">Request Help</a></div></div></div></section>'
 
     return body + footer
 
@@ -1048,13 +1048,13 @@ def handle_articles(path):
 
         # Filter form
         body += '<div class="articles-controls"><form method="get"><div class="articles-search-form">'
-        body += f'<div class="repo-search" style="flex:1;max-width:400px;"><svg class="repo-search-icon" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M21 21l-6-6m2-5a7 7 0 11-14 0 7 7 0 0114 0z"/></svg><input type="text" name="search" class="repo-search-input" placeholder="Search articles..." value="{h(search)}"></div>'
-        body += '<select name="category" class="repo-select" onchange="this.form.submit()" style="max-width:200px;"><option value="all">All Categories</option>'
+        body += f'<div class="repo-search" class="search-flex"><svg class="repo-search-icon" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M21 21l-6-6m2-5a7 7 0 11-14 0 7 7 0 0114 0z"/></svg><input type="text" name="search" class="repo-search-input" placeholder="Search articles..." value="{h(search)}"></div>'
+        body += '<select name="category" class="repo-select" onchange="this.form.submit()" class="select-narrow"><option value="all">All Categories</option>'
         for c in cats:
             body += f'<option value="{h(c["category"])}" {"selected" if category == c["category"] else ""}>{category_label(c["category"])} ({c["total"]})</option>'
-        body += '</select><button type="submit" class="btn btn-ghost" style="padding:0.63rem 1rem;">Filter</button>'
+        body += '</select><button type="submit" class="btn btn-ghost" class="btn-sm">Filter</button>'
         if search or category:
-            body += '<a href="/articles/" class="btn btn-ghost" style="padding:0.63rem 1rem;">Clear</a>'
+            body += '<a href="/articles/" class="btn btn-ghost" class="btn-sm">Clear</a>'
         body += '</div></form></div>'
 
         if not articles:
@@ -1120,7 +1120,7 @@ def handle_articles(path):
 
     # Related cases
     if related_cases:
-        body += '<div class="article-related"><h3 class="article-related-title">Related Cases</h3><div class="cases-grid" style="grid-template-columns:repeat(2, minmax(0,1fr));">'
+        body += '<div class="article-related"><h3 class="article-related-title">Related Cases</h3><div class="cases-grid" class="grid-2col">'
         for c in related_cases:
             body += f'''<div class="case-card">
     <div class="case-card-header"><div class="case-district">{h(c["district_code"])}, MA</div>{status_badge(c["status"])}</div>
@@ -1132,7 +1132,7 @@ def handle_articles(path):
 
     # Related articles
     if related_articles:
-        body += '<div class="article-related"><h3 class="article-related-title">Related Articles</h3><div class="articles-grid" style="grid-template-columns:repeat(3, minmax(0,1fr));">'
+        body += '<div class="article-related"><h3 class="article-related-title">Related Articles</h3><div class="articles-grid" class="grid-3col">'
         for ra in related_articles:
             body += f'''<article class="article-card"><div class="article-card-body">
     <div class="article-card-meta"><span class="article-category">{category_label(ra["category"])}</span><span class="article-date">{format_date(ra["published_at"])}</span></div>
@@ -1193,16 +1193,16 @@ def handle_cases(path):
         body = f'{head}{get_header("/cases/")}<section class="section"><div class="container"><div class="section-header"><span class="section-tag">Case Portfolio</span><h2 class="section-title">Case Directory</h2><p class="section-subtitle">Active investigations, public records requests, appeals, and state determinations.</p></div>'
 
         body += '<div class="case-filters"><form method="get" class="articles-search-form">'
-        body += f'<div class="repo-search" style="flex:1;max-width:400px;"><svg class="repo-search-icon" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M21 21l-6-6m2-5a7 7 0 11-14 0 7 7 0 0114 0z"/></svg><input type="text" name="search" class="repo-search-input" placeholder="Search cases..." value="{h(search)}"></div>'
-        body += '<select name="district" class="repo-select" onchange="this.form.submit()" style="max-width:200px;"><option value="all">All Districts</option>'
+        body += f'<div class="repo-search" class="search-flex"><svg class="repo-search-icon" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M21 21l-6-6m2-5a7 7 0 11-14 0 7 7 0 0114 0z"/></svg><input type="text" name="search" class="repo-search-input" placeholder="Search cases..." value="{h(search)}"></div>'
+        body += '<select name="district" class="repo-select" onchange="this.form.submit()" class="select-narrow"><option value="all">All Districts</option>'
         for d in districts:
             body += f'<option value="{h(d["code"])}" {"selected" if district == d["code"] else ""}>{h(d["name"])}</option>'
-        body += '</select><select name="status" class="repo-select" onchange="this.form.submit()" style="max-width:160px;"><option value="all">All Statuses</option>'
+        body += '</select><select name="status" class="repo-select" onchange="this.form.submit()" class="select-medium"><option value="all">All Statuses</option>'
         for s in ['open', 'pending', 'closed', 'overdue']:
             body += f'<option value="{s}" {"selected" if status == s else ""}>{s.title()}</option>'
-        body += '</select><button type="submit" class="btn btn-ghost" style="padding:0.63rem 1rem;">Filter</button>'
+        body += '</select><button type="submit" class="btn btn-ghost" class="btn-sm">Filter</button>'
         if search or district or status:
-            body += '<a href="/cases/" class="btn btn-ghost" style="padding:0.63rem 1rem;">Clear</a>'
+            body += '<a href="/cases/" class="btn btn-ghost" class="btn-sm">Clear</a>'
         body += '</form></div>'
 
         if not cases:
@@ -1263,7 +1263,7 @@ def handle_cases(path):
     body = f'{head}{get_header("/cases/")}<section class="section"><div class="container"><div class="case-detail-header">'
     body += f'<div class="case-detail-meta"><a href="/districts/{case["district_code"].lower()}" class="case-district">{h(case["district_code"])}, MA</a>{status_badge(case["status"])}</div>'
     body += f'<span class="case-detail-id">{h(case["case_id"])}</span><h1 class="case-detail-title">{h(case["title"])}</h1><p class="case-detail-summary">{h(case["summary"])}</p>'
-    body += f'<div class="case-detail-stats"><div class="stat"><span class="stat-label">Type</span><span class="stat-value" style="font-size:0.95rem;">{case_type_label(case["type"])}</span></div><div class="stat"><span class="stat-label">Filed</span><span class="stat-value" style="font-size:0.95rem;">{format_date(case["filed_date"], "%b %d, %Y")}</span></div><div class="stat"><span class="stat-label">Deadline</span><span class="stat-value" style="font-size:0.95rem;">{format_date(case["deadline"], "%b %d, %Y")}</span></div><div class="stat"><span class="stat-label">Stage</span><span class="stat-value" style="font-size:0.95rem;">{h(case["current_stage"] or "In Progress")}</span></div></div>'
+    body += f'<div class="case-detail-stats"><div class="stat"><span class="stat-label">Type</span><span class="stat-value" class="font-md">{case_type_label(case["type"])}</span></div><div class="stat"><span class="stat-label">Filed</span><span class="stat-value" class="font-md">{format_date(case["filed_date"], "%b %d, %Y")}</span></div><div class="stat"><span class="stat-label">Deadline</span><span class="stat-value" class="font-md">{format_date(case["deadline"], "%b %d, %Y")}</span></div><div class="stat"><span class="stat-label">Stage</span><span class="stat-value" class="font-md">{h(case["current_stage"] or "In Progress")}</span></div></div>'
     body += '</div>'
 
     if requested:
@@ -1290,18 +1290,18 @@ def handle_cases(path):
     if docs:
         body += '<div class="case-detail-section"><h3>Documents</h3><div class="repo-table-wrapper"><table class="repo-table"><thead><tr><th>Date</th><th>Type</th><th>Title</th><th>File</th></tr></thead><tbody>'
         for d in docs:
-            file_link = f'<a href="{h(d["file_path"] or "#")}" class="doc-link" target="_blank"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" width="14"><path d="M7 21h10a2 2 0 002-2V9.414a1 1 0 00-.293-.707l-5.414-5.414A1 1 0 0012.586 3H7a2 2 0 00-2 2v14a2 2 0 002 2z"/></svg>{h((d["file_type"] or "FILE").upper())}</a>' if d['file_path'] else '<span style="color:var(--text-muted);">-</span>'
+            file_link = f'<a href="{h(d["file_path"] or "#")}" class="doc-link" target="_blank"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" width="14"><path d="M7 21h10a2 2 0 002-2V9.414a1 1 0 00-.293-.707l-5.414-5.414A1 1 0 0012.586 3H7a2 2 0 00-2 2v14a2 2 0 002 2z"/></svg>{h((d["file_type"] or "FILE").upper())}</a>' if d['file_path'] else '<span class="text-muted">-</span>'
             body += f'<tr><td class="repo-date">{format_date(d["document_date"])}</td><td>{h(d["document_type"].replace("_"," ").title())}</td><td>{h(d["title"])}</td><td>{file_link}</td></tr>'
         body += '</tbody></table></div></div>'
 
     if related:
-        body += '<div class="case-detail-section"><h3>Related Articles</h3><div class="articles-grid" style="grid-template-columns:repeat(2,minmax(0,1fr));">'
+        body += '<div class="case-detail-section"><h3>Related Articles</h3><div class="articles-grid" class="grid-2col">'
         for ra in related:
             body += f'<article class="article-card"><div class="article-card-body"><div class="article-card-meta"><span class="article-category">{category_label(ra["category"])}</span><span class="article-date">{format_date(ra["published_at"])}</span></div><h3 class="article-card-title"><a href="/articles/{h(ra["slug"])}">{h(ra["title"])}</a></h3></div></article>'
         body += '</div></div>'
 
     conn.close()
-    return body + '<div style="margin-top:2rem;"><a href="/cases/" class="btn btn-ghost">&larr; Back to Case Directory</a></div></div></section>' + get_footer()
+    return body + '<div class="mt-2"><a href="/cases/" class="btn btn-ghost">&larr; Back to Case Directory</a></div></div></section>' + get_footer()
 
 
 def handle_data():
@@ -1353,11 +1353,11 @@ def _handle_data_portal():
         count = safe_count(table)
         if count is None or count == 0:
             if name == 'Restraint & Seclusion':
-                count_text = '<span style="color:var(--text-muted);">Not loaded</span>'
+                count_text = '<span class="text-muted">Not loaded</span>'
             elif name == 'PRS Data Dashboard':
-                count_text = '<span style="color:var(--text-muted);">Sample available</span>'
+                count_text = '<span class="text-muted">Sample available</span>'
             else:
-                count_text = '<span style="color:var(--text-muted);">Not loaded</span>'
+                count_text = '<span class="text-muted">Not loaded</span>'
         else:
             count_text = f'<span style="font-weight:700;color:var(--accent-glow);">{count:,} rows</span>'
         cards.append((name, count_text, url, desc))
@@ -1373,7 +1373,7 @@ def _handle_data_portal():
     for name, count_text, url, desc in cards:
         body += f'''<a href="{url}" class="resource-card">
     <h3 class="resource-title">{h(name)}</h3>
-    <p style="margin:0.35rem 0;">{count_text}</p>
+    <p class="my-sm">{count_text}</p>
     <p style="font-size:0.88rem;color:var(--text-secondary);margin:0.5rem 0;">{h(desc)}</p>
     <span class="resource-link">Explore Dataset</span>
 </a>'''
@@ -1509,9 +1509,9 @@ def _handle_compare_tab():
 
     body += f'\n<script id="compare-districts-data" type="application/json">{data_json}</script>'
 
-    body += '<div class="restraint-comparison-panel"><h3 style="margin-bottom:1rem;">Select Districts to Compare</h3><div class="compare-select-row"><div style="flex:1;min-width:200px;"><label style="font-size:0.8rem;color:var(--text-muted);display:block;margin-bottom:0.3rem;">District A</label><select id="compare-district-a" class="form-input" style="width:100%;"><option value="">-- Select a district --</option>' + district_options + '</select></div><div style="flex:1;min-width:200px;"><label style="font-size:0.8rem;color:var(--text-muted);display:block;margin-bottom:0.3rem;">District B</label><select id="compare-district-b" class="form-input" style="width:100%;"><option value="">-- Select a district --</option>' + district_options + '</select></div></div><div class="compare-chart-container"><canvas id="districtCompareChart"></canvas></div><div class="similar-districts-panel"><h4>Similar Districts</h4><p style="color:var(--text-muted);font-size:0.82rem;margin-bottom:0.75rem;">Add districts with similar demographics or restraint patterns to compare against.</p><div style="display:flex;gap:0.5rem;align-items:center;flex-wrap:wrap;margin-bottom:0.75rem;"><select id="similar-district-select" class="form-input" style="min-width:200px;"><option value="">-- Add a district --</option>' + all_district_options + '</select><button id="similar-district-add" class="similar-district-add">+ Add to Chart</button></div><div id="similar-districts-list" style="display:flex;flex-wrap:wrap;gap:0.35rem;"></div></div></div>'
+    body += '<div class="restraint-comparison-panel"><h3 class="mb-1">Select Districts to Compare</h3><div class="compare-select-row"><div class="flex-min-200"><label style="font-size:0.8rem;color:var(--text-muted);display:block;margin-bottom:0.3rem;">District A</label><select id="compare-district-a" class="form-input" class="w-full"><option value="">-- Select a district --</option>' + district_options + '</select></div><div class="flex-min-200"><label style="font-size:0.8rem;color:var(--text-muted);display:block;margin-bottom:0.3rem;">District B</label><select id="compare-district-b" class="form-input" class="w-full"><option value="">-- Select a district --</option>' + district_options + '</select></div></div><div class="compare-chart-container"><canvas id="districtCompareChart"></canvas></div><div class="similar-districts-panel"><h4>Similar Districts</h4><p style="color:var(--text-muted);font-size:0.82rem;margin-bottom:0.75rem;">Add districts with similar demographics or restraint patterns to compare against.</p><div style="display:flex;gap:0.5rem;align-items:center;flex-wrap:wrap;margin-bottom:0.75rem;"><select id="similar-district-select" class="form-input" style="min-width:200px;"><option value="">-- Add a district --</option>' + all_district_options + '</select><button id="similar-district-add" class="similar-district-add">+ Add to Chart</button></div><div id="similar-districts-list" style="display:flex;flex-wrap:wrap;gap:0.35rem;"></div></div></div>'
 
-    body += '<div style="margin-top:2.5rem;"><h3 style="margin-bottom:1rem;">Top 30 Districts by Total Restraints (2024-25)</h3><div class="repo-table-wrapper"><table class="repo-table sortable"><thead><tr><th>District</th><th class="num">Total Restraints</th><th class="num">Injuries</th><th class="num">Rate / 100</th><th class="num">SPED %</th><th class="num">Low Income %</th><th class="num">OSS %</th><th class="num">Attendance %</th><th class="num">Chr. Absent %</th></tr></thead><tbody>' + table_rows + '</tbody></table></div></div>'
+    body += '<div style="margin-top:2.5rem;"><h3 class="mb-1">Top 30 Districts by Total Restraints (2024-25)</h3><div class="repo-table-wrapper"><table class="repo-table sortable"><thead><tr><th>District</th><th class="num">Total Restraints</th><th class="num">Injuries</th><th class="num">Rate / 100</th><th class="num">SPED %</th><th class="num">Low Income %</th><th class="num">OSS %</th><th class="num">Attendance %</th><th class="num">Chr. Absent %</th></tr></thead><tbody>' + table_rows + '</tbody></table></div></div>'
 
 
     body += '</div></section>' + get_footer()
@@ -1524,7 +1524,7 @@ def handle_search():
 
     head = get_head('Search', 'Search across Parent Data Force articles, cases, and speeches.')
     body = f'{head}{get_header("/search/")}<section class="section"><div class="container"><div class="section-header"><span class="section-tag">Search</span><h2 class="section-title">Search the Site</h2><p class="section-subtitle">Search across articles, cases, and speeches.</p></div>'
-    body += '<form method="get"><div class="repo-search" style="max-width:600px;"><svg class="repo-search-icon" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M21 21l-6-6m2-5a7 7 0 11-14 0 7 7 0 0114 0z"/></svg><input type="text" name="q" class="repo-search-input" placeholder="Search articles, cases, and speeches..." autofocus></div><button type="submit" class="btn btn-primary" style="margin-top:0.6rem;">Search</button></form>'
+    body += '<form method="get"><div class="repo-search" class="max-w-lg"><svg class="repo-search-icon" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M21 21l-6-6m2-5a7 7 0 11-14 0 7 7 0 0114 0z"/></svg><input type="text" name="q" class="repo-search-input" placeholder="Search articles, cases, and speeches..." autofocus></div><button type="submit" class="btn btn-primary" style="margin-top:0.6rem;">Search</button></form>'
     body += '</div></section>' + get_footer()
     return body
 
@@ -1543,10 +1543,10 @@ def handle_speeches():
         body += '<div class="speeches-grid">'
         for s in speeches:
             if s['platform'].lower() == 'youtube':
-                video = f'<div class="speech-video"><iframe src="https://www.youtube.com/embed/{h(s["video_id"])}" allowfullscreen loading="lazy" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" style="border:none;"></iframe></div>'
+                video = f'<div class="speech-video"><iframe src="https://www.youtube.com/embed/{h(s["video_id"])}" allowfullscreen loading="lazy" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" class="border-none"></iframe></div>'
             else:
-                video = f'<a href="{h(s["url"])}" target="_blank" class="btn btn-secondary" style="margin-top:0.5rem;">Watch / View</a>'
-            case_link = f'<div style="margin-top:0.5rem;"><a href="/cases/{h(s["related_case_id"])}" class="related-link">Related: {h(s["related_case_id"])}</a></div>' if s['related_case_id'] else ''
+                video = f'<a href="{h(s["url"])}" target="_blank" class="btn btn-secondary" class="mt-sm">Watch / View</a>'
+            case_link = f'<div class="mt-sm"><a href="/cases/{h(s["related_case_id"])}" class="related-link">Related: {h(s["related_case_id"])}</a></div>' if s['related_case_id'] else ''
             body += f'''<div class="speech-card">
     <div class="speech-card-header"><span class="speech-category">{h(s["category"].replace("_"," ").title())}</span><span class="speech-date">{format_date(s["published_at"])}</span></div>
     <h3 class="speech-title">{h(s["title"])}</h3>
@@ -1569,8 +1569,8 @@ def handle_submit():
         <button class="submit-tab" data-tab="upload">Upload Data</button>
     </div>'''
 
-    body += '''<div class="submit-content active" id="tab-tip"><div class="tip-banner" style="grid-template-columns:1fr;">
-        <div class="tip-banner-copy"><h3>Report a Concern</h3><p style="color:var(--text-secondary);margin-bottom:1rem;">Report urgent district concerns, emerging incidents, documentation gaps, or recurring patterns. All submissions are reviewed.</p></div>
+    body += '''<div class="submit-content active" id="tab-tip"><div class="tip-banner" class="grid-1col">
+        <div class="tip-banner-copy"><h3>Report a Concern</h3><p class="text-muted mb-1">Report urgent district concerns, emerging incidents, documentation gaps, or recurring patterns. All submissions are reviewed.</p></div>
         <form class="submit-form" method="post">
             <div class="form-grid">
                 <div class="form-group"><label class="form-label">District / Agency</label><input type="text" class="form-input" placeholder="e.g., Fall River Public Schools"></div>
@@ -1583,8 +1583,8 @@ def handle_submit():
         </form>
     </div></div>'''
 
-    body += '''<div class="submit-content" id="tab-help"><div class="tip-banner" style="grid-template-columns:1fr;">
-        <div class="tip-banner-copy"><h3>Request Advocacy Help</h3><p style="color:var(--text-secondary);margin-bottom:1rem;">Need help with a special education issue, public records request, or advocacy strategy? Describe your situation and we''ll respond.</p></div>
+    body += '''<div class="submit-content" id="tab-help"><div class="tip-banner" class="grid-1col">
+        <div class="tip-banner-copy"><h3>Request Advocacy Help</h3><p class="text-muted mb-1">Need help with a special education issue, public records request, or advocacy strategy? Describe your situation and we''ll respond.</p></div>
         <form class="submit-form" method="post">
             <div class="form-grid">
                 <div class="form-group"><label class="form-label">Your Name</label><input type="text" class="form-input"></div>
@@ -1597,8 +1597,8 @@ def handle_submit():
         </form>
     </div></div>'''
 
-    body += '''<div class="submit-content" id="tab-upload"><div class="tip-banner" style="grid-template-columns:1fr;">
-        <div class="tip-banner-copy"><h3>Upload Data or Files</h3><p style="color:var(--text-secondary);margin-bottom:1rem;">Have public records, district data, or documentation? Upload files for review and potential publication.</p></div>
+    body += '''<div class="submit-content" id="tab-upload"><div class="tip-banner" class="grid-1col">
+        <div class="tip-banner-copy"><h3>Upload Data or Files</h3><p class="text-muted mb-1">Have public records, district data, or documentation? Upload files for review and potential publication.</p></div>
         <form class="submit-form" method="post" enctype="multipart/form-data">
             <div class="form-grid">
                 <div class="form-group"><label class="form-label">District / Agency</label><input type="text" class="form-input"></div>
@@ -1633,7 +1633,7 @@ def handle_about():
         <div class="value-card"><div class="value-icon"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M9.663 17h4.673M12 3v1m6.364 1.636l-.707.707M21 12h-1M4 12H3m3.343-5.657l-.707-.707m2.828 9.9a5 5 0 117.072 0l-.548.547A3.374 3.374 0 0014 18.469V19a2 2 0 11-4 0v-.531c0-.895-.356-1.754-.988-2.386l-.548-.547z"/></svg></div><h3 class="value-title">Strategy</h3><p class="value-description">Evidence-based approach combining public records law, complaint procedures, and systemic analysis to achieve meaningful outcomes.</p></div>
         <div class="value-card"><div class="value-icon"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M3.055 11H5a2 2 0 012 2v1a2 2 0 002 2 2 2 0 012 2v2.945M8 3.935V5.5A2.5 2.5 0 0010.5 8h.5a2 2 0 012 2 2 2 0 104 0 2 2 0 012-2h1.064M15 20.488V18a2 2 0 012-2h3.064M21 12a9 9 0 11-18 0 9 9 0 0118 0z"/></svg></div><h3 class="value-title">Public Interest</h3><p class="value-description">Information belongs to the public. We work to ensure transparency in public systems and make advocacy resources accessible to all families.</p></div>
     </div>
-    <div style="padding:3rem 0 0;"><h3 class="section-title" style="font-size:1.5rem;">Privacy</h3><p class="section-subtitle" style="max-width:100%;">Parent Data Force does not sell, share, or monetize personal information. Any information submitted through our forms is used solely for advocacy purposes. We do not use tracking cookies or third-party analytics.</p></div>
+    <div class="pt-3"><h3 class="section-title" class="font-lg">Privacy</h3><p class="section-subtitle" class="max-w-full">Parent Data Force does not sell, share, or monetize personal information. Any information submitted through our forms is used solely for advocacy purposes. We do not use tracking cookies or third-party analytics.</p></div>
     </div></section>'''
     return body + get_footer()
 
@@ -1673,9 +1673,9 @@ def handle_districts(path=''):
                 badge = f'<span class="status-badge status-open">{d["open_cases"]} Active</span>' if d['open_cases'] > 0 else ''
                 data_badges = ''
                 if d['disc_count']:
-                    data_badges += f'<span style="font-size:0.7rem;background:var(--bg-card);padding:0.15rem 0.4rem;border-radius:4px;">{d["disc_count"]} disc</span> '
+                    data_badges += f'<span class="badge-sm">{d["disc_count"]} disc</span> '
                 if d['restraint_count']:
-                    data_badges += f'<span style="font-size:0.7rem;background:var(--bg-card);padding:0.15rem 0.4rem;border-radius:4px;">{d["restraint_count"]} restr</span>'
+                    data_badges += f'<span class="badge-sm">{d["restraint_count"]} restr</span>'
                 body += f'''<a href="/districts/{d["code"].lower()}" class="district-card">
     <div class="district-card-header"><h3 class="district-card-name">{h(d["name"])}</h3>{badge}</div>
     <p class="district-card-location">{h(d["location"])}</p>
@@ -1767,7 +1767,7 @@ def handle_districts(path=''):
     <h1 class="section-title">{h(district["name"])}</h1>
     <p class="section-subtitle">{h(district["location"])} &middot; DESE Code: {h(dese_code)}</p>
 </div>
-<div class="hero-stats" style="margin-bottom:1.5rem;">
+<div class="hero-stats" class="mb-2">
     <div class="stat"><span class="stat-value">{len(cases)}</span><span class="stat-label">Cases</span></div>
     <div class="stat"><span class="stat-value">{len(restraint_rows)}</span><span class="stat-label">Restraint Records</span></div>
     <div class="stat"><span class="stat-value">{len(discipline_rows)}</span><span class="stat-label">Discipline Records</span></div>
@@ -1788,7 +1788,7 @@ def handle_districts(path=''):
         body += '<div class="data-tabs" style="display:flex;gap:0;border-bottom:2px solid var(--border);margin-bottom:1.5rem;flex-wrap:wrap;">'
         for tab_id, tab_label, active in tabs:
             active_class = 'active' if active else ''
-            body += f'<button class="data-tab {active_class}" data-tab="{tab_id}" style="padding:0.75rem 1.25rem;border:none;background:none;color:var(--text-muted);cursor:pointer;font-size:0.85rem;font-weight:500;border-bottom:2px solid transparent;margin-bottom:-2px;transition:all 0.2s;">{tab_label}</button>'
+            body += f'<button class="data-tab {active_class}" data-tab="{tab_id}" class="data-tab">{tab_label}</button>'
         body += '</div>'
 
     # === TAB: Overview ===
@@ -1808,34 +1808,34 @@ def handle_districts(path=''):
 
     # Data summary cards
     if has_data:
-        body += '<div class="resources-grid" style="margin-top:1rem;">'
+        body += '<div class="resources-grid" class="mt-1">'
         if restraint_rows:
             latest_r = restraint_rows[0]
             body += f'''<article class="resource-card">
     <h3 class="resource-title">Restraint & Seclusion</h3>
     <p class="resource-excerpt">{latest_r["school_year"]}: {latest_r["total_restraints"] or 0} restraints, {latest_r["total_injuries"] or 0} injuries across {len(restraint_rows)} school-level records.</p>
-    <span class="resource-link" onclick="document.querySelector('[data-tab=restraint]').click()" style="cursor:pointer;">View Restraint Data &rarr;</span>
+    <span class="resource-link" onclick="document.querySelector('[data-tab=restraint]').click()" class="cursor-pointer">View Restraint Data &rarr;</span>
 </article>'''
         if discipline_rows:
             latest_d = discipline_rows[0]
             body += f'''<article class="resource-card">
     <h3 class="resource-title">Discipline</h3>
     <p class="resource-excerpt">{latest_d["school_year"]}: {latest_d["students_disciplined"] or 0} students disciplined ({len(discipline_rows)} year{"" if len(discipline_rows)==1 else "s"} of data).</p>
-    <span class="resource-link" onclick="document.querySelector('[data-tab=discipline]').click()" style="cursor:pointer;">View Discipline Data &rarr;</span>
+    <span class="resource-link" onclick="document.querySelector('[data-tab=discipline]').click()" class="cursor-pointer">View Discipline Data &rarr;</span>
 </article>'''
         if enrollment_rows:
             latest_e = enrollment_rows[0]
             body += f'''<article class="resource-card">
     <h3 class="resource-title">Enrollment & Demographics</h3>
     <p class="resource-excerpt">{latest_e["school_year"]}: SPED {latest_e["sped_pct"] if "sped_pct" in latest_e.keys() else "-"}%, Low Income {latest_e["low_income_pct"] if "low_income_pct" in latest_e.keys() else "-"}%, EL {latest_e["el_pct"] if "el_pct" in latest_e.keys() else "-"}%</p>
-    <span class="resource-link" onclick="document.querySelector('[data-tab=enrollment]').click()" style="cursor:pointer;">View Enrollment Data &rarr;</span>
+    <span class="resource-link" onclick="document.querySelector('[data-tab=enrollment]').click()" class="cursor-pointer">View Enrollment Data &rarr;</span>
 </article>'''
         if attendance_rows:
             latest_a = attendance_rows[0]
             body += f'''<article class="resource-card">
     <h3 class="resource-title">Attendance</h3>
     <p class="resource-excerpt">{latest_a["school_year"]}: {latest_a["attendance_rate"] if "attendance_rate" in latest_a.keys() else "-"}% attendance, {latest_a["chronically_absent_10_pct"] if "chronically_absent_10_pct" in latest_a.keys() else "-"}% chronically absent.</p>
-    <span class="resource-link" onclick="document.querySelector('[data-tab=attendance]').click()" style="cursor:pointer;">View Attendance Data &rarr;</span>
+    <span class="resource-link" onclick="document.querySelector('[data-tab=attendance]').click()" class="cursor-pointer">View Attendance Data &rarr;</span>
 </article>'''
         body += '</div>'
 
@@ -1845,7 +1845,7 @@ def handle_districts(path=''):
 
     # === TAB: Cases ===
     if cases:
-        body += f'<div class="data-tab-content" id="tab-cases" style="display:none;">'
+        body += f'<div class="data-tab-content" id="tab-cases" class="theme-icon-hidden">'
         body += '<div class="repo-table-wrapper"><table class="repo-table"><thead><tr><th>Case ID</th><th>Type</th><th>Title</th><th>Status</th><th>Filed</th><th>Deadline</th></tr></thead><tbody>'
         for c in cases:
             body += f'<tr><td><a href="/cases/{h(c["case_id"])}" style="color:var(--accent);font-weight:600;">{h(c["case_id"])}</a></td><td>{case_type_label(c["type"])}</td><td>{h(c["title"])}</td><td>{status_badge(c["status"])}</td><td>{format_date(c["filed_date"])}</td><td>{format_date(c["deadline"])}</td></tr>'
@@ -1853,8 +1853,8 @@ def handle_districts(path=''):
 
     # === TAB: PRS Complaints ===
     if prs_rows:
-        body += f'<div class="data-tab-content" id="tab-prs" style="display:none;">'
-        body += f'<p style="color:var(--text-muted);margin-bottom:0.75rem;">{len(prs_rows)} PRS complaint records matching this district (from DESE Problem Resolution System).</p>'
+        body += f'<div class="data-tab-content" id="tab-prs" class="theme-icon-hidden">'
+        body += f'<p class="text-muted mb-075">{len(prs_rows)} PRS complaint records matching this district (from DESE Problem Resolution System).</p>'
         body += '<div class="repo-table-wrapper"><table class="repo-table"><thead><tr><th>PRS #</th><th>District</th><th>Intake Date</th><th>Status</th><th>Category</th><th>Subcategory</th></tr></thead><tbody>'
         for r in prs_rows:
             vals = [r[k] for k in r.keys() if k != 'id']
@@ -1863,8 +1863,8 @@ def handle_districts(path=''):
 
     # === TAB: Restraint & Seclusion ===
     if restraint_rows:
-        body += f'<div class="data-tab-content" id="tab-restraint" style="display:none;">'
-        body += f'<p style="color:var(--text-muted);margin-bottom:0.75rem;">{len(restraint_rows)} school-level records - DESE suppresses cells when fewer than 6 students were restrained.</p>'
+        body += f'<div class="data-tab-content" id="tab-restraint" class="theme-icon-hidden">'
+        body += f'<p class="text-muted mb-075">{len(restraint_rows)} school-level records - DESE suppresses cells when fewer than 6 students were restrained.</p>'
         body += '<div class="repo-table-wrapper"><table class="repo-table"><thead><tr><th>Year</th><th>School</th><th>Enrollment</th><th>Students Restrained</th><th>Total Restraints</th><th>Injuries</th><th>Rate/100</th></tr></thead><tbody>'
         for r in restraint_rows:
             body += f'<tr><td>{h(r["school_year"])}</td><td><strong>{h(r["school_name"] or "-")}</strong></td><td>{r["enrollment"] or 0:,}</td><td>{h(str(r["students_restrained"] or "&lt;6"))}</td><td>{h(str(r["total_restraints"] or "-"))}</td><td>{h(str(r["total_injuries"] or "-"))}</td><td>{h(str(r["restraint_rate_per_100"] or "-"))}</td></tr>'
@@ -1872,8 +1872,8 @@ def handle_districts(path=''):
 
     # === TAB: Discipline ===
     if discipline_rows:
-        body += f'<div class="data-tab-content" id="tab-discipline" style="display:none;">'
-        body += f'<p style="color:var(--text-muted);margin-bottom:0.75rem;">{len(discipline_rows)} year{"" if len(discipline_rows)==1 else "s"} of discipline data.</p>'
+        body += f'<div class="data-tab-content" id="tab-discipline" class="theme-icon-hidden">'
+        body += f'<p class="text-muted mb-075">{len(discipline_rows)} year{"" if len(discipline_rows)==1 else "s"} of discipline data.</p>'
         body += '<div class="repo-table-wrapper"><table class="repo-table"><thead><tr><th>Year</th><th>Students</th><th>Disciplined</th><th>% In-School Susp</th><th>% Out-School Susp</th><th>% Expulsion</th><th>% Arrest</th></tr></thead><tbody>'
         for r in discipline_rows:
             body += f'<tr><td><strong>{h(r["school_year"])}</strong></td><td>{r["students"] or 0:,}</td><td>{r["students_disciplined"] or 0:,}</td><td>{h(str(r["pct_in_school_susp"] or "-"))}%</td><td>{h(str(r["pct_out_school_susp"] or "-"))}%</td><td>{h(str(r["pct_expulsion"] or "-"))}%</td><td>{h(str(r["pct_arrest"] if "pct_arrest" in r.keys() else "-"))}%</td></tr>'
@@ -1881,7 +1881,7 @@ def handle_districts(path=''):
 
     # === TAB: Enrollment ===
     if enrollment_rows:
-        body += f'<div class="data-tab-content" id="tab-enrollment" style="display:none;">'
+        body += f'<div class="data-tab-content" id="tab-enrollment" class="theme-icon-hidden">'
         body += '<div class="repo-table-wrapper"><table class="repo-table"><thead><tr><th>Year</th><th>High Needs %</th><th>EL %</th><th>Low Income %</th><th>SPED %</th><th>FLNE %</th></tr></thead><tbody>'
         for r in enrollment_rows:
             body += f'<tr><td><strong>{h(r["school_year"])}</strong></td><td>{h(str(r["high_needs_pct"] if "high_needs_pct" in r.keys() else "-"))}%</td><td>{h(str(r["el_pct"] if "el_pct" in r.keys() else "-"))}%</td><td>{h(str(r["low_income_pct"] if "low_income_pct" in r.keys() else "-"))}%</td><td>{h(str(r["sped_pct"] if "sped_pct" in r.keys() else "-"))}%</td><td>{h(str(r["flne_pct"] if "flne_pct" in r.keys() else "-"))}%</td></tr>'
@@ -1889,7 +1889,7 @@ def handle_districts(path=''):
 
     # === TAB: Attendance ===
     if attendance_rows:
-        body += f'<div class="data-tab-content" id="tab-attendance" style="display:none;">'
+        body += f'<div class="data-tab-content" id="tab-attendance" class="theme-icon-hidden">'
         body += '<div class="repo-table-wrapper"><table class="repo-table"><thead><tr><th>Year</th><th>Attendance Rate</th><th>Avg Absences</th><th>% Absent 10+</th><th>% Chronically Absent</th></tr></thead><tbody>'
         for r in attendance_rows:
             body += f'<tr><td><strong>{h(r["school_year"])}</strong></td><td>{h(str(r["attendance_rate"] if "attendance_rate" in r.keys() else "-"))}%</td><td>{h(str(r["avg_absences"] if "avg_absences" in r.keys() else "-"))}</td><td>{h(str(r["absent_10_plus_pct"] if "absent_10_plus_pct" in r.keys() else "-"))}%</td><td>{h(str(r["chronically_absent_10_pct"] if "chronically_absent_10_pct" in r.keys() else "-"))}%</td></tr>'
@@ -1897,7 +1897,7 @@ def handle_districts(path=''):
 
     # === TAB: SPED Results ===
     if sped_rows:
-        body += f'<div class="data-tab-content" id="tab-sped" style="display:none;">'
+        body += f'<div class="data-tab-content" id="tab-sped" class="theme-icon-hidden">'
         body += '<div class="repo-table-wrapper"><table class="repo-table"><thead><tr><th>Year</th><th>SPED Grad Rate</th><th>SPED Dropout Rate</th><th>Full Inclusion %</th><th>Parent Involvement %</th></tr></thead><tbody>'
         for r in sped_rows:
             body += f'<tr><td><strong>{h(r["school_year"])}</strong></td><td>{h(str(r["sped_grad_rate"] if "sped_grad_rate" in r.keys() else "-"))}%</td><td>{h(str(r["sped_dropout_rate"] if "sped_dropout_rate" in r.keys() else "-"))}%</td><td>{h(str(r["lre_full_incl_pct"] if "lre_full_incl_pct" in r.keys() else "-"))}%</td><td>{h(str(r["parent_involve_pct"] if "parent_involve_pct" in r.keys() else "-"))}%</td></tr>'
@@ -1929,7 +1929,7 @@ if (activeTab) {
 }
 </script>'''
 
-    return body + '<div style="margin-top:2rem;"><a href="/districts/" class="btn btn-ghost">&larr; All Districts</a></div></div></section>' + get_footer()
+    return body + '<div class="mt-2"><a href="/districts/" class="btn btn-ghost">&larr; All Districts</a></div></div></section>' + get_footer()
 
 
 
@@ -2006,9 +2006,9 @@ def handle_schools(path=''):
 <div class="district-detail-header">
     <span class="section-tag">School Profile</span>
     <h1 class="section-title">{h(school_info["school_name"])}</h1>
-    <p class="section-subtitle"><a href="/districts/{school_info["district_code"].lower()}" style="color:var(--accent-glow);">{h(school_info["district_name"])}</a></p>
+    <p class="section-subtitle"><a href="/districts/{school_info["district_code"].lower()}" class="text-accent">{h(school_info["district_name"])}</a></p>
 </div>
-<div class="hero-stats" style="margin-bottom:1.5rem;">
+<div class="hero-stats" class="mb-2">
     <div class="stat"><span class="stat-value">{latest["total_restraints"] or 0 if latest else 0:,}</span><span class="stat-label">Restraints ({latest["school_year"] if latest else "N/A"})</span></div>
     <div class="stat"><span class="stat-value">{total_all:,}</span><span class="stat-label">All-Time Restraints</span></div>
     <div class="stat"><span class="stat-value">{len(restraint_rows)}</span><span class="stat-label">Years of Data</span></div>
@@ -2017,8 +2017,8 @@ def handle_schools(path=''):
 
     if restraint_rows:
         body += '''<div class="district-section">
-    <h2 class="section-title" style="font-size:1.5rem;margin-bottom:1rem;">Restraint &amp; Seclusion History</h2>
-    <p style="color:var(--text-muted);margin-bottom:0.75rem;font-size:0.85rem;">Data sourced from the Massachusetts DESE. DESE suppresses restraint counts when fewer than 6 students are restrained — suppressed cells show as 0 or &lt;6.</p>
+    <h2 class="section-title" class="font-lg mb-1">Restraint &amp; Seclusion History</h2>
+    <p class="text-muted mb-075 font-sm">Data sourced from the Massachusetts DESE. DESE suppresses restraint counts when fewer than 6 students are restrained — suppressed cells show as 0 or &lt;6.</p>
     <div class="repo-table-wrapper"><table class="repo-table"><thead><tr><th>Year</th><th>Enrollment</th><th>Students Restrained</th><th>Total Restraints</th><th>Injuries</th><th>Rate/100</th></tr></thead><tbody>'''
         for r in restraint_rows:
             students = '&lt;6' if (r['students_restrained_suppressed'] or 0) else str(r['students_restrained'] or 0)
@@ -2028,7 +2028,7 @@ def handle_schools(path=''):
             body += f'<tr><td><strong>{h(r["school_year"])}</strong></td><td>{r["enrollment"] or 0:,}</td><td>{students}</td><td>{restraints}</td><td>{injuries}</td><td>{rate}</td></tr>'
         body += '</tbody></table></div></div>'
 
-    body += f'''<div style="margin-top:2rem;display:flex;gap:1rem;flex-wrap:wrap;">
+    body += f'''<div class="flex-gap-wrap mt-2">
         <a href="/schools/" class="btn btn-ghost">&larr; All Schools</a>
         <a href="/districts/{school_info["district_code"].lower()}" class="btn btn-ghost">{h(school_info["district_name"])} District Profile &rarr;</a>
     </div>
@@ -2149,7 +2149,7 @@ def handle_admin_login(handler):
     body = '<!DOCTYPE html><html lang="en"><head><meta charset="UTF-8"><meta name="viewport" content="width=device-width,initial-scale=1.0">\n<title>Admin Login - Parent Data Force</title>\n<link rel="icon" href="/assets/images/logo.png"><link rel="stylesheet" href="/assets/css/app.css"><link rel="stylesheet" href="/assets/css/admin.css">\n<link href="https://fonts.googleapis.com/css2?family=Inter:wght@300..800&family=JetBrains+Mono:wght@400;500&display=swap" rel="stylesheet">\n<style>body{display:grid;place-items:center;min-height:100vh} .login-box{width:min(400px,90vw);border:1px solid var(--border);border-radius:var(--radius-lg);padding:2.5rem;background:var(--bg-elevated)}\n.login-box h1{font-size:1.3rem;margin-bottom:.3rem} .form-group{margin-bottom:1rem}\n.form-label{display:block;font-size:.85rem;color:var(--text-secondary);margin-bottom:.35rem}\n.form-input{width:100%;padding:.75rem;border:1px solid var(--border);border-radius:var(--radius-sm);background:rgba(255,255,255,.03);color:var(--text-primary)}\n.form-input:focus{outline:0;border-color:var(--accent-ember);box-shadow:0 0 0 3px rgba(255,90,31,.1)}\n.error{color:var(--danger);font-size:.85rem;margin-bottom:.8rem;padding:.5rem;background:var(--danger-bg);border-radius:var(--radius-xs);border:1px solid rgba(239,68,68,.2)}\n</style></head><body><div class="login-box"><h1>Parent Data Force</h1><p style="color:var(--accent-glow);font-size:.78rem;letter-spacing:.1em;margin-bottom:1.5rem">ADMIN PANEL</p>'
     if error:
         body += f'<div class="error">{h(error)}</div>'
-    body += '<form method="post"><div class="form-group"><label class="form-label">Username</label><input type="text" name="username" class="form-input" required autofocus autocomplete="off"></div><div class="form-group"><label class="form-label">Password</label><input type="password" name="password" class="form-input" required></div><button type="submit" class="btn btn-primary" style="width:100%;justify-content:center;">Sign In</button></form><div style="text-align:center;margin-top:1rem;"><a href="/" style="color:var(--text-muted);font-size:.82rem;">&larr; Back to site</a></div></div></body></html>'
+    body += '<form method="post"><div class="form-group"><label class="form-label">Username</label><input type="text" name="username" class="form-input" required autofocus autocomplete="off"></div><div class="form-group"><label class="form-label">Password</label><input type="password" name="password" class="form-input" required></div><button type="submit" class="btn btn-primary" class="w-full">Sign In</button></form><div style="text-align:center;margin-top:1rem;"><a href="/" style="color:var(--text-muted);font-size:.82rem;">&larr; Back to site</a></div></div></body></html>'
     handler.send_response(200)
     handler.send_header('Content-Type', 'text/html; charset=utf-8')
     handler.end_headers()
@@ -2304,7 +2304,7 @@ def handle_admin_articles(handler, admin_user, action='list', article_id=None):
     body = f'''{admin_head('Articles')}<body class="admin-body">{admin_nav('/admin/articles/', admin_user)}
 <div class="admin-content"><div class="admin-header">
     <h1>Articles ({stats["total"]})</h1>
-    <div style="display:flex;gap:.5rem;">
+    <div class="flex-gap-half">
         <span style="font-size:.85rem;color:var(--text-secondary);align-self:center;">{stats["published"]} published - {stats["draft"]} drafts</span>
         <a href="/admin/articles/new" class="btn btn-primary">New Article</a>
     </div>
@@ -2335,8 +2335,8 @@ def handle_admin_articles(handler, admin_user, action='list', article_id=None):
     <td>{format_date(a["published_at"])}</td>
     <td style="font-size:.78rem;color:var(--text-muted);">{tag_html}</td>
     <td>
-        <a href="/admin/articles/edit/{a["id"]}" class="btn btn-ghost" style="padding:.25rem .5rem;font-size:.75rem;">Edit</a>
-        <a href="/articles/{h(a["slug"])}" class="btn btn-ghost" style="padding:.25rem .5rem;font-size:.75rem;" target="_blank">View</a>
+        <a href="/admin/articles/edit/{a["id"]}" class="btn btn-ghost" class="btn-xs">Edit</a>
+        <a href="/articles/{h(a["slug"])}" class="btn btn-ghost" class="btn-xs" target="_blank">View</a>
         <form method="post" style="display:inline;" onsubmit="return confirm('Delete?')">
             <input type="hidden" name="action" value="delete">
             <input type="hidden" name="article_id" value="{a["id"]}">
@@ -2392,16 +2392,16 @@ def admin_article_editor(article, conn, admin_user):
     <div class="form-group" style="margin-bottom:.5rem;">
         <label class="form-label">Body * (Full HTML5)</label>
         <div style="display:flex;gap:.5rem;margin-bottom:.4rem;flex-wrap:wrap;">
-            <button type="button" class="btn btn-ghost" onclick="insertTag('h2')" style="font-size:.75rem;padding:.3rem .5rem;">H2</button>
-            <button type="button" class="btn btn-ghost" onclick="insertTag('h3')" style="font-size:.75rem;padding:.3rem .5rem;">H3</button>
-            <button type="button" class="btn btn-ghost" onclick="insertTag('p')" style="font-size:.75rem;padding:.3rem .5rem;">P</button>
-            <button type="button" class="btn btn-ghost" onclick="insertTag('ul')" style="font-size:.75rem;padding:.3rem .5rem;">UL</button>
-            <button type="button" class="btn btn-ghost" onclick="insertTag('blockquote')" style="font-size:.75rem;padding:.3rem .5rem;">Quote</button>
-            <button type="button" class="btn btn-ghost" onclick="insertShortcode('[case id=\"\"]')" style="font-size:.75rem;padding:.3rem .5rem;">Case Card</button>
-            <button type="button" class="btn btn-ghost" onclick="insertShortcode('[timeline id=\"\"]')" style="font-size:.75rem;padding:.3rem .5rem;">Timeline</button>
-            <button type="button" class="btn btn-ghost" onclick="insertShortcode('[chart type=\"restraint-years\"]')" style="font-size:.75rem;padding:.3rem .5rem;">Chart</button>
-            <button type="button" class="btn btn-ghost" onclick="insertShortcode('[youtube id=\"\" title=\"\"]')" style="font-size:.75rem;padding:.3rem .5rem;">YouTube</button>
-            <button type="button" class="btn btn-ghost" onclick="insertLink()" style="font-size:.75rem;padding:.3rem .5rem;">Link</button>
+            <button type="button" class="btn btn-ghost" onclick="insertTag('h2')" class="btn-xs">H2</button>
+            <button type="button" class="btn btn-ghost" onclick="insertTag('h3')" class="btn-xs">H3</button>
+            <button type="button" class="btn btn-ghost" onclick="insertTag('p')" class="btn-xs">P</button>
+            <button type="button" class="btn btn-ghost" onclick="insertTag('ul')" class="btn-xs">UL</button>
+            <button type="button" class="btn btn-ghost" onclick="insertTag('blockquote')" class="btn-xs">Quote</button>
+            <button type="button" class="btn btn-ghost" onclick="insertShortcode('[case id=\"\"]')" class="btn-xs">Case Card</button>
+            <button type="button" class="btn btn-ghost" onclick="insertShortcode('[timeline id=\"\"]')" class="btn-xs">Timeline</button>
+            <button type="button" class="btn btn-ghost" onclick="insertShortcode('[chart type=\"restraint-years\"]')" class="btn-xs">Chart</button>
+            <button type="button" class="btn btn-ghost" onclick="insertShortcode('[youtube id=\"\" title=\"\"]')" class="btn-xs">YouTube</button>
+            <button type="button" class="btn btn-ghost" onclick="insertLink()" class="btn-xs">Link</button>
         </div>
         <textarea name="body" class="form-textarea" rows="18" id="bodyEditor" required
             style="font-family:'JetBrains Mono',monospace;font-size:.85rem;tab-size:2;"
@@ -2430,7 +2430,7 @@ def admin_article_editor(article, conn, admin_user):
             <input type="text" name="tags" class="form-input" value="''' + tags_val + '''" placeholder="e.g. Public Records, DESE, Advocacy"></div>
         <p style="font-size:.75rem;color:var(--text-muted);margin-top:-.3rem;">Existing tags: ''' + ', '.join(h(t['name']) for t in all_tags[:12]) + '''</p>
     </div>
-    <button type="submit" class="btn btn-primary" style="width:100%;justify-content:center;margin-bottom:1rem;">Save Article</button>
+    <button type="submit" class="btn btn-primary" class="w-full mb-1">Save Article</button>
 </div>
 </div>
 </form>
@@ -2439,7 +2439,7 @@ def admin_article_editor(article, conn, admin_user):
 <div style="margin-top:2rem;border-top:1px solid var(--border);padding-top:1.5rem;">
     <h3 style="font-size:1.1rem;margin-bottom:.75rem;color:var(--text-secondary);">Live Preview</h3>
     <div id="articlePreview" style="border:1px solid var(--border);border-radius:var(--radius-md);padding:2rem;background:var(--bg-card);min-height:300px;" class="article-body">
-        <p style="color:var(--text-muted);">Start writing to see preview...</p>
+        <p class="text-muted">Start writing to see preview...</p>
     </div>
 </div>
 
@@ -2450,7 +2450,7 @@ function autoSlug(){{var t=document.getElementById('titleInput').value;document.
 function insertTag(tag){{var e=document.getElementById('bodyEditor');var s=e.selectionStart,v=e.value,p=0;var open='<'+tag+'>',close='</'+tag+'>';e.value=v.substring(0,s)+open+v.substring(s,v.length)+close;e.focus();e.selectionStart=e.selectionEnd=s+open.length;updatePreview()}}
 function insertShortcode(text){{var e=document.getElementById('bodyEditor');var s=e.selectionStart,v=e.value;e.value=v.substring(0,s)+"\\n"+text+"\\n"+v.substring(s,v.length);e.focus();e.selectionStart=e.selectionEnd=s+text.length+2;updatePreview()}}
 function insertLink(){{var url=prompt('URL:','https://');if(url){{var t=prompt('Link text:','');if(t){{var e=document.getElementById('bodyEditor');var s=e.selectionStart,v=e.value;var a='<a href="'+url+'">'+t+'</a>';e.value=v.substring(0,s)+a+v.substring(s,v.length);e.focus();updatePreview()}}}}}
-function updatePreview(){{var body=document.getElementById('bodyEditor').value;if(!body.trim()){{document.getElementById('articlePreview').innerHTML='<p style="color:var(--text-muted);">Start writing to see preview...</p>';return}}
+function updatePreview(){{var body=document.getElementById('bodyEditor').value;if(!body.trim()){{document.getElementById('articlePreview').innerHTML='<p class="text-muted">Start writing to see preview...</p>';return}}
 var div=document.createElement('div');div.innerHTML=body;var preview=document.getElementById('articlePreview');preview.innerHTML=div.innerHTML;
 var charts=preview.querySelectorAll('[data-chart-type]');for(var i=0;i<charts.length;i++){{var c=charts[i];c.innerHTML='<canvas style="min-height:200px;border:1px dashed var(--border);border-radius:8px;display:flex;align-items:center;justify-content:center;color:var(--text-muted);"><div style="text-align:center;padding:2rem;">Chart: '+c.getAttribute('data-chart-type')+'</div></canvas>'}}}}
 updatePreview();</script>
@@ -2477,7 +2477,7 @@ def handle_prr_tracker():
     head = get_head('PRR Tracker', 'Complete audit trail of every public records request filed - agencies, stages, deadlines, and outcomes.')
     body = f'''{head}{get_header("/data/")}<section class="section"><div class="container">
 <div class="section-header"><span class="section-tag">Data Tool</span><h2 class="section-title">Public Records Request Tracker</h2><p class="section-subtitle">Complete audit trail of every records request filed - agencies, stages, deadlines, responses, appeals, and outcomes. Sourced from Gmail audit records.</p></div>
-<div class="data-browser-intro" style="margin-bottom:1rem;"><p><strong>{len(tracker)} active requests</strong> across {len(agencies)} agencies. Stages: '''
+<div class="data-browser-intro" class="mb-1"><p><strong>{len(tracker)} active requests</strong> across {len(agencies)} agencies. Stages: '''
     for s in stages:
         body += f'<span style="display:inline-block;margin:0.2rem 0.4rem;font-size:0.8rem;color:var(--text-secondary);"> {h(s[0])}</span> '
     body += '</p></div>'
@@ -2494,7 +2494,7 @@ def handle_prr_tracker():
                 <td>{status_badge(t['stage'] or 'pending')}</td>
                 <td>{format_date(t['request_date'])}</td>
                 <td>{h(t['current_deadline_status'] or '-')}</td>
-                <td style="max-width:300px;">{h((t['request_summary'] or '')[:150])}{'' if t['request_summary'] and len(t['request_summary']) > 150 else ''}</td>
+                <td class="max-w-md">{h((t['request_summary'] or '')[:150])}{'' if t['request_summary'] and len(t['request_summary']) > 150 else ''}</td>
                 <td style="font-size:0.82rem;color:var(--text-secondary);">{h(str(t['next_action'] or '')[:80])}</td>
             </tr>'''
         body += '</tbody></table></div>'
@@ -2649,7 +2649,7 @@ def handle_public_records():
 </style>
 <section class="section"><div class="container">
 <div class="section-header"><span class="section-tag">Records & Appeals</span><h2 class="section-title">Public Records Requests</h2><p class="section-subtitle">Timeline bars show the journey from filing to today. Red vertical line = 10-business-day legal deadline. Hover for dates. Click to expand details.</p></div>
-<div class="hero-stats" style="margin-bottom:1rem;">
+<div class="hero-stats" class="mb-1">
     <div class="stat"><span class="stat-value">{len(entries)}</span><span class="stat-label">Requests Filed</span></div>
     <div class="stat"><span class="stat-value">{responded}</span><span class="stat-label">Responded</span></div>
     <div class="stat"><span class="stat-value">{appealed}</span><span class="stat-label">Appealed</span></div>
@@ -2662,7 +2662,7 @@ def handle_public_records():
     <div class="pr-legend-item"><div class="pr-legend-swatch" style="background:linear-gradient(90deg,rgba(239,68,68,0.5),rgba(239,68,68,0.2));"></div> Late</div>
     <div class="pr-legend-item"><div class="pr-legend-swatch" style="background:linear-gradient(90deg,rgba(239,68,68,0.7),rgba(239,68,68,0.3));"></div> Overdue</div>
     <div class="pr-legend-item"><div class="pr-legend-swatch" style="background:linear-gradient(90deg,rgba(249,115,22,0.4),rgba(249,115,22,0.1));"></div> Pending</div>
-    <div class="pr-legend-item" style="margin-left:0.5rem;"><span style="color:#ef4444;font-weight:700;">&#9474;</span> 10-day deadline</div>
+    <div class="pr-legend-item" class="ml-sm"><span style="color:#ef4444;font-weight:700;">&#9474;</span> 10-day deadline</div>
 </div>
 '''
     head_body += (f'<div class="pr-summary-row"><strong>Worst offender:</strong> {h(worst["title"][:60])} - {worst["elapsed"]}d, {h(worst["agency"])} | <strong>{missed_count} of {len(entries)}</strong> overdue | <strong>{with_docs} requests</strong> have documents</div>' if worst else '')
@@ -2779,12 +2779,12 @@ def handle_public_records():
         {f'<div class="pr-expand-section"><h5><span class="ico">&#9888;</span> Missing / Gaps</h5><p style="color:#ef4444;">{h(entry["missing_gaps"][:250])}</p></div>' if entry['missing_gaps'] else ''}
         {f'<div class="pr-expand-section"><h5><span class="ico">&#128274;</span> Withheld</h5><p style="color:#f59e0b;">{h(entry["withheld"][:200])}</p></div>' if entry.get('withheld') else ''}
         {f'<div class="pr-expand-section full"><h5><span class="ico">&#8505;</span> Deadline Basis</h5><p>{h(entry.get("deadline_basis","")[:250])}</p></div>' if entry.get('deadline_basis') else ''}
-        {f'<div class="pr-expand-section"><h5><span class="ico">&#10132;</span> Next Action</h5><p style="color:var(--accent);">{h(entry["next_action"])}</p></div>' if entry['next_action'] else ''}
+        {f'<div class="pr-expand-section"><h5><span class="ico">&#10132;</span> Next Action</h5><p class="text-accent">{h(entry["next_action"])}</p></div>' if entry['next_action'] else ''}
     </div>
     {f'<div style="margin-top:0.6rem;display:flex;flex-wrap:wrap;gap:0.3rem;">{doc_badges}</div>' if doc_badges else ''}
 </div>'''
     
-    return head_body + '<div style="margin-top:1.5rem;"><a href="/data/" class="btn btn-ghost">&larr; Data Hub</a></div></div></section>' + get_footer()
+    return head_body + '<div class="mt-2"><a href="/data/" class="btn btn-ghost">&larr; Data Hub</a></div></div></section>' + get_footer()
 
 
 def handle_request_catalog():
@@ -2804,13 +2804,13 @@ def handle_request_catalog():
             confidence_color = 'status-open' if c['confidence'] == 'High' else 'status-pending'
             body += f'''<div class="catalog-card" style="border:1px solid var(--border);border-radius:var(--radius-md);padding:1.2rem;margin-bottom:1rem;background:var(--bg-card);">
     <div style="display:flex;justify-content:space-between;align-items:flex-start;flex-wrap:wrap;gap:0.5rem;margin-bottom:0.5rem;">
-        <h3 style="font-size:1.1rem;">{h(c['cat_id'] or '')}: {h(c['category'] or '')}</h3>
+        <h3 class="font-lg">{h(c['cat_id'] or '')}: {h(c['category'] or '')}</h3>
         <span class="status-badge {confidence_color}">{h(c['confidence'] or '')}</span>
     </div>
     <div style="display:grid;grid-template-columns:repeat(auto-fit,minmax(200px,1fr));gap:0.5rem;margin-bottom:0.8rem;font-size:0.85rem;color:var(--text-secondary);">
         <div><strong>Lane:</strong> {h(c['lane'] or '')}</div>
         <div><strong>Source Type:</strong> {h(c['source_type'] or '')}</div>
-        <div><strong>Source:</strong> <code style="font-size:0.8rem;">{h(c['source_ref'] or '')}</code></div>
+        <div><strong>Source:</strong> <code class="font-xs">{h(c['source_ref'] or '')}</code></div>
     </div>
     <p style="font-size:0.9rem;color:var(--text-secondary);margin-bottom:0.4rem;"><strong>Evidence:</strong> {h(str(c['evidence_note'] or '')[:300])}</p>
     <p style="font-size:0.85rem;color:var(--text-muted);"><strong>Scope:</strong> {h(str(c['scope_seen'] or '')[:200])}</p>
@@ -2836,34 +2836,34 @@ def data_filter_bar(page_url, search_placeholder='Search...', extra_filters='', 
     sort_by = qs.get('sort', '')
     per_page = qs.get('per_page', '50')
     
-    bar = f'<form method="get" action="{page_url}" style="margin-bottom:1rem;"><div style="display:flex;gap:0.5rem;flex-wrap:wrap;align-items:flex-end;">'
+    bar = f'<form method="get" action="{page_url}" class="mb-1"><div style="display:flex;gap:0.5rem;flex-wrap:wrap;align-items:flex-end;">'
     
     if show_search:
         bar += f'''<div style="flex:2;min-width:180px;">
-    <label style="font-size:0.75rem;color:var(--text-muted);display:block;">Search</label>
+    <label class="stat-link">Search</label>
     <input type="text" name="search" value="{h(search)}" placeholder="{search_placeholder}" 
-        style="width:100%;padding:0.5rem 0.75rem;background:var(--bg-card);border:1px solid var(--border);border-radius:6px;color:var(--text);font-size:0.85rem;">
+        class="form-input">
 </div>'''
     
     bar += extra_filters
     
     # Sort
     bar += f'''<div style="flex:1;min-width:100px;">
-    <label style="font-size:0.75rem;color:var(--text-muted);display:block;">Sort By</label>
-    <select name="sort" style="width:100%;padding:0.5rem;background:var(--bg-card);border:1px solid var(--border);border-radius:6px;color:var(--text);font-size:0.8rem;">
+    <label class="stat-link">Sort By</label>
+    <select name="sort" class="form-input-sm">
         <option value="">Default</option>'''
     bar += f'</select></div>'
     
     if show_per_page:
         bar += f'''<div style="flex:1;min-width:80px;">
-    <label style="font-size:0.75rem;color:var(--text-muted);display:block;">Per Page</label>
-    <select name="per_page" style="width:100%;padding:0.5rem;background:var(--bg-card);border:1px solid var(--border);border-radius:6px;color:var(--text);font-size:0.8rem;">'''
+    <label class="stat-link">Per Page</label>
+    <select name="per_page" class="form-input-sm">'''
         for pp in [25, 50, 100, 200]:
             sel = 'selected' if per_page == str(pp) else ''
             bar += f'<option value="{pp}" {sel}>{pp}</option>'
         bar += '</select></div>'
     
-    bar += '<div style="flex:0;min-width:70px;display:flex;align-items:flex-end;"><button type="submit" class="btn btn-primary" style="padding:0.5rem 1rem;font-size:0.85rem;">Apply</button></div>'
+    bar += '<div style="flex:0;min-width:70px;display:flex;align-items:flex-end;"><button type="submit" class="btn btn-primary" class="btn-sm font-sm">Apply</button></div>'
     bar += '</div></form>'
     return bar
 
@@ -2882,12 +2882,12 @@ def pagination_links(page_url, page, total_pages, qs_dict, per_page_val=50):
     
     html = '<div style="display:flex;gap:0.5rem;justify-content:center;margin-top:1.5rem;flex-wrap:wrap;">'
     if page > 1:
-        html += f'<a href="{plink(1)}" class="btn btn-ghost" style="padding:0.4rem 0.8rem;font-size:0.8rem;">&laquo; First</a>'
+        html += f'<a href="{plink(1)}" class="btn btn-ghost" class="btn-sm font-xs">&laquo; First</a>'
     for p in range(max(1, page-2), min(total_pages+1, page+3)):
         cls = 'btn-primary' if p == page else 'btn-ghost'
-        html += f'<a href="{plink(p)}" class="btn {cls}" style="padding:0.4rem 0.8rem;font-size:0.8rem;">{p}</a>'
+        html += f'<a href="{plink(p)}" class="btn {cls}" class="btn-sm font-xs">{p}</a>'
     if page < total_pages:
-        html += f'<a href="{plink(total_pages)}" class="btn btn-ghost" style="padding:0.4rem 0.8rem;font-size:0.8rem;">Last &raquo;</a>'
+        html += f'<a href="{plink(total_pages)}" class="btn btn-ghost" class="btn-sm font-xs">Last &raquo;</a>'
     html += '</div>'
     return html
 
@@ -2901,7 +2901,7 @@ def handle_discipline():
         districts = conn.execute("SELECT DISTINCT district_name, district_code FROM discipline_data ORDER BY district_name").fetchall()
     except:
         conn.close()
-        return f'{get_head("Discipline Data")}{get_header("/data/")}<section class="section"><div class="container"><h2>Discipline Data</h2><p style="color:var(--text-muted);">Not loaded.</p></div></section>{get_footer()}'
+        return f'{get_head("Discipline Data")}{get_header("/data/")}<section class="section"><div class="container"><h2>Discipline Data</h2><p class="text-muted">Not loaded.</p></div></section>{get_footer()}'
     
     import urllib.parse as up
     qs = {}
@@ -2949,8 +2949,8 @@ def handle_discipline():
     
     # Build page
     extra_filters = f'''<div style="flex:1;min-width:120px;">
-    <label style="font-size:0.75rem;color:var(--text-muted);display:block;">Year</label>
-    <select name="year" style="width:100%;padding:0.5rem;background:var(--bg-card);border:1px solid var(--border);border-radius:6px;color:var(--text);font-size:0.8rem;">
+    <label class="stat-link">Year</label>
+    <select name="year" class="form-input-sm">
         <option value="">All Years</option>'''
     for y in years:
         sel = 'selected' if y == year_filter else ''
@@ -2958,8 +2958,8 @@ def handle_discipline():
     extra_filters += '</select></div>'
     
     extra_filters += '''<div style="flex:1;min-width:160px;">
-    <label style="font-size:0.75rem;color:var(--text-muted);display:block;">District</label>
-    <select name="district" style="width:100%;padding:0.5rem;background:var(--bg-card);border:1px solid var(--border);border-radius:6px;color:var(--text);font-size:0.8rem;">
+    <label class="stat-link">District</label>
+    <select name="district" class="form-input-sm">
         <option value="">All Districts</option>'''
     for d in districts:
         sel = 'selected' if d[1] == district_filter else ''
@@ -2979,22 +2979,22 @@ def handle_discipline():
     filter_bar = filter_bar.replace(f'value="{sort_by}"', f'value="{sort_by}" selected')
     
     head_body = f'{get_head("Discipline Data", "District-level discipline: suspensions, expulsions, arrests, law enforcement referrals.")}{get_header("/data/")}<section class="section"><div class="container">'
-    head_body += f'<div class="hero-stats" style="margin-bottom:1rem;"><div class="stat"><span class="stat-value">{total:,}</span><span class="stat-label">Records</span></div><div class="stat"><span class="stat-value">{len(years)}</span><span class="stat-label">Years</span></div><div class="stat"><span class="stat-value">{len(districts)}</span><span class="stat-label">Districts</span></div><div class="stat"><span class="stat-value">{total_pages}</span><span class="stat-label">Pages</span></div></div>'
-    head_body += '<h2 style="font-size:1.5rem;margin-bottom:0.75rem;">Discipline Data Explorer</h2>'
-    head_body += '<p style="color:var(--text-muted);margin-bottom:1rem;">Every metric sortable - click sort dropdown. Sourced from DESE.</p>'
+    head_body += f'<div class="hero-stats" class="mb-1"><div class="stat"><span class="stat-value">{total:,}</span><span class="stat-label">Records</span></div><div class="stat"><span class="stat-value">{len(years)}</span><span class="stat-label">Years</span></div><div class="stat"><span class="stat-value">{len(districts)}</span><span class="stat-label">Districts</span></div><div class="stat"><span class="stat-value">{total_pages}</span><span class="stat-label">Pages</span></div></div>'
+    head_body += '<h2 class="font-lg mb-075">Discipline Data Explorer</h2>'
+    head_body += '<p class="text-muted mb-1">Every metric sortable - click sort dropdown. Sourced from DESE.</p>'
     head_body += filter_bar
     
     if not rows:
         head_body += '<div class="empty-state"><p>No records match.</p></div>'
     else:
-        head_body += f'<p style="color:var(--text-muted);font-size:0.8rem;">{offset+1}-{min(offset+per_page,total)} of {total:,}</p>'
+        head_body += f'<p class="text-muted font-xs">{offset+1}-{min(offset+per_page,total)} of {total:,}</p>'
         head_body += '<div class="repo-table-wrapper"><table class="repo-table"><thead><tr><th>District</th><th>Year</th><th>Students</th><th>Disciplined</th><th>% In-School</th><th>% Out-School</th><th>% Expulsion</th><th>% Arrest</th><th>% Emerg</th><th>% Alt</th></tr></thead><tbody>'
         for r in rows:
             head_body += f'<tr><td><strong>{h(r["district_name"])}</strong></td><td>{h(r["school_year"])}</td><td>{r["students"] or 0:,}</td><td>{r["students_disciplined"] or 0:,}</td><td>{h(str(r["pct_in_school_susp"] or "-"))}%</td><td>{h(str(r["pct_out_school_susp"] or "-"))}%</td><td>{h(str(r["pct_expulsion"] or "-"))}%</td><td>{h(str(r["pct_arrest"] if "pct_arrest" in r.keys() else "-"))}%</td><td>{h(str(r["pct_emergency_removal"] if "pct_emergency_removal" in r.keys() else "-"))}%</td><td>{h(str(r["pct_alt_setting"] if "pct_alt_setting" in r.keys() else "-"))}%</td></tr>'
         head_body += '</tbody></table></div>'
         head_body += pagination_links('/data/discipline/', page, total_pages, qs)
     
-    return head_body + '<div style="margin-top:1rem;"><a href="/data/" class="btn btn-ghost">&larr; Data Hub</a></div></div></section>' + get_footer()
+    return head_body + '<div class="mt-1"><a href="/data/" class="btn btn-ghost">&larr; Data Hub</a></div></div></section>' + get_footer()
 
 
 def handle_enrollment():
@@ -3004,7 +3004,7 @@ def handle_enrollment():
         districts = conn.execute("SELECT DISTINCT district_name, district_code FROM enrollment_data ORDER BY district_name").fetchall()
     except:
         conn.close()
-        return f'{get_head("Enrollment Data")}{get_header("/data/")}<section class="section"><div class="container"><h2>Enrollment Data</h2><p style="color:var(--text-muted);">Not loaded.</p></div></section>{get_footer()}'
+        return f'{get_head("Enrollment Data")}{get_header("/data/")}<section class="section"><div class="container"><h2>Enrollment Data</h2><p class="text-muted">Not loaded.</p></div></section>{get_footer()}'
     
     import urllib.parse as up
     qs = {}; 
@@ -3028,9 +3028,9 @@ def handle_enrollment():
     rows = conn.execute(f'SELECT * FROM enrollment_data{where_clause} ORDER BY {order} LIMIT ? OFFSET ?', params+[per_page,offset]).fetchall()
     conn.close()
     
-    extra = f'''<div style="flex:1;min-width:110px;"><label style="font-size:0.75rem;color:var(--text-muted);display:block;">Year</label><select name="year" style="width:100%;padding:0.5rem;background:var(--bg-card);border:1px solid var(--border);border-radius:6px;color:var(--text);font-size:0.8rem;"><option value="">All</option>'''
+    extra = f'''<div class="flex-min-110"><label class="stat-link">Year</label><select name="year" class="form-input-sm"><option value="">All</option>'''
     for y in years: extra += f'<option value="{h(y)}" {"selected" if y==year_filter else ""}>{h(y)}</option>'
-    extra += '</select></div><div style="flex:1;min-width:150px;"><label style="font-size:0.75rem;color:var(--text-muted);display:block;">District</label><select name="district" style="width:100%;padding:0.5rem;background:var(--bg-card);border:1px solid var(--border);border-radius:6px;color:var(--text);font-size:0.8rem;"><option value="">All</option>'
+    extra += '</select></div><div class="flex-min-150"><label class="stat-link">District</label><select name="district" class="form-input-sm"><option value="">All</option>'
     for d in districts: extra += f'<option value="{h(d[1])}" {"selected" if d[1]==district_filter else ""}>{h(d[0])}</option>'
     extra += '</select></div>'
     
@@ -3038,16 +3038,16 @@ def handle_enrollment():
     filter_bar = data_filter_bar('/data/enrollment/','District name...',extra).replace('<option value="">Default</option>', f'<option value="">Default</option>{sort_opts}').replace(f'value="{sort_by}"', f'value="{sort_by}" selected')
     
     body = f'{get_head("Enrollment Demographics","District enrollment: SPED, low income, EL, high needs, FLNE.")}{get_header("/data/")}<section class="section"><div class="container">'
-    body += f'<div class="hero-stats" style="margin-bottom:1rem;"><div class="stat"><span class="stat-value">{total:,}</span><span class="stat-label">Records</span></div><div class="stat"><span class="stat-value">{len(years)}</span><span class="stat-label">Years</span></div><div class="stat"><span class="stat-value">{len(districts)}</span><span class="stat-label">Districts</span></div><div class="stat"><span class="stat-value">{total_pages}</span><span class="stat-label">Pages</span></div></div>'
-    body += '<h2 style="font-size:1.5rem;margin-bottom:0.75rem;">Enrollment & Demographics Explorer</h2><p style="color:var(--text-muted);margin-bottom:1rem;">Every metric sortable. Sourced from DESE.</p>'+filter_bar
+    body += f'<div class="hero-stats" class="mb-1"><div class="stat"><span class="stat-value">{total:,}</span><span class="stat-label">Records</span></div><div class="stat"><span class="stat-value">{len(years)}</span><span class="stat-label">Years</span></div><div class="stat"><span class="stat-value">{len(districts)}</span><span class="stat-label">Districts</span></div><div class="stat"><span class="stat-value">{total_pages}</span><span class="stat-label">Pages</span></div></div>'
+    body += '<h2 class="font-lg mb-075">Enrollment & Demographics Explorer</h2><p class="text-muted mb-1">Every metric sortable. Sourced from DESE.</p>'+filter_bar
     if not rows: body += '<div class="empty-state"><p>No records match.</p></div>'
     else:
-        body += f'<p style="color:var(--text-muted);font-size:0.8rem;">{offset+1}-{min(offset+per_page,total)} of {total:,}</p>'
+        body += f'<p class="text-muted font-xs">{offset+1}-{min(offset+per_page,total)} of {total:,}</p>'
         body += '<div class="repo-table-wrapper"><table class="repo-table"><thead><tr><th>District</th><th>Year</th><th>% SPED</th><th>% Low Income</th><th>% EL</th><th>% High Needs</th><th>% FLNE</th></tr></thead><tbody>'
         for r in rows:
             body += f'<tr><td><strong>{h(r["district_name"])}</strong></td><td>{h(r["school_year"])}</td><td>{h(str(r["sped_pct"] if "sped_pct" in r.keys() else "-"))}%</td><td>{h(str(r["low_income_pct"] if "low_income_pct" in r.keys() else "-"))}%</td><td>{h(str(r["el_pct"] if "el_pct" in r.keys() else "-"))}%</td><td>{h(str(r["high_needs_pct"] if "high_needs_pct" in r.keys() else "-"))}%</td><td>{h(str(r["flne_pct"] if "flne_pct" in r.keys() else "-"))}%</td></tr>'
         body += '</tbody></table></div>'+pagination_links('/data/enrollment/',page,total_pages,qs)
-    return body + '<div style="margin-top:1rem;"><a href="/data/" class="btn btn-ghost">&larr; Data Hub</a></div></div></section>'+get_footer()
+    return body + '<div class="mt-1"><a href="/data/" class="btn btn-ghost">&larr; Data Hub</a></div></div></section>'+get_footer()
 
 
 def handle_restraint_data_firestore(fs_db):
@@ -3059,7 +3059,7 @@ def handle_restraint_data_firestore(fs_db):
         # Load all restraint docs from Firestore
         all_docs = list(fs_db.collection('restraint_data').stream())
         if not all_docs:
-            return f'{get_head("Restraint Data")}{get_header("/data/")}<section class="section"><div class="container"><h2>Restraint Data</h2><p style="color:var(--text-muted);">No data in Firestore. Run migration first.</p></div></section>{get_footer()}'
+            return f'{get_head("Restraint Data")}{get_header("/data/")}<section class="section"><div class="container"><h2>Restraint Data</h2><p class="text-muted">No data in Firestore. Run migration first.</p></div></section>{get_footer()}'
         
         rows = [d.to_dict() for d in all_docs]
         # Filter summary rows
@@ -3071,7 +3071,7 @@ def handle_restraint_data_firestore(fs_db):
                                      for r in rows if r.get('district_name')), key=lambda x: x[0])
         
     except Exception as e:
-        return f'{get_head("Restraint Data")}{get_header("/data/")}<section class="section"><div class="container"><h2>Restraint Data</h2><p style="color:var(--text-muted);">Firestore error: {h(str(e)[:200])}</p></div></section>{get_footer()}'
+        return f'{get_head("Restraint Data")}{get_header("/data/")}<section class="section"><div class="container"><h2>Restraint Data</h2><p class="text-muted">Firestore error: {h(str(e)[:200])}</p></div></section>{get_footer()}'
     
     qs = {}
     if '?' in _current_path: qs = dict(up.parse_qsl(_current_path.split('?',1)[1]))
@@ -3157,9 +3157,9 @@ def handle_restraint_data_firestore(fs_db):
     annual_avg = {k: sum(v)/len(v) for k, v in annual_avg.items()}
     
     # Filter bar HTML
-    extra = f'<div style="flex:1;min-width:110px;"><label style="font-size:0.75rem;color:var(--text-muted);display:block;">Year</label><select name="year" style="width:100%;padding:0.5rem;background:var(--bg-card);border:1px solid var(--border);border-radius:6px;color:var(--text);font-size:0.8rem;"><option value="">All</option>'
+    extra = f'<div class="flex-min-110"><label class="stat-link">Year</label><select name="year" class="form-input-sm"><option value="">All</option>'
     for y in years: extra += f'<option value="{h(y)}" {"selected" if y==year_filter else ""}>{h(y)}</option>'
-    extra += '</select></div><div style="flex:1;min-width:150px;"><label style="font-size:0.75rem;color:var(--text-muted);display:block;">District</label><select name="district" style="width:100%;padding:0.5rem;background:var(--bg-card);border:1px solid var(--border);border-radius:6px;color:var(--text);font-size:0.8rem;"><option value="">All</option>'
+    extra += '</select></div><div class="flex-min-150"><label class="stat-link">District</label><select name="district" class="form-input-sm"><option value="">All</option>'
     for d in districts_list: extra += f'<option value="{h(d[1])}" {"selected" if d[1]==district_filter else ""}>{h(d[0])}</option>'
     extra += '</select></div>'
     
@@ -3197,30 +3197,30 @@ def handle_restraint_data_firestore(fs_db):
     
     body = f'{get_head("Restraint & Seclusion","School-level restraint data from DESE, 2016-2025.")}{get_header("/data/")}'
     body += '<section class="section"><div class="container">'
-    body += f'<div class="hero-stats" style="margin-bottom:1.5rem;"><div class="stat"><span class="stat-value">{total:,}</span><span class="stat-label">Records</span></div><div class="stat"><span class="stat-value">{len(years)}</span><span class="stat-label">Years</span></div><div class="stat"><span class="stat-value">{len(districts_list)}</span><span class="stat-label">Districts</span></div><div class="stat"><span class="stat-value">{sw_rate}</span><span class="stat-label">Statewide Rate/100</span></div></div>'
+    body += f'<div class="hero-stats" class="mb-2"><div class="stat"><span class="stat-value">{total:,}</span><span class="stat-label">Records</span></div><div class="stat"><span class="stat-value">{len(years)}</span><span class="stat-label">Years</span></div><div class="stat"><span class="stat-value">{len(districts_list)}</span><span class="stat-label">Districts</span></div><div class="stat"><span class="stat-value">{sw_rate}</span><span class="stat-label">Statewide Rate/100</span></div></div>'
     
     body += '''<div class="restraint-info-box"><strong>About This Data</strong><br>Data sourced from the <a href="https://educationtocareer.data.mass.gov/" target="_blank" rel="noopener">Massachusetts E2C Data Hub</a> (Socrata API) and the <a href="https://profiles.doe.mass.edu/statereport/restraints.aspx" target="_blank" rel="noopener">DESE Profiles website</a>. DESE publishes school-year restraint data in <strong>late February</strong> of the following year. Dataset spans 2016-2025.<br><br><strong>Note:</strong> Counts below 6 are suppressed. True statewide totals are higher than published figures. School demographics (SPED%, income) joined from enrollment dataset.</div>'''
     
     # Row 1: Full-width YOY chart
-    body += f'<div class="restraint-chart-card full-width" style="margin-bottom:1.5rem;"><h3 class="restraint-chart-title">Statewide Restraint Trends (2016-2025)</h3><div style="position:relative;height:350px;"><canvas id="restraintYOYChart"></canvas></div></div>'
+    body += f'<div class="restraint-chart-card full-width" class="mb-2"><h3 class="restraint-chart-title">Statewide Restraint Trends (2016-2025)</h3><div class="chart-container"><canvas id="restraintYOYChart"></canvas></div></div>'
     
     # Row 2: Three charts
     body += f'''<div class="restraint-charts">
-        <div class="restraint-chart-card"><h3 class="restraint-chart-title">Top 15 Districts by Rate</h3><div style="position:relative;height:350px;"><canvas id="restraintDistrictChart"></canvas></div></div>
-        <div class="restraint-chart-card"><h3 class="restraint-chart-title">Rate Distribution</h3><div style="position:relative;height:350px;"><canvas id="restraintHistChart"></canvas></div></div>
-        <div class="restraint-chart-card"><h3 class="restraint-chart-title">Injury Rate by Year</h3><div style="position:relative;height:350px;"><canvas id="restraintInjuryChart"></canvas></div></div>
+        <div class="restraint-chart-card"><h3 class="restraint-chart-title">Top 15 Districts by Rate</h3><div class="chart-container"><canvas id="restraintDistrictChart"></canvas></div></div>
+        <div class="restraint-chart-card"><h3 class="restraint-chart-title">Rate Distribution</h3><div class="chart-container"><canvas id="restraintHistChart"></canvas></div></div>
+        <div class="restraint-chart-card"><h3 class="restraint-chart-title">Injury Rate by Year</h3><div class="chart-container"><canvas id="restraintInjuryChart"></canvas></div></div>
     </div>'''
     
     # YOY table
     if yoy_data:
-        body += '<div style="margin-bottom:1.5rem;"><h3 style="margin-bottom:0.25rem;font-size:1.1rem;">Year-over-Year Statewide Totals</h3><p style="color:var(--accent-glow);font-size:0.78rem;margin-bottom:0.75rem;"><strong>Click column headers to sort.</strong></p><div class="repo-table-wrapper"><table class="repo-table sortable"><thead><tr><th data-sort="text">Year</th><th data-sort="number">Schools</th><th data-sort="number">Students</th><th data-sort="number">Restraints</th><th data-sort="number">Injuries</th><th data-sort="number">Rate/100</th></tr></thead><tbody>'
+        body += '<div class="mb-2"><h3 class="mb-025 font-lg">Year-over-Year Statewide Totals</h3><p style="color:var(--accent-glow);font-size:0.78rem;margin-bottom:0.75rem;"><strong>Click column headers to sort.</strong></p><div class="repo-table-wrapper"><table class="repo-table sortable"><thead><tr><th data-sort="text">Year</th><th data-sort="number">Schools</th><th data-sort="number">Students</th><th data-sort="number">Restraints</th><th data-sort="number">Injuries</th><th data-sort="number">Rate/100</th></tr></thead><tbody>'
         for t in yoy_data:
             rate = f'{t["sr"]/t["se"]*100:.2f}' if t["se"] and t["se"] > 0 and t["sr"] else '-'
             body += f'<tr><td><strong>{h(t["school_year"])}</strong></td><td>{t["sc"]:,}</td><td>{t["ss"]:,}</td><td>{t["sr"]:,}</td><td>{t["si"]:,}</td><td>{rate}</td></tr>'
         body += '</tbody></table></div></div>'
     
     # School-level table with tooltips
-    body += '<div style="display:flex;justify-content:space-between;align-items:center;flex-wrap:wrap;gap:0.5rem;margin-bottom:0.5rem;"><h3 style="font-size:1.1rem;">School-Level Records</h3>'
+    body += '<div style="display:flex;justify-content:space-between;align-items:center;flex-wrap:wrap;gap:0.5rem;margin-bottom:0.5rem;"><h3 class="font-lg">School-Level Records</h3>'
     export_params = dict(qs); export_params.pop('page', None)
     export_url = '/data/restraint/export?' + up.urlencode(export_params)
     body += f'<a href="{export_url}" class="restraint-export-btn"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" width="16" height="16"><path d="M21 15v4a2 2 0 01-2 2H5a2 2 0 01-2-2v-4"/><polyline points="7 10 12 15 17 10"/><line x1="12" y1="15" x2="12" y2="3"/></svg> Export CSV</a></div>'
@@ -3229,7 +3229,7 @@ def handle_restraint_data_firestore(fs_db):
     if not paged:
         body += '<div class="empty-state"><p>No records match your filters.</p></div>'
     else:
-        body += f'<p style="color:var(--text-muted);font-size:0.8rem;">{offset+1}-{min(offset+per_page,total)} of {total:,}</p>'
+        body += f'<p class="text-muted font-xs">{offset+1}-{min(offset+per_page,total)} of {total:,}</p>'
         # Column tooltips
         tips = {'Rate/100': '(Restraints / Enrollment) &times; 100', 'Inj Rate': 'Injuries per 100 students', 'SPED%': '% Students with Disabilities', 'Students': 'Unique students restrained (&lt;6 suppressed)', 'Restr.': 'Total restraint incidents', 'Inj.': 'Injuries during restraints'}
         th = lambda label: f'<th data-sort="number"><span class="col-has-tip">{label}<span class="col-tip">{tips.get(label,"")}</span></span></th>' if label in tips else f'<th data-sort="number">{label}</th>'
@@ -3260,7 +3260,7 @@ def handle_restraint_data_firestore(fs_db):
                     color = 'var(--danger)' if pct_diff > 0 else 'var(--success)'
                     arrow = '&#9650;' if pct_diff > 0 else '&#9660;'
                     delta_html = f' <span style="color:{color};font-size:0.7rem;">{arrow}{abs(pct_diff):.0f}%</span>'
-            body += f'<tr><td style="white-space:nowrap;">{h(str(r.get("school_year","")))}</td><td>{h(str(r.get("district_name","")))}</td><td><strong>{h(str(r.get("school_name","-")))})</strong></td><td>{r.get("enrollment", 0) or 0:,}</td><td>{students}</td><td>{restraints}</td><td>{injuries}</td><td style="white-space:nowrap;">{rate}{delta_html}</td><td>{inj_rate_str}</td><td>{sped_str}</td><td>{li_str}</td></tr>'
+            body += f'<tr><td class="nowrap">{h(str(r.get("school_year","")))}</td><td>{h(str(r.get("district_name","")))}</td><td><strong>{h(str(r.get("school_name","-")))})</strong></td><td>{r.get("enrollment", 0) or 0:,}</td><td>{students}</td><td>{restraints}</td><td>{injuries}</td><td class="nowrap">{rate}{delta_html}</td><td>{inj_rate_str}</td><td>{sped_str}</td><td>{li_str}</td></tr>'
         body += '</tbody></table></div>' + pagination_links('/data/restraint/', page, total_pages, qs)
     
     # Injury chart data
@@ -3305,7 +3305,7 @@ if(va<vb)return asc?-1:1;if(va>vb)return asc?1:-1;return 0;
 rows.forEach(function(r){{tbody.appendChild(r)}});
 }};}});
 }});</script>'''
-    body += '<div style="margin-top:1rem;"><a href="/data/" class="btn btn-ghost">&larr; Data Hub</a></div></div></section>' + get_footer()
+    body += '<div class="mt-1"><a href="/data/" class="btn btn-ghost">&larr; Data Hub</a></div></div></section>' + get_footer()
     return body
 
 
@@ -3320,7 +3320,7 @@ def handle_restraint_data():
         districts = conn.execute("SELECT DISTINCT district_name, district_code FROM restraint_data WHERE is_summary_row=0 ORDER BY district_name").fetchall()
     except:
         conn.close()
-        return f'{get_head("Restraint Data")}{get_header("/data/")}<section class="section"><div class="container"><h2>Restraint Data</h2><p style="color:var(--text-muted);">Data not loaded. Run the ingest pipeline first.</p></div></section>{get_footer()}'
+        return f'{get_head("Restraint Data")}{get_header("/data/")}<section class="section"><div class="container"><h2>Restraint Data</h2><p class="text-muted">Data not loaded. Run the ingest pipeline first.</p></div></section>{get_footer()}'
     
     import urllib.parse as up
     qs = {}; 
@@ -3362,9 +3362,9 @@ def handle_restraint_data():
     conn.close()
     
     # Filter bar
-    extra = f'''<div style="flex:1;min-width:110px;"><label style="font-size:0.75rem;color:var(--text-muted);display:block;">Year</label><select name="year" style="width:100%;padding:0.5rem;background:var(--bg-card);border:1px solid var(--border);border-radius:6px;color:var(--text);font-size:0.8rem;"><option value="">All</option>'''
+    extra = f'''<div class="flex-min-110"><label class="stat-link">Year</label><select name="year" class="form-input-sm"><option value="">All</option>'''
     for y in years: extra += f'<option value="{h(y)}" {"selected" if y==year_filter else ""}>{h(y)}</option>'
-    extra += '</select></div><div style="flex:1;min-width:150px;"><label style="font-size:0.75rem;color:var(--text-muted);display:block;">District</label><select name="district" style="width:100%;padding:0.5rem;background:var(--bg-card);border:1px solid var(--border);border-radius:6px;color:var(--text);font-size:0.8rem;"><option value="">All</option>'
+    extra += '</select></div><div class="flex-min-150"><label class="stat-link">District</label><select name="district" class="form-input-sm"><option value="">All</option>'
     for d in districts: extra += f'<option value="{h(d[1])}" {"selected" if d[1]==district_filter else ""}>{h(d[0])}</option>'
     extra += '</select></div>'
     
@@ -3376,7 +3376,7 @@ def handle_restraint_data():
     body += '<section class="section"><div class="container">'
     
     # Hero stats
-    body += f'''<div class="hero-stats" style="margin-bottom:1.5rem;">
+    body += f'''<div class="hero-stats" class="mb-2">
         <div class="stat"><span class="stat-value">{total:,}</span><span class="stat-label">Records</span></div>
         <div class="stat"><span class="stat-value">{len(years)}</span><span class="stat-label">Years</span></div>
         <div class="stat"><span class="stat-value">{len(districts)}</span><span class="stat-label">Districts</span></div>
@@ -3399,7 +3399,7 @@ def handle_restraint_data():
     body += f'''<div class="restraint-charts">
         <div class="restraint-chart-card full-width">
             <h3 class="restraint-chart-title">Statewide Restraint Trends (2016-2025)</h3>
-            <div style="position:relative;height:350px;"><canvas id="restraintYOYChart"></canvas></div>
+            <div class="chart-container"><canvas id="restraintYOYChart"></canvas></div>
         </div>
         <div class="restraint-chart-card">
             <h3 class="restraint-chart-title">Top 15 Districts by Restraint Rate</h3>
@@ -3409,14 +3409,14 @@ def handle_restraint_data():
     
     # YOY summary table
     if yoy_data:
-        body += '<div style="margin-bottom:1.5rem;"><h3 style="margin-bottom:0.25rem;font-size:1.1rem;">Year-over-Year Statewide Totals</h3><p style="color:var(--accent-glow);font-size:0.78rem;margin-bottom:0.75rem;"><strong>Click column headers to sort.</strong> Note: Seed data may show identical totals across years — full per-year data regeneration pending.</p><div class="repo-table-wrapper"><table class="repo-table sortable"><thead><tr><th data-sort="text">Year</th><th data-sort="number">Schools</th><th data-sort="number">Students</th><th data-sort="number">Restraints</th><th data-sort="number">Injuries</th><th data-sort="number">Rate/100</th></tr></thead><tbody>'
+        body += '<div class="mb-2"><h3 class="mb-025 font-lg">Year-over-Year Statewide Totals</h3><p style="color:var(--accent-glow);font-size:0.78rem;margin-bottom:0.75rem;"><strong>Click column headers to sort.</strong> Note: Seed data may show identical totals across years — full per-year data regeneration pending.</p><div class="repo-table-wrapper"><table class="repo-table sortable"><thead><tr><th data-sort="text">Year</th><th data-sort="number">Schools</th><th data-sort="number">Students</th><th data-sort="number">Restraints</th><th data-sort="number">Injuries</th><th data-sort="number">Rate/100</th></tr></thead><tbody>'
         for t in yoy_data:
             rate = f'{t["sr"]/t["se"]*100:.2f}' if t["se"] and t["se"]>0 and t["sr"] else '-'
             body += f'<tr><td><strong>{h(t["school_year"])}</strong></td><td>{t["sc"]:,}</td><td>{t["ss"]:,}</td><td>{t["sr"]:,}</td><td>{t["si"]:,}</td><td>{rate}</td></tr>'
         body += '</tbody></table></div></div>'
     
     # School-level records
-    body += '<div style="display:flex;justify-content:space-between;align-items:center;flex-wrap:wrap;gap:0.5rem;margin-bottom:0.5rem;"><h3 style="font-size:1.1rem;">School-Level Records</h3>'
+    body += '<div style="display:flex;justify-content:space-between;align-items:center;flex-wrap:wrap;gap:0.5rem;margin-bottom:0.5rem;"><h3 class="font-lg">School-Level Records</h3>'
     
     # CSV export link
     export_params = dict(qs); export_params.pop('page',None)
@@ -3429,7 +3429,7 @@ def handle_restraint_data():
     if not rows:
         body += '<div class="empty-state"><p>No records match your filters.</p></div>'
     else:
-        body += f'<p style="color:var(--text-muted);font-size:0.8rem;">{offset+1}-{min(offset+per_page,total)} of {total:,}</p>'
+        body += f'<p class="text-muted font-xs">{offset+1}-{min(offset+per_page,total)} of {total:,}</p>'
         body += '<div class="repo-table-wrapper"><table class="repo-table sortable"><thead><tr><th data-sort="text">Year</th><th data-sort="text">District</th><th data-sort="text">School</th><th data-sort="number">Enroll</th><th data-sort="number">Students</th><th data-sort="number">Restr.</th><th data-sort="number">Inj.</th><th data-sort="number">Rate/100</th></tr></thead><tbody>'
         for r in rows:
             students = r['students_restrained'] if r['students_restrained_suppressed'] == 0 else f'&lt;6'
@@ -3444,7 +3444,7 @@ def handle_restraint_data():
                     color = 'var(--danger)' if pct_diff > 0 else 'var(--success)'
                     arrow = '&#9650;' if pct_diff > 0 else '&#9660;'
                     delta_html = f' <span style="color:{color};font-size:0.7rem;">{arrow}{abs(pct_diff):.0f}%</span>'
-            body += f'<tr><td style="white-space:nowrap;">{h(r["school_year"])}</td><td>{h(r["district_name"])}</td><td><strong>{h(r["school_name"] or "-")}</strong></td><td>{r["enrollment"] or 0:,}</td><td>{students}</td><td>{restraints}</td><td>{injuries}</td><td style="white-space:nowrap;">{rate}{delta_html}</td></tr>'
+            body += f'<tr><td class="nowrap">{h(r["school_year"])}</td><td>{h(r["district_name"])}</td><td><strong>{h(r["school_name"] or "-")}</strong></td><td>{r["enrollment"] or 0:,}</td><td>{students}</td><td>{restraints}</td><td>{injuries}</td><td class="nowrap">{rate}{delta_html}</td></tr>'
         body += '</tbody></table></div>'+pagination_links('/data/restraint/',page,total_pages,qs)
     
     # Chart configs as Python dicts → JSON for inline JS
@@ -3515,7 +3515,7 @@ document.querySelectorAll("table.sortable th").forEach(function(th,col){{
 }});
 }});</script>'''
     
-    body += '<div style="margin-top:1rem;"><a href="/data/" class="btn btn-ghost">&larr; Data Hub</a></div></div></section>'+get_footer()
+    body += '<div class="mt-1"><a href="/data/" class="btn btn-ghost">&larr; Data Hub</a></div></div></section>'+get_footer()
     return body
 
 
@@ -3658,7 +3658,7 @@ def handle_prs_data():
         
     except Exception as e:
         conn.close()
-        return f'{get_head("PRS Data Dashboard")}{get_header("/data/")}<section class="section"><div class="container"><h2>PRS Data Dashboard</h2><p style="color:var(--text-muted);">PRS data table not found. Run the data pipeline to load it.</p><div style="margin-top:1.5rem;"><a href="/data/" class="btn btn-ghost">&larr; Data Hub</a></div></div></section>{get_footer()}'
+        return f'{get_head("PRS Data Dashboard")}{get_header("/data/")}<section class="section"><div class="container"><h2>PRS Data Dashboard</h2><p class="text-muted">PRS data table not found. Run the data pipeline to load it.</p><div class="mt-2"><a href="/data/" class="btn btn-ghost">&larr; Data Hub</a></div></div></section>{get_footer()}'
     
     conn.close()
     
@@ -3666,7 +3666,7 @@ def handle_prs_data():
     head_body = f'{get_head("PRS Data Dashboard", "DESE Problem Resolution System - complaint intake, findings, and closure data.")}{get_header("/data/")}<section class="section"><div class="container">'
     
     # Stats row
-    head_body += f'''<div class="hero-stats" style="margin-bottom:1rem;">
+    head_body += f'''<div class="hero-stats" class="mb-1">
     <div class="stat"><span class="stat-value">{total:,}</span><span class="stat-label">Filtered Records</span></div>
     <div class="stat"><span class="stat-value">{total_all:,}</span><span class="stat-label">Total Database</span></div>
     <div class="stat"><span class="stat-value">{stats.get("open",0):,}</span><span class="stat-label">Open/Active</span></div>
@@ -3675,15 +3675,15 @@ def handle_prs_data():
 </div>'''
     
     # Search + Filter bar
-    head_body += f'''<form method="get" action="/data/prs/" style="margin-bottom:1rem;">
+    head_body += f'''<form method="get" action="/data/prs/" class="mb-1">
 <div style="display:flex;gap:0.5rem;flex-wrap:wrap;align-items:flex-end;">
     <div style="flex:2;min-width:200px;">
-        <label style="font-size:0.75rem;color:var(--text-muted);display:block;">Search</label>
+        <label class="stat-link">Search</label>
         <input type="text" name="search" value="{h(search)}" placeholder="PRS number, district, category..." 
-            style="width:100%;padding:0.5rem 0.75rem;background:var(--bg-card);border:1px solid var(--border);border-radius:6px;color:var(--text);font-size:0.85rem;">
+            class="form-input">
     </div>
     <div style="flex:1;min-width:140px;">
-        <label style="font-size:0.75rem;color:var(--text-muted);display:block;">Status (multi-select)</label>
+        <label class="stat-link">Status (multi-select)</label>
         <select name="status" multiple style="width:100%;padding:0.5rem;background:var(--bg-card);border:1px solid var(--border);border-radius:6px;color:var(--text);font-size:0.8rem;min-height:36px;" size="3">
             <option value="">All Statuses</option>'''
     for s in statuses:
@@ -3692,7 +3692,7 @@ def handle_prs_data():
     head_body += '''</select>
     </div>
     <div style="flex:1;min-width:140px;">
-        <label style="font-size:0.75rem;color:var(--text-muted);display:block;">Category (multi)</label>
+        <label class="stat-link">Category (multi)</label>
         <select name="category" multiple style="width:100%;padding:0.5rem;background:var(--bg-card);border:1px solid var(--border);border-radius:6px;color:var(--text);font-size:0.8rem;min-height:36px;" size="3">'''
     for c in categories:
         sel = 'selected' if c in cat_filter.split(',') else ''
@@ -3700,8 +3700,8 @@ def handle_prs_data():
     head_body += '''</select>
     </div>
     <div style="flex:1;min-width:120px;">
-        <label style="font-size:0.75rem;color:var(--text-muted);display:block;">Closure Code</label>
-        <select name="closure" style="width:100%;padding:0.5rem;background:var(--bg-card);border:1px solid var(--border);border-radius:6px;color:var(--text);font-size:0.8rem;">
+        <label class="stat-link">Closure Code</label>
+        <select name="closure" class="form-input-sm">
             <option value="">All</option>'''
     for cl in closures:
         sel = 'selected' if cl == closure_filter else ''
@@ -3709,8 +3709,8 @@ def handle_prs_data():
     head_body += '''</select>
     </div>
     <div style="flex:1;min-width:100px;">
-        <label style="font-size:0.75rem;color:var(--text-muted);display:block;">Sort By</label>
-        <select name="sort" style="width:100%;padding:0.5rem;background:var(--bg-card);border:1px solid var(--border);border-radius:6px;color:var(--text);font-size:0.8rem;">'''
+        <label class="stat-link">Sort By</label>
+        <select name="sort" class="form-input-sm">'''
     sort_opts = [
         ('intake_date_desc', 'Date (Newest)'), ('intake_date_asc', 'Date (Oldest)'),
         ('prs_number_asc', 'PRS # (A-Z)'), ('prs_number_desc', 'PRS # (Z-A)'),
@@ -3723,22 +3723,22 @@ def handle_prs_data():
     head_body += '''</select>
     </div>
     <div style="flex:1;min-width:80px;">
-        <label style="font-size:0.75rem;color:var(--text-muted);display:block;">Per Page</label>
-        <select name="per_page" style="width:100%;padding:0.5rem;background:var(--bg-card);border:1px solid var(--border);border-radius:6px;color:var(--text);font-size:0.8rem;">'''
+        <label class="stat-link">Per Page</label>
+        <select name="per_page" class="form-input-sm">'''
     for pp in [25, 50, 100, 200]:
         sel = 'selected' if per_page == pp else ''
         head_body += f'<option value="{pp}" {sel}>{pp}</option>'
     head_body += '''</select>
     </div>
     <div style="flex:0;min-width:80px;display:flex;align-items:flex-end;">
-        <button type="submit" class="btn btn-primary" style="padding:0.5rem 1rem;font-size:0.85rem;">Filter</button>
+        <button type="submit" class="btn btn-primary" class="btn-sm font-sm">Filter</button>
     </div>
 </div>
 </form>'''
     
     # Results table
     if not rows:
-        head_body += '<div class="empty-state"><p>No PRS records match your filters.</p><a href="/data/prs/" class="btn btn-ghost" style="margin-top:1rem;">Clear Filters</a></div>'
+        head_body += '<div class="empty-state"><p>No PRS records match your filters.</p><a href="/data/prs/" class="btn btn-ghost" class="mt-1">Clear Filters</a></div>'
     else:
         head_body += f'<p style="color:var(--text-muted);font-size:0.8rem;margin-bottom:0.5rem;">Showing {offset+1}-{min(offset+per_page,total)} of {total:,} records</p>'
         head_body += '<div class="repo-table-wrapper"><table class="repo-table"><thead><tr><th>PRS #</th><th>District</th><th>Intake Date</th><th>Status</th><th>Findings Date</th><th>Category</th><th>Subcategory</th><th>Closure Code</th></tr></thead><tbody>'
@@ -3746,9 +3746,9 @@ def handle_prs_data():
             head_body += f'''<tr>
     <td style="font-family:var(--font-mono);font-weight:600;white-space:nowrap;">{h(r["prs_number"])}</td>
     <td><strong>{h(r["district"])}</strong></td>
-    <td style="white-space:nowrap;">{format_date(r["intake_date"])}</td>
+    <td class="nowrap">{format_date(r["intake_date"])}</td>
     <td>{status_badge(str(r["status"]).lower() if r["status"] else "unknown")}</td>
-    <td style="white-space:nowrap;">{format_date(r["findings_date"])}</td>
+    <td class="nowrap">{format_date(r["findings_date"])}</td>
     <td>{h(r["category"] or "-")}</td>
     <td style="max-width:200px;overflow:hidden;text-overflow:ellipsis;white-space:nowrap;">{h(r["subcategory"] or "-")}</td>
     <td style="font-size:0.8rem;max-width:180px;">{h(r["closure_code"] or "-")}</td>
@@ -3771,15 +3771,15 @@ def handle_prs_data():
                 return '/data/prs/?' + '&'.join(params)
             
             if page > 1:
-                head_body += f'<a href="{page_link(1)}" class="btn btn-ghost" style="padding:0.4rem 0.8rem;font-size:0.8rem;">&laquo; First</a>'
+                head_body += f'<a href="{page_link(1)}" class="btn btn-ghost" class="btn-sm font-xs">&laquo; First</a>'
             for p in range(max(1, page-2), min(total_pages+1, page+3)):
                 cls = 'btn-primary' if p == page else 'btn-ghost'
-                head_body += f'<a href="{page_link(p)}" class="btn {cls}" style="padding:0.4rem 0.8rem;font-size:0.8rem;">{p}</a>'
+                head_body += f'<a href="{page_link(p)}" class="btn {cls}" class="btn-sm font-xs">{p}</a>'
             if page < total_pages:
-                head_body += f'<a href="{page_link(total_pages)}" class="btn btn-ghost" style="padding:0.4rem 0.8rem;font-size:0.8rem;">Last &raquo;</a>'
+                head_body += f'<a href="{page_link(total_pages)}" class="btn btn-ghost" class="btn-sm font-xs">Last &raquo;</a>'
             head_body += '</div>'
     
-    return head_body + '<div style="margin-top:1.5rem;"><a href="/data/" class="btn btn-ghost">&larr; Data Hub</a></div></div></section>' + get_footer()
+    return head_body + '<div class="mt-2"><a href="/data/" class="btn btn-ghost">&larr; Data Hub</a></div></div></section>' + get_footer()
 
 
 def handle_attendance():
@@ -3787,7 +3787,7 @@ def handle_attendance():
     try:
         years = [r[0] for r in conn.execute("SELECT DISTINCT school_year FROM attendance_data ORDER BY school_year DESC").fetchall()]
         districts = conn.execute("SELECT DISTINCT district_name, district_code FROM attendance_data ORDER BY district_name").fetchall()
-    except: conn.close(); return f'{get_head("Attendance")}{get_header("/data/")}<section class="section"><div class="container"><h2>Attendance Data</h2><p style="color:var(--text-muted);">Not loaded.</p></div></section>{get_footer()}'
+    except: conn.close(); return f'{get_head("Attendance")}{get_header("/data/")}<section class="section"><div class="container"><h2>Attendance Data</h2><p class="text-muted">Not loaded.</p></div></section>{get_footer()}'
     
     import urllib.parse as up
     qs = {}; 
@@ -3811,9 +3811,9 @@ def handle_attendance():
     rows = conn.execute(f'SELECT * FROM attendance_data{where_clause} ORDER BY {order} LIMIT ? OFFSET ?', params+[per_page,offset]).fetchall()
     conn.close()
     
-    extra = f'''<div style="flex:1;min-width:110px;"><label style="font-size:0.75rem;color:var(--text-muted);display:block;">Year</label><select name="year" style="width:100%;padding:0.5rem;background:var(--bg-card);border:1px solid var(--border);border-radius:6px;color:var(--text);font-size:0.8rem;"><option value="">All</option>'''
+    extra = f'''<div class="flex-min-110"><label class="stat-link">Year</label><select name="year" class="form-input-sm"><option value="">All</option>'''
     for y in years: extra += f'<option value="{h(y)}" {"selected" if y==year_filter else ""}>{h(y)}</option>'
-    extra += '</select></div><div style="flex:1;min-width:150px;"><label style="font-size:0.75rem;color:var(--text-muted);display:block;">District</label><select name="district" style="width:100%;padding:0.5rem;background:var(--bg-card);border:1px solid var(--border);border-radius:6px;color:var(--text);font-size:0.8rem;"><option value="">All</option>'
+    extra += '</select></div><div class="flex-min-150"><label class="stat-link">District</label><select name="district" class="form-input-sm"><option value="">All</option>'
     for d in districts: extra += f'<option value="{h(d[1])}" {"selected" if d[1]==district_filter else ""}>{h(d[0])}</option>'
     extra += '</select></div>'
     
@@ -3821,16 +3821,16 @@ def handle_attendance():
     filter_bar = data_filter_bar('/data/attendance/','District name...',extra).replace('<option value="">Default</option>', f'<option value="">Default</option>{sort_opts}').replace(f'value="{sort_by}"', f'value="{sort_by}" selected')
     
     body = f'{get_head("Attendance Data","Attendance rates, absences, chronic absenteeism.")}{get_header("/data/")}<section class="section"><div class="container">'
-    body += f'<div class="hero-stats" style="margin-bottom:1rem;"><div class="stat"><span class="stat-value">{total:,}</span><span class="stat-label">Records</span></div><div class="stat"><span class="stat-value">{len(years)}</span><span class="stat-label">Years</span></div><div class="stat"><span class="stat-value">{len(districts)}</span><span class="stat-label">Districts</span></div><div class="stat"><span class="stat-value">{total_pages}</span><span class="stat-label">Pages</span></div></div>'
-    body += '<h2 style="font-size:1.5rem;margin-bottom:0.75rem;">Attendance Data Explorer</h2><p style="color:var(--text-muted);margin-bottom:1rem;">Every metric sortable. Sourced from DESE.</p>'+filter_bar
+    body += f'<div class="hero-stats" class="mb-1"><div class="stat"><span class="stat-value">{total:,}</span><span class="stat-label">Records</span></div><div class="stat"><span class="stat-value">{len(years)}</span><span class="stat-label">Years</span></div><div class="stat"><span class="stat-value">{len(districts)}</span><span class="stat-label">Districts</span></div><div class="stat"><span class="stat-value">{total_pages}</span><span class="stat-label">Pages</span></div></div>'
+    body += '<h2 class="font-lg mb-075">Attendance Data Explorer</h2><p class="text-muted mb-1">Every metric sortable. Sourced from DESE.</p>'+filter_bar
     if not rows: body += '<div class="empty-state"><p>No records match.</p></div>'
     else:
-        body += f'<p style="color:var(--text-muted);font-size:0.8rem;">{offset+1}-{min(offset+per_page,total)} of {total:,}</p>'
+        body += f'<p class="text-muted font-xs">{offset+1}-{min(offset+per_page,total)} of {total:,}</p>'
         body += '<div class="repo-table-wrapper"><table class="repo-table"><thead><tr><th>District</th><th>Year</th><th>Attend %</th><th>Avg Absences</th><th>% Absent 10+</th><th>% Chronically Absent</th><th>% Chronic (20%)</th></tr></thead><tbody>'
         for r in rows:
             body += f'<tr><td><strong>{h(r["district_name"])}</strong></td><td>{h(r["school_year"])}</td><td>{h(str(r["attendance_rate"] if "attendance_rate" in r.keys() else "-"))}%</td><td>{h(str(r["avg_absences"] if "avg_absences" in r.keys() else "-"))}</td><td>{h(str(r["absent_10_plus_pct"] if "absent_10_plus_pct" in r.keys() else "-"))}%</td><td>{h(str(r["chronically_absent_10_pct"] if "chronically_absent_10_pct" in r.keys() else "-"))}%</td><td>{h(str(r["chronically_absent_20_pct"] if "chronically_absent_20_pct" in r.keys() else "-"))}%</td></tr>'
         body += '</tbody></table></div>'+pagination_links('/data/attendance/',page,total_pages,qs)
-    return body + '<div style="margin-top:1rem;"><a href="/data/" class="btn btn-ghost">&larr; Data Hub</a></div></div></section>'+get_footer()
+    return body + '<div class="mt-1"><a href="/data/" class="btn btn-ghost">&larr; Data Hub</a></div></div></section>'+get_footer()
 
 
 def handle_sped_results():
@@ -3844,7 +3844,7 @@ def handle_sped_results():
     try:
         years = [r[0] for r in conn.execute(f"SELECT DISTINCT school_year FROM {table} ORDER BY school_year DESC").fetchall()]
         districts = conn.execute(f"SELECT DISTINCT district_name, district_code FROM {table} ORDER BY district_name").fetchall()
-    except: conn.close(); return f'{get_head("SPED Results")}{get_header("/data/")}<section class="section"><div class="container"><h2>SPED Results</h2><p style="color:var(--text-muted);">Not loaded.</p></div></section>{get_footer()}'
+    except: conn.close(); return f'{get_head("SPED Results")}{get_header("/data/")}<section class="section"><div class="container"><h2>SPED Results</h2><p class="text-muted">Not loaded.</p></div></section>{get_footer()}'
     
     import urllib.parse as up
     qs = {}; 
@@ -3868,9 +3868,9 @@ def handle_sped_results():
     rows = conn.execute(f'SELECT * FROM {table}{where_clause} ORDER BY {order} LIMIT ? OFFSET ?', params+[per_page,offset]).fetchall()
     conn.close()
     
-    extra = f'''<div style="flex:1;min-width:110px;"><label style="font-size:0.75rem;color:var(--text-muted);display:block;">Year</label><select name="year" style="width:100%;padding:0.5rem;background:var(--bg-card);border:1px solid var(--border);border-radius:6px;color:var(--text);font-size:0.8rem;"><option value="">All</option>'''
+    extra = f'''<div class="flex-min-110"><label class="stat-link">Year</label><select name="year" class="form-input-sm"><option value="">All</option>'''
     for y in years: extra += f'<option value="{h(y)}" {"selected" if y==year_filter else ""}>{h(y)}</option>'
-    extra += '</select></div><div style="flex:1;min-width:150px;"><label style="font-size:0.75rem;color:var(--text-muted);display:block;">District</label><select name="district" style="width:100%;padding:0.5rem;background:var(--bg-card);border:1px solid var(--border);border-radius:6px;color:var(--text);font-size:0.8rem;"><option value="">All</option>'
+    extra += '</select></div><div class="flex-min-150"><label class="stat-link">District</label><select name="district" class="form-input-sm"><option value="">All</option>'
     for d in districts: extra += f'<option value="{h(d[1])}" {"selected" if d[1]==district_filter else ""}>{h(d[0])}</option>'
     extra += '</select></div>'
     
@@ -3878,16 +3878,16 @@ def handle_sped_results():
     filter_bar = data_filter_bar('/data/sped-results/','District name...',extra).replace('<option value="">Default</option>', f'<option value="">Default</option>{sort_opts}').replace(f'value="{sort_by}"', f'value="{sort_by}" selected')
     
     body = f'{get_head("SPED Results","SPED graduation, dropout, inclusion, parent involvement.")}{get_header("/data/")}<section class="section"><div class="container">'
-    body += f'<div class="hero-stats" style="margin-bottom:1rem;"><div class="stat"><span class="stat-value">{total:,}</span><span class="stat-label">Records</span></div><div class="stat"><span class="stat-value">{len(years)}</span><span class="stat-label">Years</span></div><div class="stat"><span class="stat-value">{len(districts)}</span><span class="stat-label">Districts</span></div><div class="stat"><span class="stat-value">{total_pages}</span><span class="stat-label">Pages</span></div></div>'
-    body += '<h2 style="font-size:1.5rem;margin-bottom:0.75rem;">SPED Results Explorer</h2><p style="color:var(--text-muted);margin-bottom:1rem;">Every metric sortable. Sourced from DESE.</p>'+filter_bar
+    body += f'<div class="hero-stats" class="mb-1"><div class="stat"><span class="stat-value">{total:,}</span><span class="stat-label">Records</span></div><div class="stat"><span class="stat-value">{len(years)}</span><span class="stat-label">Years</span></div><div class="stat"><span class="stat-value">{len(districts)}</span><span class="stat-label">Districts</span></div><div class="stat"><span class="stat-value">{total_pages}</span><span class="stat-label">Pages</span></div></div>'
+    body += '<h2 class="font-lg mb-075">SPED Results Explorer</h2><p class="text-muted mb-1">Every metric sortable. Sourced from DESE.</p>'+filter_bar
     if not rows: body += '<div class="empty-state"><p>No records match.</p></div>'
     else:
-        body += f'<p style="color:var(--text-muted);font-size:0.8rem;">{offset+1}-{min(offset+per_page,total)} of {total:,}</p>'
+        body += f'<p class="text-muted font-xs">{offset+1}-{min(offset+per_page,total)} of {total:,}</p>'
         body += '<div class="repo-table-wrapper"><table class="repo-table"><thead><tr><th>District</th><th>Year</th><th>Grad Rate</th><th>Dropout Rate</th><th>Full Inclusion %</th><th>Parent Involve %</th></tr></thead><tbody>'
         for r in rows:
             body += f'<tr><td><strong>{h(r["district_name"])}</strong></td><td>{h(r["school_year"])}</td><td>{h(str(r["sped_grad_rate"] if "sped_grad_rate" in r.keys() else "-"))}%</td><td>{h(str(r["sped_dropout_rate"] if "sped_dropout_rate" in r.keys() else "-"))}%</td><td>{h(str(r["lre_full_incl_pct"] if "lre_full_incl_pct" in r.keys() else "-"))}%</td><td>{h(str(r["parent_involve_pct"] if "parent_involve_pct" in r.keys() else "-"))}%</td></tr>'
         body += '</tbody></table></div>'+pagination_links('/data/sped-results/',page,total_pages,qs)
-    return body + '<div style="margin-top:1rem;"><a href="/data/" class="btn btn-ghost">&larr; Data Hub</a></div></div></section>'+get_footer()
+    return body + '<div class="mt-1"><a href="/data/" class="btn btn-ghost">&larr; Data Hub</a></div></div></section>'+get_footer()
 
 
 # SVG category icons for resource sections
@@ -4016,7 +4016,7 @@ def handle_resources():
     body += '<button type="submit" class="btn btn-primary" style="padding:0.56rem 1rem;">Search</button></form>'
 
     if not all_resources:
-        body += '<div class="empty-state"><p>No resources found.</p><a href="?category=all" class="btn btn-secondary" style="margin-top:1rem;">View All Resources</a></div>'
+        body += '<div class="empty-state"><p>No resources found.</p><a href="?category=all" class="btn btn-secondary" class="mt-1">View All Resources</a></div>'
         body += '</div></section>' + get_footer()
         return body
 

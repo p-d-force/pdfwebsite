@@ -1,3545 +1,751 @@
 /* ── District Cards ── */
 
-
-
-
-
-
-
 .districts-grid {
 
-
-
-
-
-
-
   display: grid;
-
-
-
-
-
-
 
   grid-template-columns: repeat(auto-fill, minmax(320px, 1fr));
 
-
-
-
-
-
-
   gap: 1rem;
 
-
-
-
-
-
-
 }
-
-
-
-
-
-
-
-
-
-
-
-
-
-
 
 .district-card {
 
-
-
-
-
-
-
   background: var(--bg-elevated);
-
-
-
-
-
-
 
   border: 1px solid var(--border);
 
-
-
-
-
-
-
   border-radius: var(--radius-md);
-
-
-
-
-
-
 
   padding: 1.5rem;
 
-
-
-
-
-
-
   display: flex;
 
-
-
-
-
-
-
   flex-direction: column;
-
-
-
-
-
-
 
   gap: 0.6rem;
 
-
-
-
-
-
-
   transition: border-color var(--transition), box-shadow var(--transition);
 
-
-
-
-
-
-
 }
-
-
-
-
-
-
-
-
-
-
-
-
-
-
 
 .district-card:hover {
 
-
-
-
-
-
-
   border-color: var(--accent-glow);
-
-
-
-
-
-
 
   box-shadow: 0 0 20px rgba(255, 90, 31, 0.08);
 
-
-
-
-
-
-
 }
-
-
-
-
-
-
-
-
-
-
-
-
-
-
 
 .district-card-header {
 
-
-
-
-
-
-
   display: flex;
-
-
-
-
-
-
 
   justify-content: space-between;
 
-
-
-
-
-
-
   align-items: center;
-
-
-
-
-
-
 
   margin-bottom: 0.2rem;
 
-
-
-
-
-
-
 }
-
-
-
-
-
-
-
-
-
-
-
-
-
-
 
 .district-card-name {
 
-
-
-
-
-
-
   font-size: 1.1rem;
-
-
-
-
-
-
 
   font-weight: 700;
 
-
-
-
-
-
-
 }
-
-
-
-
-
-
-
-
-
-
-
-
-
-
 
 .district-card-location {
 
-
-
-
-
-
-
   color: var(--text-secondary);
-
-
-
-
-
-
 
   font-size: 0.85rem;
 
-
-
-
-
-
-
 }
-
-
-
-
-
-
-
-
-
-
-
-
-
-
 
 .district-card-stats {
 
-
-
-
-
-
-
   display: flex;
-
-
-
-
-
-
 
   gap: 0.75rem;
 
-
-
-
-
-
-
   font-size: 0.82rem;
-
-
-
-
-
-
 
   color: var(--text-muted);
 
-
-
-
-
-
-
   flex-wrap: wrap;
 
-
-
-
-
-
-
 }
-
-
-
-
-
-
-
-
-
-
-
-
-
-
 
 .district-card-link {
 
-
-
-
-
-
-
   color: var(--accent-glow);
-
-
-
-
-
-
 
   font-size: 0.85rem;
 
-
-
-
-
-
-
   font-weight: 600;
-
-
-
-
-
-
 
   margin-top: auto;
 
-
-
-
-
-
-
 }
-
-
-
-
-
-
-
-
-
-
-
-
-
-
 
 .district-detail-header {
 
-
-
-
-
-
-
   margin-bottom: 2rem;
 
-
-
-
-
-
-
 }
-
-
-
-
-
-
-
-
-
-
-
-
-
-
 
 .district-section {
 
-
-
-
-
-
-
   margin-bottom: 2.5rem;
 
-
-
-
-
-
-
 }
-
-
-
-
-
-
-
-
-
-
-
-
-
-
 
 .data-tabs {
 
-
-
-
-
-
-
   display: flex;
-
-
-
-
-
-
 
   border-bottom: 2px solid var(--border);
 
-
-
-
-
-
-
   margin-bottom: 1.5rem;
 
-
-
-
-
-
-
 }
-
-
-
-
-
-
-
-
-
-
-
-
-
-
 
 .data-tab {
 
-
-
-
-
-
-
   padding: 0.75rem 1.5rem;
 
-
-
-
-
-
-
   cursor: pointer;
-
-
-
-
-
-
 
   border-bottom: 2px solid transparent;
 
-
-
-
-
-
-
   margin-bottom: -2px;
 
-
-
-
-
-
-
   font-size: 0.9rem;
-
-
-
-
-
-
 
   font-weight: 500;
 
-
-
-
-
-
-
   color: var(--text-secondary);
-
-
-
-
-
-
 
   transition: color var(--transition), border-color var(--transition);
 
-
-
-
-
-
-
   background: none;
 
-
-
-
-
-
-
 }
-
-
-
-
-
-
-
-
-
-
-
-
-
-
 
 .data-tab:hover {
 
-
-
-
-
-
-
   color: var(--text-primary);
 
-
-
-
-
-
-
 }
-
-
-
-
-
-
-
-
-
-
-
-
-
-
 
 .data-tab.active {
 
-
-
-
-
-
-
   color: var(--accent);
-
-
-
-
-
-
 
   border-bottom-color: var(--accent);
 
-
-
-
-
-
-
 }
-
-
-
-
-
-
-
-
-
-
-
-
-
-
 
 .repo-controls {
 
-
-
-
-
-
-
   display: grid;
 
-
-
-
-
-
-
   gap: 0.7rem;
-
-
-
-
-
-
 
   margin-bottom: 1rem;
 
-
-
-
-
-
-
 }
-
-
-
-
-
-
-
-
-
-
-
-
-
-
 
 .repo-search {
 
-
-
-
-
-
-
   position: relative;
 
-
-
-
-
-
-
 }
-
-
-
-
-
-
-
-
-
-
-
-
-
-
 
 .repo-search-icon {
 
-
-
-
-
-
-
   width: 16px;
-
-
-
-
-
-
 
   height: 16px;
 
-
-
-
-
-
-
   position: absolute;
-
-
-
-
-
-
 
   left: 0.7rem;
 
-
-
-
-
-
-
   top: 50%;
-
-
-
-
-
-
 
   transform: translateY(-50%);
 
-
-
-
-
-
-
   color: var(--text-muted);
 
-
-
-
-
-
-
 }
-
-
-
-
-
-
-
-
-
-
-
-
-
-
 
 .repo-search-input,
 
-
-
-
-
-
-
 .repo-select,
-
-
-
-
-
-
 
 .form-input,
 
-
-
-
-
-
-
 .form-select,
-
-
-
-
-
-
 
 .form-textarea {
 
-
-
-
-
-
-
   width: 100%;
-
-
-
-
-
-
 
   border: 1px solid var(--border);
 
-
-
-
-
-
-
   background: rgba(255, 255, 255, 0.02);
 
-
-
-
-
-
-
   border-radius: 10px;
-
-
-
-
-
-
 
   padding: 0.63rem 0.7rem;
 
-
-
-
-
-
-
   color: var(--text-primary);
 
-
-
-
-
-
-
 }
-
-
-
-
-
-
-
-
-
-
-
-
-
-
 
 .repo-select,
 
-
-
-
-
-
-
 .form-select,
-
-
-
-
-
-
 
 select {
 
-
-
-
-
-
-
   background-color: var(--bg-elevated);
 
-
-
-
-
-
-
   color: var(--text-primary);
-
-
-
-
-
-
 
   border-color: var(--border);
 
-
-
-
-
-
-
   appearance: auto;
 
-
-
-
-
-
-
 }
-
-
-
-
-
-
-
-
-
-
-
-
-
-
 
 .repo-select option,
 
-
-
-
-
-
-
 .form-select option,
-
-
-
-
-
-
 
 select option {
 
-
-
-
-
-
-
   background-color: var(--bg-elevated);
-
-
-
-
-
-
 
   color: var(--text-primary);
 
-
-
-
-
-
-
 }
-
-
-
-
-
-
-
-
-
-
-
-
-
-
 
 .repo-search-input {
 
-
-
-
-
-
-
   padding-left: 2.2rem;
 
-
-
-
-
-
-
 }
-
-
-
-
-
-
-
-
-
-
-
-
-
-
 
 .repo-search-input:focus,
 
-
-
-
-
-
-
 .repo-select:focus,
-
-
-
-
-
-
 
 .form-input:focus,
 
-
-
-
-
-
-
 .form-select:focus,
-
-
-
-
-
-
 
 .form-textarea:focus {
 
-
-
-
-
-
-
   outline: none;
-
-
-
-
-
-
 
   border-color: rgba(255, 90, 31, 0.55);
 
-
-
-
-
-
-
   box-shadow: 0 0 0 3px rgba(255, 90, 31, 0.15);
 
-
-
-
-
-
-
 }
-
-
-
-
-
-
-
-
-
-
-
-
-
-
 
 .repo-table-wrapper {
 
-
-
-
-
-
-
   border: 1px solid var(--border);
-
-
-
-
-
-
 
   border-radius: var(--radius-md);
 
-
-
-
-
-
-
   overflow: auto;
 
-
-
-
-
-
-
 }
-
-
-
-
-
-
-
-
-
-
-
-
-
-
 
 .repo-table {
 
-
-
-
-
-
-
   width: 100%;
-
-
-
-
-
-
 
   border-collapse: collapse;
 
-
-
-
-
-
-
   min-width: 940px;
 
-
-
-
-
-
-
 }
-
-
-
-
-
-
-
-
-
-
-
-
-
-
 
 .repo-table th,
 
-
-
-
-
-
-
 .repo-table td {
-
-
-
-
-
-
 
   padding: 0.7rem;
 
-
-
-
-
-
-
   border-bottom: 1px solid var(--border-soft);
 
-
-
-
-
-
-
   text-align: left;
-
-
-
-
-
-
 
   font-size: 0.88rem;
 
-
-
-
-
-
-
 }
-
-
-
-
-
-
-
-
-
-
-
-
-
-
 
 .repo-table thead {
 
-
-
-
-
-
-
   background: rgba(255, 255, 255, 0.02);
 
-
-
-
-
-
-
 }
-
-
-
-
-
-
-
-
-
-
-
-
-
-
 
 .sortable th {
 
-
-
-
-
-
-
   cursor: pointer;
-
-
-
-
-
-
 
   user-select: none;
 
-
-
-
-
-
-
 }
-
-
-
-
-
-
-
-
-
-
-
-
-
-
 
 .sortable th:hover {
 
-
-
-
-
-
-
   color: var(--text-primary);
 
-
-
-
-
-
-
 }
-
-
-
-
-
-
-
-
-
-
-
-
-
-
 
 .sortable th.sort-asc::after {
 
-
-
-
-
-
-
   content: ' \25B2';
-
-
-
-
-
-
 
   color: var(--accent-glow);
 
-
-
-
-
-
-
 }
-
-
-
-
-
-
-
-
-
-
-
-
-
-
 
 .sortable th.sort-desc::after {
 
-
-
-
-
-
-
   content: ' \25BC';
-
-
-
-
-
-
 
   color: var(--accent-glow);
 
-
-
-
-
-
-
 }
-
-
-
-
-
-
-
-
-
-
-
-
-
-
 
 .repo-date,
 
-
-
-
-
-
-
 .repo-id {
 
-
-
-
-
-
-
   font-family: "JetBrains Mono", Consolas, monospace;
-
-
-
-
-
-
 
   color: #d7d7d7;
 
-
-
-
-
-
-
 }
-
-
-
-
-
-
-
-
-
-
-
-
-
-
 
 .calendar-month-header {
 
-
-
-
-
-
-
   margin-bottom: 0.7rem;
 
-
-
-
-
-
-
 }
-
-
-
-
-
-
-
-
-
-
-
-
-
-
 
 .calendar-weekdays {
 
-
-
-
-
-
-
   display: grid;
-
-
-
-
-
-
 
   grid-template-columns: repeat(7, minmax(0, 1fr));
 
-
-
-
-
-
-
   gap: 0.4rem;
-
-
-
-
-
-
 
   margin-bottom: 0.4rem;
 
-
-
-
-
-
-
 }
-
-
-
-
-
-
-
-
-
-
-
-
-
-
 
 .calendar-weekdays span {
 
-
-
-
-
-
-
   text-align: center;
-
-
-
-
-
-
 
   font-size: 0.78rem;
 
-
-
-
-
-
-
   color: var(--text-secondary);
-
-
-
-
-
-
 
   letter-spacing: 0.05em;
 
-
-
-
-
-
-
   text-transform: uppercase;
 
-
-
-
-
-
-
 }
-
-
-
-
-
-
-
-
-
-
-
-
-
-
 
 .calendar-grid {
 
-
-
-
-
-
-
   display: grid;
-
-
-
-
-
-
 
   grid-template-columns: repeat(7, minmax(0, 1fr));
 
-
-
-
-
-
-
   gap: 0.4rem;
 
-
-
-
-
-
-
 }
-
-
-
-
-
-
-
-
-
-
-
-
-
-
 
 .calendar-day {
 
-
-
-
-
-
-
   min-height: 86px;
 
-
-
-
-
-
-
   border: 1px solid var(--border);
-
-
-
-
-
-
 
   border-radius: 10px;
 
-
-
-
-
-
-
   background: rgba(255, 255, 255, 0.02);
-
-
-
-
-
-
 
   color: var(--text-primary);
 
-
-
-
-
-
-
   text-align: left;
-
-
-
-
-
-
 
   padding: 0.42rem;
 
-
-
-
-
-
-
   display: flex;
-
-
-
-
-
-
 
   flex-direction: column;
 
-
-
-
-
-
-
   justify-content: space-between;
-
-
-
-
-
-
 
   gap: 0.35rem;
 
-
-
-
-
-
-
   cursor: pointer;
 
-
-
-
-
-
-
 }
-
-
-
-
-
-
-
-
-
-
-
-
-
-
 
 .calendar-day-empty {
 
-
-
-
-
-
-
   border-style: dashed;
-
-
-
-
-
-
 
   opacity: 0.35;
 
-
-
-
-
-
-
   pointer-events: none;
 
-
-
-
-
-
-
 }
-
-
-
-
-
-
-
-
-
-
-
-
-
-
 
 .calendar-day-has-events {
 
-
-
-
-
-
-
   border-color: rgba(255, 163, 102, 0.45);
 
-
-
-
-
-
-
 }
-
-
-
-
-
-
-
-
-
-
-
-
-
-
 
 .calendar-day-active {
 
-
-
-
-
-
-
   border-color: rgba(255, 90, 31, 0.75);
-
-
-
-
-
-
 
   box-shadow: 0 0 0 2px rgba(255, 90, 31, 0.2);
 
-
-
-
-
-
-
 }
-
-
-
-
-
-
-
-
-
-
-
-
-
-
 
 .calendar-day-number {
 
-
-
-
-
-
-
   font-weight: 700;
-
-
-
-
-
-
 
   font-size: 0.9rem;
 
-
-
-
-
-
-
 }
-
-
-
-
-
-
-
-
-
-
-
-
-
-
 
 .calendar-day-markers {
 
-
-
-
-
-
-
   display: flex;
 
-
-
-
-
-
-
   flex-wrap: wrap;
-
-
-
-
-
-
 
   gap: 0.3rem;
 
-
-
-
-
-
-
 }
-
-
-
-
-
-
-
-
-
-
-
-
-
-
 
 .calendar-chip {
 
-
-
-
-
-
-
   display: inline-flex;
 
-
-
-
-
-
-
   border-radius: 999px;
-
-
-
-
-
-
 
   padding: 0.12rem 0.4rem;
 
-
-
-
-
-
-
   font-size: 0.68rem;
-
-
-
-
-
-
 
   border: 1px solid transparent;
 
-
-
-
-
-
-
 }
-
-
-
-
-
-
-
-
-
-
-
-
-
-
 
 .calendar-chip-meeting {
 
-
-
-
-
-
-
   background: rgba(59, 130, 246, 0.18);
-
-
-
-
-
-
 
   border-color: rgba(59, 130, 246, 0.4);
 
-
-
-
-
-
-
   color: #b9dcff;
 
-
-
-
-
-
-
 }
-
-
-
-
-
-
-
-
-
-
-
-
-
-
 
 .calendar-chip-deadline {
 
-
-
-
-
-
-
   background: rgba(245, 158, 11, 0.2);
-
-
-
-
-
-
 
   border-color: rgba(245, 158, 11, 0.45);
 
-
-
-
-
-
-
   color: #facc15;
 
-
-
-
-
-
-
 }
-
-
-
-
-
-
-
-
-
-
-
-
-
-
 
 .doc-link {
 
-
-
-
-
-
-
   display: inline-flex;
 
-
-
-
-
-
-
   align-items: center;
-
-
-
-
-
-
 
   gap: 0.35rem;
 
-
-
-
-
-
-
   color: var(--accent-glow);
 
-
-
-
-
-
-
 }
-
-
-
-
-
-
-
-
-
-
-
-
-
-
 
 .doc-link svg {
 
-
-
-
-
-
-
   width: 14px;
 
-
-
-
-
-
-
 }
-
-
-
-
-
-
-
-
-
-
-
-
-
-
 
 .type-badge {
 
-
-
-
-
-
-
   font-size: 0.72rem;
 
-
-
-
-
-
-
   border-radius: 999px;
-
-
-
-
-
-
 
   padding: 0.2rem 0.5rem;
 
-
-
-
-
-
-
   font-weight: 600;
 
-
-
-
-
-
-
 }
-
-
-
-
-
-
-
-
-
-
-
-
-
-
 
 .type-appeal { background: rgba(255, 90, 31, 0.18); color: #ffb88f; }
 
-
-
-
-
-
-
 .type-determination { background: rgba(59, 130, 246, 0.15); color: #b9dcff; }
-
-
-
-
-
-
 
 .type-prr { background: rgba(139, 92, 246, 0.18); color: #d8c4ff; }
 
-
-
-
-
-
-
-
-
-
-
-
-
-
-
 .repo-lifecycle {
-
-
-
-
-
-
 
   margin-top: 1.1rem;
 
-
-
-
-
-
-
 }
-
-
-
-
-
-
-
-
-
-
-
-
-
-
 
 .repo-lifecycle-title,
 
-
-
-
-
-
-
 .dese-cases-title {
-
-
-
-
-
-
 
   font-size: 1.15rem;
 
-
-
-
-
-
-
   margin-bottom: 0.7rem;
 
-
-
-
-
-
-
 }
-
-
-
-
-
-
-
-
-
-
-
-
-
-
 
 .lifecycle-steps {
 
-
-
-
-
-
-
   display: grid;
-
-
-
-
-
-
 
   grid-template-columns: repeat(5, minmax(0, 1fr));
 
-
-
-
-
-
-
   gap: 0.8rem;
 
-
-
-
-
-
-
 }
-
-
-
-
-
-
-
-
-
-
-
-
-
-
 
 .lifecycle-step {
 
-
-
-
-
-
-
   border: 1px solid var(--border);
-
-
-
-
-
-
 
   border-radius: 12px;
 
-
-
-
-
-
-
   padding: 0.8rem;
-
-
-
-
-
-
 
   background: rgba(255, 255, 255, 0.02);
 
-
-
-
-
-
-
 }
-
-
-
-
-
-
-
-
-
-
-
-
-
-
 
 .lifecycle-number {
 
-
-
-
-
-
-
   width: 27px;
-
-
-
-
-
-
 
   height: 27px;
 
-
-
-
-
-
-
   border-radius: 50%;
 
-
-
-
-
-
-
   display: grid;
-
-
-
-
-
-
 
   place-items: center;
 
-
-
-
-
-
-
   background: rgba(255, 90, 31, 0.2);
 
-
-
-
-
-
-
   color: var(--accent-glow);
-
-
-
-
-
-
 
   margin-bottom: 0.45rem;
 
-
-
-
-
-
-
   font-weight: 700;
 
-
-
-
-
-
-
 }
-
-
-
-
-
-
-
-
-
-
-
-
-
-
 
 .lifecycle-content h4 {
 
-
-
-
-
-
-
   font-size: 0.9rem;
-
-
-
-
-
-
 
   margin-bottom: 0.3rem;
 
-
-
-
-
-
-
 }
-
-
-
-
-
-
-
-
-
-
-
-
-
-
 
 .lifecycle-content p {
 
-
-
-
-
-
-
   font-size: 0.82rem;
-
-
-
-
-
-
 
   color: var(--text-secondary);
 
-
-
-
-
-
-
 }
-
-
-
-
-
-
-
-
-
-
-
-
-
-
 
 .dese-cases {
 
-
-
-
-
-
-
   margin-top: 1.2rem;
 
-
-
-
-
-
-
 }
-
-
-
-
-
-
-
-
-
-
-
-
-
-
 
 .dese-case-list {
 
-
-
-
-
-
-
   display: grid;
-
-
-
-
-
-
 
   gap: 0.7rem;
 
-
-
-
-
-
-
 }
-
-
-
-
-
-
-
-
-
-
-
-
-
-
 
 .dese-case-header,
 
-
-
-
-
-
-
 .dese-case-links,
-
-
-
-
-
-
 
 .appearance-meta,
 
-
-
-
-
-
-
 .resource-meta,
-
-
-
-
-
-
 
 .footer-bottom,
 
-
-
-
-
-
-
 .footer-legal,
-
-
-
-
-
-
 
 .footer-contact-info,
 
-
-
-
-
-
-
 .footer-social,
-
-
-
-
-
-
 
 .contact-method,
 
-
-
-
-
-
-
 .contact-method-content,
-
-
-
-
-
-
 
 .hero-cta,
 
-
-
-
-
-
-
 .radio-group {
-
-
-
-
-
-
 
   display: flex;
 
-
-
-
-
-
-
   align-items: center;
 
-
-
-
-
-
-
 }
-
-
-
-
-
-
-
-
-
-
-
-
-
-
 
 .dese-case-header {
 
-
-
-
-
-
-
   justify-content: space-between;
-
-
-
-
-
-
 
   margin-bottom: 0.4rem;
 
-
-
-
-
-
-
 }
-
-
-
-
-
-
-
-
-
-
-
-
-
-
 
 .dese-case-id,
 
-
-
-
-
-
-
 .appearance-date,
-
-
-
-
-
-
 
 .resource-category {
 
-
-
-
-
-
-
   font-family: "JetBrains Mono", Consolas, monospace;
 
-
-
-
-
-
-
   color: var(--accent-glow);
-
-
-
-
-
-
 
   font-size: 0.75rem;
 
-
-
-
-
-
-
 }
-
-
-
-
-
-
-
-
-
-
-
-
-
-
 
 .dese-case-links {
 
-
-
-
-
-
-
   gap: 0.5rem;
-
-
-
-
-
-
 
   margin-top: 0.55rem;
 
-
-
-
-
-
-
   flex-wrap: wrap;
 
-
-
-
-
-
-
 }
-
-
-
-
-
-
-
-
-
-
-
-
-
-
 
 .related-link {
 
-
-
-
-
-
-
   border: 1px solid var(--border);
 
-
-
-
-
-
-
   border-radius: 999px;
-
-
-
-
-
-
 
   padding: 0.2rem 0.45rem;
 
-
-
-
-
-
-
   color: var(--text-secondary);
-
-
-
-
-
-
 
   font-size: 0.72rem;
 
-
-
-
-
-
-
 }
-
-
-
-
-
-
-
-
-
-
-
-
-
-
 
 .statewide-meta,
 
-
-
-
-
-
-
 .portal-status {
-
-
-
-
-
-
 
   margin-top: 0.65rem;
 
-
-
-
-
-
-
 }
-
-
-
-
-
-
-
-
-
-
-
-
-
-
 
 .statewide-tag,
 
-
-
-
-
-
-
 .portal-status {
-
-
-
-
-
-
 
   display: inline-flex;
 
-
-
-
-
-
-
   border-radius: 999px;
-
-
-
-
-
-
 
   border: 1px solid var(--border);
 
-
-
-
-
-
-
   padding: 0.24rem 0.52rem;
-
-
-
-
-
-
 
   font-size: 0.72rem;
 
-
-
-
-
-
-
   color: var(--text-secondary);
 
-
-
-
-
-
-
 }
-
-
-
-
-
-
-
-
-
-
-
-
-
-
 
 .resources-grid {
 
-
-
-
-
-
-
   grid-template-columns: repeat(3, minmax(0, 1fr));
 
-
-
-
-
-
-
 }
-
-
-
-
-
-
-
-
-
-
-
-
-
-
 
 .resource-category { margin-bottom: 0.5rem; }
 
-
-
-
-
-
-
-
-
-
-
-
-
-
-
 .resource-meta {
-
-
-
-
-
-
 
   justify-content: space-between;
 
-
-
-
-
-
-
   margin-top: 0.8rem;
 
-
-
-
-
-
-
 }
-
-
-
-
-
-
-
-
-
-
-
-
-
-
 
 .resource-read-time {
 
-
-
-
-
-
-
   color: var(--text-muted);
-
-
-
-
-
-
 
   font-size: 0.78rem;
 
-
-
-
-
-
-
 }
-
-
-
-
-
-
-
-
-
-
-
-
-
-
 
 .resource-link {
 
-
-
-
-
-
-
   border: none;
-
-
-
-
-
-
 
   background: transparent;
 
-
-
-
-
-
-
   color: var(--accent-glow);
 
-
-
-
-
-
-
   cursor: pointer;
-
-
-
-
-
-
 
 }

@@ -1,417 +1,95 @@
 /* ── Compare District Selectors ── */
 
-
-
-
-
-
-
 .compare-select-row {
 
-
-
-
-
-
-
   display: flex;
-
-
-
-
-
-
 
   gap: 1rem;
 
-
-
-
-
-
-
   align-items: center;
-
-
-
-
-
-
 
   margin-bottom: 1rem;
 
-
-
-
-
-
-
   flex-wrap: wrap;
 
-
-
-
-
-
-
 }
-
-
-
-
-
-
-
-
-
-
-
-
-
-
 
 .compare-select {
 
-
-
-
-
-
-
   min-width: 200px;
-
-
-
-
-
-
 
   background: var(--bg-elevated);
 
-
-
-
-
-
-
   color: var(--text-primary);
 
-
-
-
-
-
-
   border: 1px solid var(--border);
-
-
-
-
-
-
 
   border-radius: 8px;
 
-
-
-
-
-
-
   padding: 0.5rem 0.75rem;
-
-
-
-
-
-
 
   font-family: Inter, "Segoe UI", Tahoma, sans-serif;
 
-
-
-
-
-
-
   font-size: 0.9rem;
-
-
-
-
-
-
 
   appearance: auto;
 
-
-
-
-
-
-
   cursor: pointer;
 
-
-
-
-
-
-
 }
-
-
-
-
-
-
-
-
-
-
-
-
-
-
 
 .compare-select:focus {
 
-
-
-
-
-
-
   outline: none;
-
-
-
-
-
-
 
   border-color: var(--accent);
 
-
-
-
-
-
-
   box-shadow: 0 0 0 2px rgba(255, 90, 31, 0.18);
 
-
-
-
-
-
-
 }
-
-
-
-
-
-
-
-
-
-
-
-
-
-
 
 .compare-select option {
 
-
-
-
-
-
-
   background-color: var(--bg-elevated);
-
-
-
-
-
-
 
   color: var(--text-primary);
 
-
-
-
-
-
-
 }
-
-
-
-
-
-
-
-
-
-
-
-
-
-
 
 /* ── Compare Chart ── */
 
-
-
-
-
-
-
 .compare-chart-container {
-
-
-
-
-
-
 
   position: relative;
 
-
-
-
-
-
-
   width: 100%;
-
-
-
-
-
-
 
   min-height: 400px;
 
-
-
-
-
-
-
   background: var(--bg-elevated);
-
-
-
-
-
-
 
   border: 1px solid var(--border);
 
-
-
-
-
-
-
   border-radius: 12px;
-
-
-
-
-
-
 
   padding: 1rem;
 
-
-
-
-
-
-
 }
-
-
-
-
-
-
-
-
-
-
-
-
-
-
 
 .district-compare-empty {
 
-
-
-
-
-
-
   display: flex;
-
-
-
-
-
-
 
   align-items: center;
 
-
-
-
-
-
-
   justify-content: center;
-
-
-
-
-
-
 
   min-height: 300px;
 
-
-
-
-
-
-
   color: var(--text-muted);
-
-
-
-
-
-
 
   font-size: 0.95rem;
 
-
-
-
-
-
-
   text-align: center;
-
-
-
-
-
-
 
 }

@@ -1,1049 +1,247 @@
 .nav-link-portal {
 
-
-
-
-
-
-
   border: 1px solid rgba(255, 90, 31, 0.5);
-
-
-
-
-
-
 
   padding: 0.42rem 0.72rem;
 
-
-
-
-
-
-
   border-radius: 999px;
-
-
-
-
-
-
 
 }
 
 .portal-icon {
 
-
-
-
-
-
-
   width: 38px;
-
-
-
-
-
-
 
   height: 38px;
 
-
-
-
-
-
-
   border-radius: 10px;
-
-
-
-
-
-
 
   border: 1px solid rgba(255, 90, 31, 0.35);
 
-
-
-
-
-
-
   display: grid;
-
-
-
-
-
-
 
   place-items: center;
 
-
-
-
-
-
-
   color: var(--accent-ember);
-
-
-
-
-
-
 
   margin-bottom: 0.7rem;
 
-
-
-
-
-
-
 }
 
 .portal-status {
-
-
-
-
-
-
 
   margin-top: 0.65rem;
 
-
-
-
-
-
-
 }
 
 .portal-status {
 
-
-
-
-
-
-
   display: inline-flex;
-
-
-
-
-
-
 
   border-radius: 999px;
 
-
-
-
-
-
-
   border: 1px solid var(--border);
-
-
-
-
-
-
 
   padding: 0.24rem 0.52rem;
 
-
-
-
-
-
-
   font-size: 0.72rem;
 
-
-
-
-
-
-
   color: var(--text-secondary);
-
-
-
-
-
-
 
 }
 
 .portal-notice svg {
 
-
-
-
-
-
-
   width: 18px;
-
-
-
-
-
-
 
   min-width: 18px;
 
-
-
-
-
-
-
   color: var(--accent-glow);
-
-
-
-
-
-
 
 }
 
 .portal-notice p {
 
-
-
-
-
-
-
   font-size: 0.88rem;
 
-
-
-
-
-
-
   color: var(--text-secondary);
-
-
-
-
-
-
 
 }
 
 .portal-grid {
 
-
-
-
-
-
-
   grid-template-columns: repeat(4, minmax(0, 1fr));
 
-
-
-
-
-
-
 }
-
-
-
-
-
-
-
-
-
-
-
-
-
-
 
 .portal-notice {
 
-
-
-
-
-
-
   margin-top: 0.95rem;
-
-
-
-
-
-
 
   padding: 0.75rem;
 
-
-
-
-
-
-
   display: flex;
-
-
-
-
-
-
 
   gap: 0.58rem;
 
-
-
-
-
-
-
 }
 
 .restraint-charts {
-
-
-
-
-
-
 
   display: grid;
 
-
-
-
-
-
-
   grid-template-columns: 1fr 1fr;
-
-
-
-
-
-
 
   gap: 1.5rem;
 
-
-
-
-
-
-
   margin: 2rem 0;
 
-
-
-
-
-
-
 }
-
-
-
-
-
-
-
-
-
-
-
-
-
-
 
 .restraint-chart-card {
 
-
-
-
-
-
-
   background: var(--bg-elevated);
-
-
-
-
-
-
 
   border: 1px solid var(--border);
 
-
-
-
-
-
-
   border-radius: var(--radius-md);
-
-
-
-
-
-
 
   padding: 1.5rem;
 
-
-
-
-
-
-
 }
-
-
-
-
-
-
-
-
-
-
-
-
-
-
 
 .restraint-chart-card.full-width {
 
-
-
-
-
-
-
   grid-column: 1 / -1;
 
-
-
-
-
-
-
 }
-
-
-
-
-
-
-
-
-
-
-
-
-
-
 
 .restraint-chart-title {
 
-
-
-
-
-
-
   font-size: 1rem;
-
-
-
-
-
-
 
   font-weight: 700;
 
-
-
-
-
-
-
   margin: 0 0 1rem;
-
-
-
-
-
-
 
   color: var(--text-primary);
 
-
-
-
-
-
-
 }
-
-
-
-
-
-
-
-
-
-
-
-
-
-
 
 .restraint-info-box {
 
-
-
-
-
-
-
   background: linear-gradient(135deg, rgba(59, 130, 246, 0.04), rgba(139, 92, 246, 0.04));
-
-
-
-
-
-
 
   border: 1px solid rgba(59, 130, 246, 0.15);
 
-
-
-
-
-
-
   border-radius: var(--radius-md);
-
-
-
-
-
-
 
   padding: 1.25rem;
 
-
-
-
-
-
-
   margin-bottom: 2rem;
-
-
-
-
-
-
 
   font-size: 0.9rem;
 
-
-
-
-
-
-
   color: var(--text-secondary);
-
-
-
-
-
-
 
   line-height: 1.6;
 
-
-
-
-
-
-
 }
-
-
-
-
-
-
-
-
-
-
-
-
-
-
 
 .restraint-info-box strong {
 
-
-
-
-
-
-
   color: var(--text-primary);
 
-
-
-
-
-
-
 }
-
-
-
-
-
-
-
-
-
-
-
-
-
-
 
 .restraint-info-box a {
 
-
-
-
-
-
-
   color: var(--accent-glow);
 
-
-
-
-
-
-
 }
-
-
-
-
-
-
-
-
-
-
-
-
-
-
 
 .restraint-export-btn {
 
-
-
-
-
-
-
   display: inline-flex;
-
-
-
-
-
-
 
   align-items: center;
 
-
-
-
-
-
-
   gap: 0.4rem;
-
-
-
-
-
-
 
   padding: 0.5rem 1rem;
 
-
-
-
-
-
-
   background: rgba(34, 197, 94, 0.1);
-
-
-
-
-
-
 
   border: 1px solid rgba(34, 197, 94, 0.2);
 
-
-
-
-
-
-
   border-radius: 8px;
-
-
-
-
-
-
 
   color: #4ade80;
 
-
-
-
-
-
-
   font-size: 0.82rem;
-
-
-
-
-
-
 
   font-weight: 600;
 
-
-
-
-
-
-
   cursor: pointer;
-
-
-
-
-
-
 
   text-decoration: none;
 
-
-
-
-
-
-
   transition: background var(--transition);
 
-
-
-
-
-
-
 }
-
-
-
-
-
-
-
-
-
-
-
-
-
-
 
 .restraint-export-btn:hover {
 
-
-
-
-
-
-
   background: rgba(34, 197, 94, 0.18);
 
-
-
-
-
-
-
 }
-
-
-
-
-
-
-
-
-
-
-
-
-
-
 
 .restraint-comparison-panel {
 
-
-
-
-
-
-
   background: var(--bg-elevated);
-
-
-
-
-
-
 
   border: 1px solid var(--border);
 
-
-
-
-
-
-
   border-radius: var(--radius-md);
-
-
-
-
-
-
 
   padding: 1.5rem;
 
-
-
-
-
-
-
   margin-bottom: 2rem;
 
-
-
-
-
-
-
 }
-
-
-
-
-
-
-
-
-
-
-
-
-
-
 
 .restraint-comparison-panel select {
 
-
-
-
-
-
-
   min-width: 200px;
 
-
-
-
-
-
-
 }
-
-
-
-
-
-
-
-
-
-
-
-
-
-
 
 .restraint-delta-up {
 
-
-
-
-
-
-
   color: var(--danger);
-
-
-
-
-
-
 
   font-size: 0.75rem;
 
-
-
-
-
-
-
 }
-
-
-
-
-
-
-
-
-
-
-
-
-
-
 
 .restraint-delta-down {
 
-
-
-
-
-
-
   color: var(--success);
 
-
-
-
-
-
-
   font-size: 0.75rem;
-
-
-
-
-
-
 
 }
 
-
-
-
-
-
-
-
-
-
-
-
-
-
-
 .restraint-delta-same {
-
-
-
-
-
-
 
   color: var(--text-muted);
 
-
-
-
-
-
-
   font-size: 0.75rem;
-
-
-
-
-
-
 
 }
 
 .restraint-charts {
 
-
-
-
-
-
-
     grid-template-columns: 1fr;
-
-
-
-
-
-
 
   }

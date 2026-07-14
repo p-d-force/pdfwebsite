@@ -1,0 +1,21 @@
+/* Beta Banner — site-wide development notice */
+.beta-banner {
+    text-align: center;
+    padding: 0.45rem 1rem;
+    background: rgba(255, 90, 31, 0.08);
+    border-bottom: 1px solid rgba(255, 90, 31, 0.15);
+    font-size: 0.78rem;
+    color: #ff5a1f;
+    letter-spacing: 0.01em;
+}
+
+/* Extension: construction notice (top of body) */
+.construction-notice {
+    text-align: center;
+    padding: 0.45rem 1rem;
+    background: rgba(255, 90, 31, 0.08);
+    border-bottom: 1px solid rgba(255, 90, 31, 0.15);
+    font-size: 0.78rem;
+    color: #ff5a1f;
+    letter-spacing: 0.01em;
+}
