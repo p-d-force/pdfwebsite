@@ -74,7 +74,7 @@ html {
 
 body {
 
-  background: var(--bg-primary);
+  background: radial-gradient(ellipse at 50% 0%, rgba(255, 255, 255, 0.03), transparent 60%), var(--bg-primary);
 
   color: var(--text-primary);
 

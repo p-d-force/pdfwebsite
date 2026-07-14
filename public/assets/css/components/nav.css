@@ -39,41 +39,40 @@
 }
 
 .nav-logo {
-
   display: flex;
-
   align-items: center;
-
   gap: 0.7rem;
-
   min-width: 0;
+  position: relative;
+}
 
+.nav-logo::after {
+  content: '';
+  position: absolute;
+  left: 0;
+  top: 50%;
+  width: 280px;
+  height: 80px;
+  transform: translateY(-50%);
+  background: radial-gradient(ellipse at left center, rgba(255, 255, 255, 0.05), transparent 70%);
+  pointer-events: none;
+  z-index: -1;
 }
 
 .nav-logo-img {
-
   width: 36px;
-
   height: 36px;
-
   border-radius: 50%;
-
   border: 1px solid var(--border);
-
-  box-shadow: var(--glow);
-
+  box-shadow: var(--glow), 0 0 60px rgba(255, 255, 255, 0.04);
 }
 
 .nav-logo-text {
-
   font-size: 0.92rem;
-
   letter-spacing: 0.08em;
-
   font-weight: 700;
-
   white-space: nowrap;
-
+  text-shadow: 0 0 28px rgba(255, 255, 255, 0.06);
 }
 
 .nav-menu {
