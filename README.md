@@ -140,11 +140,29 @@ pdfwebsite/
 │   │   └── footer.php              # Footer + scripts
 │   │
 │   └── assets/                     # Static files
-│       ├── css/styles.css          # Main stylesheet (66KB)
-│       ├── js/main.js              # Core JS (nav, tabs, filters)
-│       ├── js/charts.js            # Chart.js — restraint trends
-│       ├── js/charts-compare.js    # Chart.js — district comparison
-│       └── images/                 # Logos, icons
+│       ├── css/
+│       │   ├── app.css             # Entry point — imports all component stylesheets
+│       │   ├── donate.css           # Donate button (glowing orange CTA)
+│       │   ├── admin.css            # Admin panel overrides
+│       │   └── components/          # Per-feature CSS (edit one file per component)
+│       │       ├── base.css         # Reset, variables, utilities
+│       │       ├── buttons.css      # All .btn-* variants (primary glow, ghost, tip, sizes)
+│       │       ├── nav.css          # Navigation + nav pill buttons
+│       │       ├── hero.css         # Hero section, stats, scroll indicator
+│       │       ├── footer.css       # Footer, subscribe form
+│       │       ├── case-list.css    # Case cards, filters
+│       │       ├── article-card.css # Article cards, search
+│       │       ├── district-dashboard.css  # District tabbed dashboard
+│       │       ├── data-portal.css  # Data browser tables, filters
+│       │       ├── compare-panel.css # District comparison tool
+│       │       ├── section-dark.css # Dark section variant
+│       │       ├── section-accent.css # Accent section variant
+│       │       └── beta-banner.css  # Construction/preview banner
+│       ├── js/                      # Client-side JS (IIFE pattern)
+│       │   ├── app.js               # Core JS entry point
+│       │   └── components/          # JS components
+│       │       └── charts.js        # Chart.js visualizations
+│       └── images/                  # Logos, icons
 │
 ├── 🔬 DATA PIPELINE
 │   └── massachusetts/

@@ -61,11 +61,20 @@ python dev_server.py
 # → http://localhost:8081/
 ```
 
-The dev server runs PHP via CGI and serves from the project root. It includes embedded route handlers that mirror production behavior.
+The dev server (`dev_server.py`) is a self-contained Python HTTP server with embedded route handlers, SQLite database, and CSS serving. It mirrors production URL structure without requiring PHP or Apache.
+
+### CSS Architecture
+
+CSS is componentized: `app.css` imports per-feature stylesheets from `components/`. Each component file owns one visual concern — buttons, navigation, hero, footer, data tables, etc. Edit a single component file to change that feature site-wide.
+
+Key components:
+- `buttons.css` — all `.btn-*` variants (primary glow, secondary, ghost, tip, sizes, responsive)
+- `nav.css` — navigation bar + `.nav-link-tip` and `.nav-link-portal` pill buttons
+- `hero.css` — hero section, CTA buttons, stats
+- `footer.css` — footer layout, subscribe form
+- `data-portal.css` — data browser tables, filter bars, pagination
+- `district-dashboard.css` — tabbed district profiles with PRS, restraint, discipline, enrollment tabs
+
+Standalone CSS files (`donate.css`, `admin.css`) are linked directly in `<head>` for page-specific or global overrides.
 
 ## Production
-
-- **Server:** LiteSpeed on cPanel
-- **Database:** MariaDB 10.11
-- **Deploy:** FTP to `public_html/`
-- **URL:** https://parentdataforce.com

@@ -34,8 +34,8 @@ Each repo has an extensive GitHub wiki:
 |---|---|
 | PHP DB access | `Database::fetchAll($sql, [$params])` — never raw PDO |
 | Output escaping | `h($var)` for all dynamic HTML output |
-| HTML patterns | `asset('css/styles.css')` for static file paths |
-| CSS | Single file: `assets/css/styles.css`. No inline styles in PHP. |
+| CSS | Component architecture: `assets/css/app.css` imports per-feature files from `components/`. All button styles in `components/buttons.css`. No inline styles in PHP. |
+| HTML patterns | `asset('css/app.css')` for static file paths |
 | JS | IIFE pattern. Charts in `charts.js` / `charts-compare.js`. Core in `main.js`. |
 | Construction mode | `SITE_UNDER_CONSTRUCTION` in `.env` controls global banner |
 | Page dev flag | `$page_under_development = true` before includes → noindex + per-page banner |

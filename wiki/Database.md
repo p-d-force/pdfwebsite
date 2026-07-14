@@ -60,9 +60,7 @@ Three tables from `scraper/migration/documents_table.sql`:
 
 ## Seed Data
 
-Six districts are pre-seeded: Boston (00350000), Springfield (02810000), Worcester (03480000), Brockton (00440000), Lawrence (01490000), Holyoke (01370000).
-
-Seed SQL files: `backend/seed_*.sql` — restraint (6,182 rows), enrollment (3,168), discipline (2,779), attendance (3,160), SPED, PRS, drive data.
+Six districts are pre-seeded: Attleboro (00160000), Fall River (00950000), Whitman-Hanson (07800000), Bridgewater-Raynham (06250000), Norton (02000000), DESE (00000000).
 
 ## Conventions
 
