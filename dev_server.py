@@ -685,6 +685,7 @@ def get_head(title='', description=''):
     <title>{h(title + ' | ' if title else '')}Parent Data Force</title>
     <link rel="icon" type="image/png" href="/assets/images/logo.png">
     <link rel="stylesheet" href="/assets/css/app.css">
+    <link rel="stylesheet" href="/assets/css/donate.css">
     <link rel="preconnect" href="https://fonts.googleapis.com">
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
     <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700;800&family=JetBrains+Mono:wght@400;500&display=swap" rel="stylesheet">
@@ -2058,6 +2059,75 @@ def handle_updates():
     {f'<p class="update-body">{h(u["body"] or "")}</p>' if u["body"] else ''}
     {district_link}
 </div>'''
+        body += '</div>'
+
+    return body + '</div></section>' + get_footer()
+
+
+
+def handle_appearances():
+    conn = get_db()
+    conn.execute('''CREATE TABLE IF NOT EXISTS media_appearances (
+        id INTEGER PRIMARY KEY AUTOINCREMENT,
+        title TEXT NOT NULL,
+        source_name TEXT,
+        source_url TEXT,
+        type TEXT NOT NULL DEFAULT 'other',
+        date TEXT NOT NULL,
+        description TEXT,
+        person TEXT,
+        district_code TEXT,
+        created_at TEXT DEFAULT (datetime('now'))
+    )''')
+    type_filter = ''
+    params = []
+    import urllib.parse
+    qs = {}
+    if '?' in _current_path:
+        qs = dict(urllib.parse.parse_qsl(_current_path.split('?', 1)[1]))
+    t = qs.get('type', 'all')
+    if t and t != 'all':
+        type_filter = 'WHERE type = ?'
+        params = [t]
+    appearances = conn.execute(
+        f"SELECT * FROM media_appearances {type_filter} ORDER BY date DESC",
+        params
+    ).fetchall()
+    type_counts = conn.execute(
+        "SELECT type, COUNT(*) as total FROM media_appearances GROUP BY type ORDER BY type"
+    ).fetchall()
+    conn.close()
+
+    type_labels = {
+        'news_article': 'News Article', 'radio': 'Radio', 'public_comment': 'Public Comment',
+        'tv': 'TV', 'podcast': 'Podcast', 'other': 'Other'
+    }
+
+    head = get_head('Appearances', 'News articles, radio interviews, public comments, and media coverage.')
+    body = f'{head}{get_header("/appearances/")}<section class="section"><div class="container"><div class="section-header"><span class="section-tag">Media &amp; Public Engagement</span><h2 class="section-title">Appearances</h2><p class="section-subtitle">News articles, radio interviews, public comments, and media coverage featuring Parent Data Force and its members across Massachusetts.</p></div>'
+
+    body += '<div class="articles-controls" style="margin-bottom:1.5rem;"><form method="get" class="articles-search-form"><select name="type" class="repo-select" onchange="this.form.submit()" style="max-width:250px;"><option value="all">All Types</option>'
+    for tc in type_counts:
+        selected = 'selected' if type_filter and params and params[0] == tc['type'] else ''
+        body += f'<option value="{h(tc["type"])}" {selected}>{h(type_labels.get(tc["type"], tc["type"]))} ({tc["total"]})</option>'
+    body += '</select>'
+    if type_filter:
+        body += '<a href="/appearances/" class="btn btn-ghost" style="padding:0.63rem 1rem;">Clear</a>'
+    body += '</form></div>'
+
+    if not appearances:
+        body += '<div class="empty-state"><p>Media appearances will appear here as Parent Data Force engages with press, radio, and public meetings.</p></div>'
+    else:
+        body += '<div class="appearances-grid">'
+        for a in appearances:
+            district_html = f'<a href="/districts/{h(a["district_code"].lower())}/" style="color:var(--accent-glow);font-size:0.78rem;margin-left:0.5rem;text-decoration:underline;">{h(a["district_code"])}</a>' if a['district_code'] else ''
+            source_html = f'<a href="{h(a["source_url"])}" target="_blank" rel="noopener">{h(a["title"])}</a>' if a['source_url'] else h(a['title'])
+            body += f'''<article class="appearance-card">
+<div class="appearance-meta"><span class="appearance-type" style="display:inline-block;font-size:0.72rem;font-weight:600;text-transform:uppercase;letter-spacing:0.06em;padding:0.2rem 0.55rem;border-radius:999px;margin-right:0.5rem;background:var(--bg-raised);color:var(--text-secondary);border:1px solid var(--border-color);">{h(type_labels.get(a["type"], a["type"]))}</span><span class="appearance-date" style="color:var(--text-muted);font-size:0.82rem;">{format_date(a["date"])}</span>{district_html}</div>
+<h3 class="appearance-title">{source_html}</h3>
+{f'<p style="color:var(--text-secondary);font-size:0.9rem;line-height:1.5;">{h(a["description"])}</p>' if a["description"] else ''}
+<div style="margin-top:0.5rem;font-size:0.8rem;color:var(--text-muted);"><strong>Source:</strong> {h(a["source_name"] or "")}{f" &middot; {h(a['person'])}" if a['person'] else ''}</div>
+</article>'''
         body += '</div>'
 
     return body + '</div></section>' + get_footer()
@@ -4190,6 +4260,10 @@ class PDFHandler(SimpleHTTPRequestHandler):
                 content = handle_speeches()
             elif path.startswith('/search/'):
                 content = handle_search()
+            elif path.startswith('/updates/'):
+                content = handle_updates()
+            elif path.startswith('/appearances/'):
+                content = handle_appearances()
             elif path.startswith('/submit/'):
                 content = handle_submit()
             elif path.startswith('/about/'):

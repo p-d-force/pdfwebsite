@@ -1,0 +1,17 @@
+/* Donate Button — glowing orange CTA matching footer Subscribe button */
+.nav-link.nav-link-donate {
+  background: linear-gradient(120deg, var(--accent-hot), var(--accent-ember));
+  box-shadow: 0 6px 20px rgba(255, 90, 31, 0.3);
+  border: 1px solid transparent;
+  border-radius: 12px;
+  padding: 0.5rem 1rem;
+  font-weight: 600;
+  color: #fff !important;
+  transition: transform var(--transition), box-shadow var(--transition);
+}
+
+.nav-link.nav-link-donate:hover {
+  transform: translateY(-2px);
+  box-shadow: 0 8px 25px rgba(255, 90, 31, 0.45);
+  color: #fff !important;
+}

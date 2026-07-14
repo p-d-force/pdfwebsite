@@ -149,9 +149,6 @@ textarea {
 .flex-between { display: flex; justify-content: space-between; align-items: flex-start; flex-wrap: wrap; gap: 0.5rem; }
 .grid-2col { grid-template-columns: repeat(2, minmax(0, 1fr)); }
 .grid-3col { grid-template-columns: repeat(3, minmax(0, 1fr)); }
-.btn-sm { padding: 0.63rem 1rem; }
-.btn-xs { padding: 0.25rem 0.5rem; font-size: 0.75rem; }
-.btn-filter { padding: 0.63rem 1rem; }
 .text-muted { color: var(--text-muted); }
 .text-accent { color: var(--accent-glow); }
 .text-danger { color: var(--danger); }

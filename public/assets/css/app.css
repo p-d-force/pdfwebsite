@@ -1,5 +1,6 @@
 /* App CSS — imports component stylesheets */
 @import 'components/base.css';
+@import 'components/buttons.css';
 @import 'components/beta-banner.css';
 @import 'components/section-dark.css';
 @import 'components/section-accent.css';
