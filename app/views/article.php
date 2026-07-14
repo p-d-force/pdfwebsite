@@ -1,0 +1,1 @@
+<?php if (!empty($article)): ?><section class="section"><div class="container"><h1><?= h($article['title']) ?></h1><?php if (!empty($article['published_date'])): ?><time><?= h(format_date($article['published_date'])) ?></time><?php endif; ?><?php if (!empty($article['body'])): ?><div class="article-body"><?= $article['body'] ?></div><?php endif; ?></div></section><?php endif; ?>

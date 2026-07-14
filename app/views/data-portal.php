@@ -1,0 +1,1 @@
+<section class="section"><div class="container"><h1>Data Portal</h1><p>Explore Massachusetts school district data — restraint and seclusion, enrollment, discipline, and attendance.</p><p><a href="/compare" class="btn btn-primary">Compare Districts</a></p></div></section>

@@ -44,6 +44,7 @@ class ThreadingHTTPServer(ThreadingMixIn, HTTPServer):
     daemon_threads = True
 
 ROOT = Path(__file__).resolve().parent
+PUBLIC_ROOT = ROOT / "public"
 DB_PATH = ROOT / "dev.db"
 HOST = "localhost"
 PORT = 8081
@@ -656,13 +657,12 @@ def render_shortcodes(content):
 # 
 # HTML rendering
 # 
-
 ASSETS = {
-    'styles.css': (ROOT / 'styles.css'),
-    'admin.css': (ROOT / 'assets' / 'css' / 'admin.css'),
-    'main.js': (ROOT / 'assets' / 'js' / 'main.js'),
-    'charts.js': (ROOT / 'assets' / 'js' / 'charts.js'),
-    'logo.png': (ROOT / 'assets' / 'images' / 'logo.png'),
+    'styles.css': (PUBLIC_ROOT / 'assets' / 'css' / 'app.css'),
+    'admin.css': (PUBLIC_ROOT / 'assets' / 'css' / 'admin.css'),
+    'main.js': (PUBLIC_ROOT / 'assets' / 'js' / 'app.js'),
+    'charts.js': (PUBLIC_ROOT / 'assets' / 'js' / 'components' / 'charts.js'),
+    'logo.png': (PUBLIC_ROOT / 'assets' / 'images' / 'logo.png'),
 }
 
 CSS_CONTENT = None
@@ -4107,7 +4107,7 @@ def handle_resources():
 
 class PDFHandler(SimpleHTTPRequestHandler):
     def __init__(self, *args, **kwargs):
-        super().__init__(*args, directory=str(ROOT), **kwargs)
+        super().__init__(*args, directory=str(PUBLIC_ROOT), **kwargs)
 
     def do_GET(self):
         global _current_path
