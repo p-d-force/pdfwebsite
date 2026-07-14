@@ -21,9 +21,15 @@ class CaseController
     {
         $slug = $params['slug'] ?? '';
         $case = Database::fetch(
-            "SELECT * FROM cases WHERE slug = ? OR case_number = ?",
-            [$slug, $slug]
+            "SELECT * FROM cases WHERE slug = ?",
+            [$slug]
         );
+        if (!$case) {
+            $case = Database::fetch(
+                "SELECT * FROM cases WHERE case_number = ?",
+                [$slug]
+            );
+        }
         if (!$case) {
             http_response_code(404);
             View::render('errors/404', ['page_title' => 'Case Not Found']);

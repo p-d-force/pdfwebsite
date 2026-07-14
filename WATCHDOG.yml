@@ -1,12 +1,6 @@
 advisors: 
   - name: Main Advisor
     model: ollama/gemma4:12b-256k
-    tools: 
-      - read
-      - ask
-      - glob
-      - grep
-      - browser
   - name: Advisor 2
     model: ollama/gemma4:12b-256k
     tools: 

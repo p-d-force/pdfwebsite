@@ -1,9 +1,0 @@
-{
-  "district": "ATTLEBORO",
-  "districtName": "Attleboro Public Schools",
-  "location": "Attleboro, MA",
-  "status": "active",
-  "cases": ["SPR26-0842", "ATTLEBORO-PRR-002"],
-  "notes": "Active investigations - professional development records, meeting recordings transparency, and recurring records response delays",
-  "relatedDistricts": ["FALLRIVER", "WHITMANH", "BRIDGEWAT", "NORTON"]
-}

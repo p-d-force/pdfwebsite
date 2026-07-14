@@ -57,6 +57,11 @@ cases/*/*.mp3
 cases/*/*.pdf
 cases/*/*.zip
 
+
+# Local dev artifacts
+.omp/sessions/
+.omp/models.yml
+nav_inspect.png
 # Backups (large, potentially stale)
 backups/
 

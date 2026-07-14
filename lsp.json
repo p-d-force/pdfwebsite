@@ -1,0 +1,22 @@
+{
+  "servers": {
+    "intelephense": {
+      "command": "intelephense",
+      "args": ["--stdio"],
+      "fileTypes": [".php"],
+      "rootMarkers": [".git"]
+    },
+    "typescript-language-server": {
+      "command": "typescript-language-server",
+      "args": ["--stdio"],
+      "fileTypes": [".js"],
+      "rootMarkers": [".git"]
+    },
+    "vscode-css-language-server": {
+      "command": "vscode-css-language-server",
+      "args": ["--stdio"],
+      "fileTypes": [".css"],
+      "rootMarkers": [".git"]
+    }
+  }
+}

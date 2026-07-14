@@ -34,7 +34,7 @@ class District
                     COUNT(DISTINCT c.id) as case_count,
                     SUM(CASE WHEN c.status IN ('open','pending') THEN 1 ELSE 0 END) as open_cases
              FROM districts d
-             LEFT JOIN cases c ON d.district_code = c.district_code AND c.status != 'archived'
+             LEFT JOIN cases c ON d.id = c.district_id AND c.status != 'archived'
              WHERE d.is_active = 1
              GROUP BY d.id
              ORDER BY case_count DESC, d.district_name ASC"
@@ -46,8 +46,10 @@ class District
     {
         return Database::fetchAll(
             "SELECT c.*, COUNT(cd.id) as document_count
-             FROM cases c LEFT JOIN case_documents cd ON c.id = cd.case_id
-             WHERE c.district_code = ? AND c.status != 'archived'
+             FROM cases c
+             JOIN districts d ON c.district_id = d.id
+             LEFT JOIN case_documents cd ON c.id = cd.case_id
+             WHERE d.district_code = ? AND c.status != 'archived'
              GROUP BY c.id ORDER BY c.filed_date DESC",
             [$districtCode]
         );

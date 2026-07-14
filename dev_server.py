@@ -1614,6 +1614,7 @@ document.querySelectorAll('.submit-tab').forEach(tab => {
     });
 });
     </script>'''
+    return body + get_footer()
 
 def handle_about():
     head = get_head('About', 'Parent Data Force is an independent special education and public accountability advocacy initiative.')
@@ -4179,6 +4180,7 @@ class PDFHandler(SimpleHTTPRequestHandler):
             path = path.split('?')[0]
 
         if path.startswith('/assets/'):
+            self.directory = str(ROOT / 'public')
             return super().do_GET()
         if path == '/favicon.ico':
             self.send_response(404); self.end_headers(); return
