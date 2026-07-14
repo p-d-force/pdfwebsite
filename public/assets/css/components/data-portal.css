@@ -1,4 +1,4 @@
-.portal-grid,
+.nav-link-portal {
 
 
 
@@ -6,7 +6,7 @@
 
 
 
-.appearances-grid {
+  border: 1px solid rgba(255, 90, 31, 0.5);
 
 
 
@@ -14,7 +14,7 @@
 
 
 
-  display: grid;
+  padding: 0.42rem 0.72rem;
 
 
 
@@ -22,15 +22,7 @@
 
 
 
-  grid-template-columns: repeat(4, minmax(0, 1fr));
-
-
-
-
-
-
-
-  gap: 1rem;
+  border-radius: 999px;
 
 
 
@@ -39,174 +31,6 @@
 
 
 }
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-.value-card,
-
-
-
-
-
-
-
-.service-card,
-
-
-
-
-
-
-
-.statewide-card,
-
-
-
-
-
-
-
-.resource-card,
-
-
-
-
-
-
-
-.portal-card,
-
-
-
-
-
-
-
-.appearance-card,
-
-
-
-
-
-
-
-.case-card,
-
-
-
-
-
-
-
-.dese-case-item {
-
-
-
-
-
-
-
-  border: 1px solid var(--border);
-
-
-
-
-
-
-
-  background: linear-gradient(160deg, rgba(255, 255, 255, 0.02), rgba(255, 255, 255, 0.01));
-
-
-
-
-
-
-
-  border-radius: var(--radius-md);
-
-
-
-
-
-
-
-  padding: 1rem;
-
-
-
-
-
-
-
-  transition: border-color var(--transition), transform var(--transition), box-shadow var(--transition);
-
-
-
-
-
-
-
-}
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-.value-card:hover,
-
-
-
-
-
-
-
-.service-card:hover,
-
-
-
-
-
-
-
-.statewide-card:hover,
-
-
-
-
-
-
-
-.resource-card:hover,
-
-
-
-
-
-
-
-.portal-card:hover,
 
 .portal-icon {
 
@@ -282,238 +106,6 @@
 
 }
 
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-.value-title,
-
-
-
-
-
-
-
-.service-title,
-
-
-
-
-
-
-
-.statewide-title,
-
-
-
-
-
-
-
-.portal-title,
-
-
-
-
-
-
-
-.appearance-title,
-
-
-
-
-
-
-
-.resource-title,
-
-
-
-
-
-
-
-.case-card-title {
-
-
-
-
-
-
-
-  font-size: 1.03rem;
-
-
-
-
-
-
-
-  margin-bottom: 0.44rem;
-
-
-
-
-
-
-
-}
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-.value-description,
-
-
-
-
-
-
-
-.service-description,
-
-
-
-
-
-
-
-.statewide-description,
-
-
-
-
-
-
-
-.portal-description,
-
-
-
-
-
-
-
-.appearance-summary,
-
-
-
-
-
-
-
-.resource-excerpt,
-
-
-
-
-
-
-
-.case-card-summary,
-
-
-
-
-
-
-
-.dese-case-summary {
-
-
-
-
-
-
-
-  font-size: 0.92rem;
-
-
-
-
-
-
-
-  color: var(--text-secondary);
-
-
-
-
-
-
-
-}
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-.service-number {
-
-
-
-
-
-
-
-  font-family: "JetBrains Mono", Consolas, monospace;
-
-
-
-
-
-
-
-  color: var(--accent-glow);
-
-
-
-
-
-
-
-  margin-bottom: 0.5rem;
-
-
-
-
-
-
-
-}
-
 .portal-status {
 
 
@@ -532,31 +124,15 @@
 
 }
 
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-.statewide-tag,
-
-
-
-
-
-
-
 .portal-status {
 
-.portal-notice,
+
+
+
+
+
+
+  display: inline-flex;
 
 
 
@@ -564,15 +140,7 @@
 
 
 
-.disclaimer-box,
-
-
-
-
-
-
-
-.form-disclaimer {
+  border-radius: 999px;
 
 
 
@@ -588,7 +156,7 @@
 
 
 
-  border-radius: var(--radius-md);
+  padding: 0.24rem 0.52rem;
 
 
 
@@ -596,207 +164,7 @@
 
 
 
-  background: rgba(255, 255, 255, 0.02);
-
-
-
-
-
-
-
-}
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-.submit-form,
-
-
-
-
-
-
-
-.contact-form {
-
-
-
-
-
-
-
-  padding: 1rem;
-
-
-
-
-
-
-
-}
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-.quick-tip-block {
-
-
-
-
-
-
-
-  display: flex;
-
-
-
-
-
-
-
-  justify-content: space-between;
-
-
-
-
-
-
-
-  gap: 0.8rem;
-
-
-
-
-
-
-
-  align-items: center;
-
-
-
-
-
-
-
-  border: 1px solid rgba(255, 163, 102, 0.35);
-
-
-
-
-
-
-
-  border-radius: 12px;
-
-
-
-
-
-
-
-  background: rgba(255, 90, 31, 0.09);
-
-
-
-
-
-
-
-  padding: 0.8rem;
-
-
-
-
-
-
-
-  margin-bottom: 0.8rem;
-
-
-
-
-
-
-
-}
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-.quick-tip-content h3 {
-
-
-
-
-
-
-
-  font-size: 1rem;
-
-
-
-
-
-
-
-  margin-bottom: 0.2rem;
-
-
-
-
-
-
-
-}
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-.quick-tip-content p {
+  font-size: 0.72rem;
 
 
 
@@ -812,173 +180,7 @@
 
 
 
-  font-size: 0.88rem;
-
-
-
-
-
-
-
 }
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-.btn-tip-inline {
-
-
-
-
-
-
-
-  border: 1px solid rgba(255, 163, 102, 0.55);
-
-
-
-
-
-
-
-  background: rgba(255, 255, 255, 0.03);
-
-
-
-
-
-
-
-  border-radius: 10px;
-
-
-
-
-
-
-
-  padding: 0.55rem 0.8rem;
-
-
-
-
-
-
-
-  white-space: nowrap;
-
-
-
-
-
-
-
-}
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-.form-disclaimer {
-
-
-
-
-
-
-
-  display: flex;
-
-
-
-
-
-
-
-  gap: 0.65rem;
-
-
-
-
-
-
-
-  padding: 0.8rem;
-
-
-
-
-
-
-
-  margin-bottom: 0.9rem;
-
-
-
-
-
-
-
-  border-color: rgba(255, 90, 31, 0.3);
-
-
-
-
-
-
-
-  background: rgba(255, 90, 31, 0.07);
-
-
-
-
-
-
-
-}
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-.form-disclaimer svg,
-
-
-
-
-
-
 
 .portal-notice svg {
 
@@ -1014,28 +216,6 @@
 
 }
 
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-.form-disclaimer p,
-
-
-
-
-
-
-
 .portal-notice p {
 
 
@@ -1053,6 +233,88 @@
 
 
   color: var(--text-secondary);
+
+
+
+
+
+
+
+}
+
+.portal-grid {
+
+
+
+
+
+
+
+  grid-template-columns: repeat(4, minmax(0, 1fr));
+
+
+
+
+
+
+
+}
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+.portal-notice {
+
+
+
+
+
+
+
+  margin-top: 0.95rem;
+
+
+
+
+
+
+
+  padding: 0.75rem;
+
+
+
+
+
+
+
+  display: flex;
+
+
+
+
+
+
+
+  gap: 0.58rem;
+
+
+
+
+
+
+
+}
 
 .restraint-charts {
 
@@ -1743,3 +1005,45 @@
 
 
 .restraint-delta-same {
+
+
+
+
+
+
+
+  color: var(--text-muted);
+
+
+
+
+
+
+
+  font-size: 0.75rem;
+
+
+
+
+
+
+
+}
+
+.restraint-charts {
+
+
+
+
+
+
+
+    grid-template-columns: 1fr;
+
+
+
+
+
+
+
+  }

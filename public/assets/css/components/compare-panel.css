@@ -247,3 +247,171 @@
 
 
 }
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+/* ── Compare Chart ── */
+
+
+
+
+
+
+
+.compare-chart-container {
+
+
+
+
+
+
+
+  position: relative;
+
+
+
+
+
+
+
+  width: 100%;
+
+
+
+
+
+
+
+  min-height: 400px;
+
+
+
+
+
+
+
+  background: var(--bg-elevated);
+
+
+
+
+
+
+
+  border: 1px solid var(--border);
+
+
+
+
+
+
+
+  border-radius: 12px;
+
+
+
+
+
+
+
+  padding: 1rem;
+
+
+
+
+
+
+
+}
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+.district-compare-empty {
+
+
+
+
+
+
+
+  display: flex;
+
+
+
+
+
+
+
+  align-items: center;
+
+
+
+
+
+
+
+  justify-content: center;
+
+
+
+
+
+
+
+  min-height: 300px;
+
+
+
+
+
+
+
+  color: var(--text-muted);
+
+
+
+
+
+
+
+  font-size: 0.95rem;
+
+
+
+
+
+
+
+  text-align: center;
+
+
+
+
+
+
+
+}

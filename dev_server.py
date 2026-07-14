@@ -684,7 +684,7 @@ def get_head(title='', description=''):
     <link rel="canonical" href="http://{HOST}:{PORT}{{canonical_path}}">
     <title>{h(title + ' | ' if title else '')}Parent Data Force</title>
     <link rel="icon" type="image/png" href="/assets/images/logo.png">
-    <link rel="stylesheet" href="/assets/css/styles.css">
+    <link rel="stylesheet" href="/assets/css/app.css">
     <link rel="preconnect" href="https://fonts.googleapis.com">
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
     <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700;800&family=JetBrains+Mono:wght@400;500&display=swap" rel="stylesheet">
@@ -2146,7 +2146,7 @@ def handle_admin_login(handler):
                     pass
             error = 'Invalid username or password.'
 
-    body = '<!DOCTYPE html><html lang="en"><head><meta charset="UTF-8"><meta name="viewport" content="width=device-width,initial-scale=1.0">\n<title>Admin Login - Parent Data Force</title>\n<link rel="icon" href="/assets/images/logo.png"><link rel="stylesheet" href="/assets/css/styles.css"><link rel="stylesheet" href="/assets/css/admin.css">\n<link href="https://fonts.googleapis.com/css2?family=Inter:wght@300..800&family=JetBrains+Mono:wght@400;500&display=swap" rel="stylesheet">\n<style>body{display:grid;place-items:center;min-height:100vh} .login-box{width:min(400px,90vw);border:1px solid var(--border);border-radius:var(--radius-lg);padding:2.5rem;background:var(--bg-elevated)}\n.login-box h1{font-size:1.3rem;margin-bottom:.3rem} .form-group{margin-bottom:1rem}\n.form-label{display:block;font-size:.85rem;color:var(--text-secondary);margin-bottom:.35rem}\n.form-input{width:100%;padding:.75rem;border:1px solid var(--border);border-radius:var(--radius-sm);background:rgba(255,255,255,.03);color:var(--text-primary)}\n.form-input:focus{outline:0;border-color:var(--accent-ember);box-shadow:0 0 0 3px rgba(255,90,31,.1)}\n.error{color:var(--danger);font-size:.85rem;margin-bottom:.8rem;padding:.5rem;background:var(--danger-bg);border-radius:var(--radius-xs);border:1px solid rgba(239,68,68,.2)}\n</style></head><body><div class="login-box"><h1>Parent Data Force</h1><p style="color:var(--accent-glow);font-size:.78rem;letter-spacing:.1em;margin-bottom:1.5rem">ADMIN PANEL</p>'
+    body = '<!DOCTYPE html><html lang="en"><head><meta charset="UTF-8"><meta name="viewport" content="width=device-width,initial-scale=1.0">\n<title>Admin Login - Parent Data Force</title>\n<link rel="icon" href="/assets/images/logo.png"><link rel="stylesheet" href="/assets/css/app.css"><link rel="stylesheet" href="/assets/css/admin.css">\n<link href="https://fonts.googleapis.com/css2?family=Inter:wght@300..800&family=JetBrains+Mono:wght@400;500&display=swap" rel="stylesheet">\n<style>body{display:grid;place-items:center;min-height:100vh} .login-box{width:min(400px,90vw);border:1px solid var(--border);border-radius:var(--radius-lg);padding:2.5rem;background:var(--bg-elevated)}\n.login-box h1{font-size:1.3rem;margin-bottom:.3rem} .form-group{margin-bottom:1rem}\n.form-label{display:block;font-size:.85rem;color:var(--text-secondary);margin-bottom:.35rem}\n.form-input{width:100%;padding:.75rem;border:1px solid var(--border);border-radius:var(--radius-sm);background:rgba(255,255,255,.03);color:var(--text-primary)}\n.form-input:focus{outline:0;border-color:var(--accent-ember);box-shadow:0 0 0 3px rgba(255,90,31,.1)}\n.error{color:var(--danger);font-size:.85rem;margin-bottom:.8rem;padding:.5rem;background:var(--danger-bg);border-radius:var(--radius-xs);border:1px solid rgba(239,68,68,.2)}\n</style></head><body><div class="login-box"><h1>Parent Data Force</h1><p style="color:var(--accent-glow);font-size:.78rem;letter-spacing:.1em;margin-bottom:1.5rem">ADMIN PANEL</p>'
     if error:
         body += f'<div class="error">{h(error)}</div>'
     body += '<form method="post"><div class="form-group"><label class="form-label">Username</label><input type="text" name="username" class="form-input" required autofocus autocomplete="off"></div><div class="form-group"><label class="form-label">Password</label><input type="password" name="password" class="form-input" required></div><button type="submit" class="btn btn-primary" style="width:100%;justify-content:center;">Sign In</button></form><div style="text-align:center;margin-top:1rem;"><a href="/" style="color:var(--text-muted);font-size:.82rem;">&larr; Back to site</a></div></div></body></html>'
@@ -2183,7 +2183,7 @@ def handle_admin_dashboard(admin_user):
 def admin_head(title=''):
     return f'''<!DOCTYPE html><html lang="en"><head><meta charset="UTF-8"><meta name="viewport" content="width=device-width,initial-scale=1.0">
 <title>{h(title + ' - ' if title else '')}Admin - Parent Data Force</title>
-<link rel="icon" href="/assets/images/logo.png"><link rel="stylesheet" href="/assets/css/styles.css"><link rel="stylesheet" href="/assets/css/admin.css">
+<link rel="icon" href="/assets/images/logo.png"><link rel="stylesheet" href="/assets/css/app.css"><link rel="stylesheet" href="/assets/css/admin.css">
 <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300..800&family=JetBrains+Mono:wght@400;500&display=swap" rel="stylesheet"></head>'''
 
 
