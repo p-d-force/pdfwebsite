@@ -1,0 +1,21 @@
+{
+  "id": "rule-public-records-core",
+  "group": "doc-families",
+  "title": "Public Records Core Rules",
+  "enabled": true,
+  "priority": 100,
+  "match": {
+    "docFamilies": ["public-records"]
+  },
+  "then": {
+    "deterministicRequiredFields": ["title", "requestNumbers"],
+    "preferredLinkTargets": ["case", "organization", "document", "event"],
+    "deadlineExtractionMode": "strict",
+    "defaultVisibility": "internal",
+    "defaultPublishEligible": false
+  },
+  "aiPromptHints": [
+    "Look for request scope, appeal posture, fee disputes, and production status.",
+    "Favor exact request numbers and dates over narrative inference."
+  ]
+}

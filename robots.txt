@@ -1,0 +1,19 @@
+User-agent: *
+Allow: /
+Allow: /articles/
+Allow: /cases/
+Allow: /districts/
+Allow: /data/
+Allow: /speeches/
+Allow: /updates/
+Allow: /about/
+Allow: /submit/
+Allow: /archive/
+Disallow: /admin/
+Disallow: /api/
+Disallow: /includes/
+Disallow: /errors/
+Disallow: /backend/
+Disallow: /vendor/
+
+Sitemap: https://www.parentdataforce.com/sitemap.php

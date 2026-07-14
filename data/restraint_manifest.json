@@ -1,0 +1,124 @@
+{
+  "source": "DESE Student Restraints Report - Public Schools",
+  "files": [
+    "data/raw/dese-restraint/dese-student-restraints-2016-17-public-schools.xlsx",
+    "data/raw/dese-restraint/dese-student-restraints-2017-18-public-schools.xlsx",
+    "data/raw/dese-restraint/dese-student-restraints-2018-19-public-schools.xlsx",
+    "data/raw/dese-restraint/dese-student-restraints-2019-20-public-schools.xlsx",
+    "data/raw/dese-restraint/dese-student-restraints-2020-21-public-schools.xlsx",
+    "data/raw/dese-restraint/dese-student-restraints-2021-22-public-schools.xlsx",
+    "data/raw/dese-restraint/dese-student-restraints-2022-23-public-schools.xlsx",
+    "data/raw/dese-restraint/dese-student-restraints-2023-24-public-schools.xlsx",
+    "data/raw/dese-restraint/dese-student-restraints-2024-25-public-schools.xlsx"
+  ],
+  "yearsCovered": [
+    "2016-17",
+    "2017-18",
+    "2018-19",
+    "2019-20",
+    "2020-21",
+    "2021-22",
+    "2022-23",
+    "2023-24",
+    "2024-25"
+  ],
+  "suppressionRule": "Dash '-' indicates a DESE-suppressed value. Suppressed values are kept as unknown and not converted to midpoint estimates.",
+  "rankingLenses": {
+    "allRowsMinusSummary": "All DESE school rows with numeric restraint values, excluding only the Public Schools Total summary row.",
+    "traditionalComparable": "Rows that pass both checks: enrollment >= 100 and school name does not include special-program keywords."
+  },
+  "emlWorkbookAttachments": [
+    {
+      "sourceType": "eml-attachment",
+      "sourceEml": "intake/Request to Add DESE Student Restraint Trend Review to Superintendent\u2019s Report Agenda.eml",
+      "attachmentName": "restraints (6).xlsx",
+      "schoolYear": "2019-20",
+      "target": "data/raw/dese-restraint/dese-student-restraints-2019-20-public-schools.xlsx",
+      "sha256": "c607b00723c81c6d28383b299865d1c7be8711e340a6d8adbf8a0074c93f9eb0",
+      "updated": false
+    },
+    {
+      "sourceType": "eml-attachment",
+      "sourceEml": "intake/Request to Add DESE Student Restraint Trend Review to Superintendent\u2019s Report Agenda.eml",
+      "attachmentName": "restraints (2).xlsx",
+      "schoolYear": "2023-24",
+      "target": "data/raw/dese-restraint/dese-student-restraints-2023-24-public-schools.xlsx",
+      "sha256": "ac6bab0ed1e460c039514e73cde49fc11b68811607fbf5de27147968d60e43a2",
+      "updated": false
+    },
+    {
+      "sourceType": "eml-attachment",
+      "sourceEml": "intake/Request to Add DESE Student Restraint Trend Review to Superintendent\u2019s Report Agenda.eml",
+      "attachmentName": "restraints (1).xlsx",
+      "schoolYear": "2024-25",
+      "target": "data/raw/dese-restraint/dese-student-restraints-2024-25-public-schools.xlsx",
+      "sha256": "d248ae0aff237722d0476020f45b2badd2f32ca64a106521bc87a025788f6501",
+      "updated": false
+    },
+    {
+      "sourceType": "eml-attachment",
+      "sourceEml": "intake/Request to Add DESE Student Restraint Trend Review to Superintendent\u2019s Report Agenda.eml",
+      "attachmentName": "restraints (5).xlsx",
+      "schoolYear": "2020-21",
+      "target": "data/raw/dese-restraint/dese-student-restraints-2020-21-public-schools.xlsx",
+      "sha256": "17307ffc1b40af7461b2bc55e19f7b447be768200ca5490ed14867afe2ddd167",
+      "updated": false
+    },
+    {
+      "sourceType": "eml-attachment",
+      "sourceEml": "intake/Request to Add DESE Student Restraint Trend Review to Superintendent\u2019s Report Agenda.eml",
+      "attachmentName": "restraints (7).xlsx",
+      "schoolYear": "2018-19",
+      "target": "data/raw/dese-restraint/dese-student-restraints-2018-19-public-schools.xlsx",
+      "sha256": "632672d129b84d30b9da70a2fb3eb7dc5352a5f6a3fa4352d603671e1f2c9889",
+      "updated": false
+    },
+    {
+      "sourceType": "eml-attachment",
+      "sourceEml": "intake/Request to Add DESE Student Restraint Trend Review to Superintendent\u2019s Report Agenda.eml",
+      "attachmentName": "restraints (3).xlsx",
+      "schoolYear": "2022-23",
+      "target": "data/raw/dese-restraint/dese-student-restraints-2022-23-public-schools.xlsx",
+      "sha256": "32e5ffe606a2341de839bde684019b00d828e2c9883fb81d5b05a431e0f32b9c",
+      "updated": false
+    },
+    {
+      "sourceType": "eml-attachment",
+      "sourceEml": "intake/Request to Add DESE Student Restraint Trend Review to Superintendent\u2019s Report Agenda.eml",
+      "attachmentName": "restraints (9).xlsx",
+      "schoolYear": "2016-17",
+      "target": "data/raw/dese-restraint/dese-student-restraints-2016-17-public-schools.xlsx",
+      "sha256": "979e67ab56efad4ddc32372f6e2bb75c9e55393be481225e7e53c747c44c91a7",
+      "updated": false
+    },
+    {
+      "sourceType": "eml-attachment",
+      "sourceEml": "intake/Request to Add DESE Student Restraint Trend Review to Superintendent\u2019s Report Agenda.eml",
+      "attachmentName": "restraints (8).xlsx",
+      "schoolYear": "2017-18",
+      "target": "data/raw/dese-restraint/dese-student-restraints-2017-18-public-schools.xlsx",
+      "sha256": "0fd89a6e797cec11693dfe139d695ced1dc1f68426548cc208716e1669f17a28",
+      "updated": false
+    },
+    {
+      "sourceType": "eml-attachment",
+      "sourceEml": "intake/Request to Add DESE Student Restraint Trend Review to Superintendent\u2019s Report Agenda.eml",
+      "attachmentName": "restraints (4).xlsx",
+      "schoolYear": "2021-22",
+      "target": "data/raw/dese-restraint/dese-student-restraints-2021-22-public-schools.xlsx",
+      "sha256": "7316c5a41c11ddccec622f37c56615d27eabdaf6dc92cda10813cd77051874d3",
+      "updated": false
+    }
+  ],
+  "looseIntakeWorkbooks": [],
+  "referenceDocs": [
+    {
+      "sourceType": "eml-attachment",
+      "sourceEml": "intake/Request to Add DESE Student Restraint Trend Review to Superintendent\u2019s Report Agenda.eml",
+      "attachmentName": "Attleboro Public Schools \u2013 DESE Student Restraint Data.docx",
+      "target": "data/raw/dese-restraint/reference/attleboro-public-schools-dese-student-restraint-data.docx",
+      "sha256": "8b9a0fcaf8b8f530ac0b1634ffc0a509b48d9e8de9f6df519d11728eb215ceb7",
+      "updated": false
+    }
+  ]
+}

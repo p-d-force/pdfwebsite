@@ -1,0 +1,112 @@
+{
+  "events": [
+    {
+      "id": "fallriver-2026-04-01-school-committee-meeting-april-1-2026-location-kuss",
+      "slug": "fallriver-2026-04-01-school-committee-meeting-april-1-2026-location-kuss",
+      "title": "School Committee Meeting April 1, 2026 Location: Kuss",
+      "type": "meeting",
+      "districtCode": "FALLRIVER",
+      "jurisdiction": "US-MA",
+      "startAt": "2026-04-01T00:00:00",
+      "allDay": true,
+      "timezone": "America/New_York",
+      "source": {
+        "method": "web-scrape",
+        "url": "https://www.fallriverschools.org/school-committee/locations-and-agendas",
+        "page": "https://www.fallriverschools.org/school-committee/locations-and-agendas",
+        "candidateType": "block",
+        "confidence": 0.95
+      }
+    },
+    {
+      "id": "norton-2026-04-15-date-april-15-2026-award-of-contract-by-school-committee",
+      "slug": "norton-2026-04-15-date-april-15-2026-award-of-contract-by-school-committee",
+      "title": "Date: April 15, 2026 Award of Contract by School Committee",
+      "type": "meeting",
+      "districtCode": "NORTON",
+      "jurisdiction": "US-MA",
+      "startAt": "2026-04-15T00:00:00",
+      "allDay": true,
+      "timezone": "America/New_York",
+      "source": {
+        "method": "web-scrape",
+        "url": "https://www.norton.k12.ma.us/13093_2",
+        "page": "https://www.norton.k12.ma.us/13093_2",
+        "candidateType": "block",
+        "confidence": 0.6
+      }
+    },
+    {
+      "id": "fallriver-2026-05-06-school-committee-meeting-may-6-2026-location-durfee",
+      "slug": "fallriver-2026-05-06-school-committee-meeting-may-6-2026-location-durfee",
+      "title": "School Committee Meeting May 6, 2026 Location: Durfee",
+      "type": "meeting",
+      "districtCode": "FALLRIVER",
+      "jurisdiction": "US-MA",
+      "startAt": "2026-05-06T00:00:00",
+      "allDay": true,
+      "timezone": "America/New_York",
+      "source": {
+        "method": "web-scrape",
+        "url": "https://www.fallriverschools.org/school-committee/locations-and-agendas",
+        "page": "https://www.fallriverschools.org/school-committee/locations-and-agendas",
+        "candidateType": "block",
+        "confidence": 0.95
+      }
+    },
+    {
+      "id": "fallriver-2026-06-03-school-committee-meeting-june-3-2026-location-durfee-agenda-ada-agenda",
+      "slug": "fallriver-2026-06-03-school-committee-meeting-june-3-2026-location-durfee-agenda-ada-agenda",
+      "title": "School Committee Meeting June 3, 2026 Location: Durfee Agenda ADA Agenda",
+      "type": "meeting",
+      "districtCode": "FALLRIVER",
+      "jurisdiction": "US-MA",
+      "startAt": "2026-06-03T00:00:00",
+      "allDay": true,
+      "timezone": "America/New_York",
+      "source": {
+        "method": "web-scrape",
+        "url": "https://www.fallriverschools.org/school-committee/locations-and-agendas",
+        "page": "https://www.fallriverschools.org/school-committee/locations-and-agendas",
+        "candidateType": "block",
+        "confidence": 1.0
+      }
+    },
+    {
+      "id": "fallriver-2026-07-22-school-committee-meeting-july-22-2026-location-durfee",
+      "slug": "fallriver-2026-07-22-school-committee-meeting-july-22-2026-location-durfee",
+      "title": "School Committee Meeting July 22, 2026 Location: Durfee",
+      "type": "meeting",
+      "districtCode": "FALLRIVER",
+      "jurisdiction": "US-MA",
+      "startAt": "2026-07-22T00:00:00",
+      "allDay": true,
+      "timezone": "America/New_York",
+      "source": {
+        "method": "web-scrape",
+        "url": "https://www.fallriverschools.org/school-committee/locations-and-agendas",
+        "page": "https://www.fallriverschools.org/school-committee/locations-and-agendas",
+        "candidateType": "block",
+        "confidence": 0.95
+      }
+    },
+    {
+      "id": "fallriver-2026-08-05-school-committee-meeting-august-5-2026",
+      "slug": "fallriver-2026-08-05-school-committee-meeting-august-5-2026",
+      "title": "School Committee Meeting August 5, 2026",
+      "type": "meeting",
+      "districtCode": "FALLRIVER",
+      "jurisdiction": "US-MA",
+      "startAt": "2026-08-05T00:00:00",
+      "allDay": true,
+      "timezone": "America/New_York",
+      "source": {
+        "method": "web-scrape",
+        "url": "https://www.fallriverschools.org/school-committee/locations-and-agendas",
+        "page": "https://www.fallriverschools.org/school-committee/locations-and-agendas",
+        "candidateType": "block",
+        "confidence": 0.95
+      }
+    }
+  ]
+}

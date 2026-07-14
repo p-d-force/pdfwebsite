@@ -1,0 +1,82 @@
+{
+  "status_workflow": {
+    "pending": ["processing", "review", "rejected"],
+    "processing": ["review", "rejected", "archived"],
+    "review": ["approved", "rejected", "pending"],
+    "approved": ["archived"],
+    "rejected": ["pending", "archived"],
+    "archived": ["pending", "review"]
+  },
+  "priority_weights": {
+    "low": 1,
+    "normal": 2,
+    "high": 3,
+    "critical": 4
+  },
+  "auto_processing": {
+    "enabled": true,
+    "batch_size": 10,
+    "max_processing_time_minutes": 30,
+    "retry_attempts": 3
+  },
+  "assignment": {
+    "auto_assign": true,
+    "round_robin": true,
+    "max_items_per_user": 5,
+    "consider_workload": true
+  },
+  "notifications": {
+    "on_assignment": true,
+    "on_status_change": true,
+    "on_deadline_approaching": true,
+    "deadline_hours": 24
+  },
+  "file_handling": {
+    "max_file_size_mb": 50,
+    "allowed_mime_types": [
+      "application/pdf",
+      "application/msword",
+      "application/vnd.openxmlformats-officedocument.wordprocessingml.document",
+      "application/vnd.ms-excel",
+      "application/vnd.openxmlformats-officedocument.spreadsheetml.sheet",
+      "text/plain",
+      "text/csv",
+      "application/json",
+      "application/xml",
+      "message/rfc822",
+      "text/html"
+    ],
+    "allowed_extensions": [
+      ".pdf",
+      ".doc",
+      ".docx",
+      ".xls",
+      ".xlsx",
+      ".txt",
+      ".csv",
+      ".json",
+      ".xml",
+      ".eml",
+      ".html",
+      ".htm"
+    ],
+    "storage_paths": {
+      "intake": "intake",
+      "processing": "data/processing",
+      "completed": "intake/completed",
+      "archived": "data/archived"
+    }
+  },
+  "review": {
+    "require_review_before_approval": true,
+    "min_review_time_seconds": 30,
+    "max_concurrent_reviews_per_user": 3,
+    "field_validation_required": true
+  },
+  "analytics": {
+    "collect_metrics": true,
+    "retention_days": 90,
+    "daily_summary": true,
+    "weekly_report": true
+  }
+}

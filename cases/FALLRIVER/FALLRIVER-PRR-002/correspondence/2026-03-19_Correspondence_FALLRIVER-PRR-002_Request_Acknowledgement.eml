@@ -1,0 +1,433 @@
+Delivered-To: joseph.k.ford@gmail.com
+Received: by 2002:a05:651c:1988:b0:38b:50c7:824a with SMTP id bx8csp894934ljb;
+        Thu, 19 Mar 2026 11:36:36 -0700 (PDT)
+X-Received: by 2002:a53:a806:0:b0:64c:faa9:4261 with SMTP id 956f58d0204a3-64eaa89256cmr301098d50.5.1773945396505;
+        Thu, 19 Mar 2026 11:36:36 -0700 (PDT)
+ARC-Seal: i=2; a=rsa-sha256; t=1773945396; cv=pass;
+        d=google.com; s=arc-20240605;
+        b=DI7bo9IZ2xeJQdVLi9tbWjNGzNd9S9iR0ACfW0+0FtKxjQhF+7kvK/yYHJweXD4FeK
+         6njsFGSRCXA6hQSOqOj9nY+RPH/Ao7SFj7oMw4kbi813ml60R9OV763tTlV1XsrcspPD
+         OAldCVPsbSoCvo1vZecdAr/xRckBRa5pgSDMLOSovwH7wRfIg8Fjito6UsqGH3UKdcpC
+         1IrwBxlKj3jIsfSnOQivYnBZOWQq0seoNA8y59Tut3h2DduRBYxPNx7t7Y483vL2+VGn
+         n1lhxZSA1LYKP3b2vhEFF/Qhe+kdl0ZF7RCUIN9+2gqzSD+7bUSBFWffrVkH+O6O6Qid
+         JORQ==
+ARC-Message-Signature: i=2; a=rsa-sha256; c=relaxed/relaxed; d=google.com; s=arc-20240605;
+        h=to:subject:message-id:date:from:in-reply-to:references:mime-version
+         :dkim-signature;
+        bh=QS95PL+Io9vHxLrRTdOGKHzmvdaVS8viDILGNIKnT0Q=;
+        fh=GCJ8p26IFf7G/Of1CCRHCWidDdBMZmdgCeQOILM04po=;
+        b=a1h1NO3CDHxQLW1QUWpiL1tdJ3G6+BwamiGOCLBMeRpKBZhOQK82EJHuxZ+1wEDYbH
+         dyy1Y9Qe6A0ExOxu6dgp00P82E91drrUHvKIgeSD9hb8PnKxaCo0qp7HfZVW+koJOPCO
+         2Hhco2PNDPiFoTN1htfrzZfgiSarazz3X+WDXz/gLvQAWt5iRfSGgScykJUBw0DxEtj+
+         kZZIasMkFO1Jwy7iV6zbrf6ndVwo0nDntUsxTNnqeI+7aMM2fQOt9ERJyRaF+OdPCQBz
+         umLOMFmX0cBz3T1CQx1fnO01sUi61qXMyP4tOR8j3zCQ1cdN/F53pF32nBaoR+9+PZrX
+         kjLw==;
+        dara=google.com
+ARC-Authentication-Results: i=2; mx.google.com;
+       dkim=pass header.i=@gmail.com header.s=20230601 header.b=gZ84GJvC;
+       arc=pass (i=1);
+       spf=pass (google.com: domain of parentdataforce@gmail.com designates 209.85.220.41 as permitted sender) smtp.mailfrom=parentdataforce@gmail.com;
+       dmarc=pass (p=NONE sp=QUARANTINE dis=NONE) header.from=gmail.com;
+       dara=pass header.i=@gmail.com
+Return-Path: <parentdataforce@gmail.com>
+Received: from mail-sor-f41.google.com (mail-sor-f41.google.com. [209.85.220.41])
+        by mx.google.com with SMTPS id 956f58d0204a3-64e919f6658sor3443236d50.1.2026.03.19.11.36.36
+        for <joseph.k.ford@gmail.com>
+        (Google Transport Security);
+        Thu, 19 Mar 2026 11:36:36 -0700 (PDT)
+Received-SPF: pass (google.com: domain of parentdataforce@gmail.com designates 209.85.220.41 as permitted sender) client-ip=209.85.220.41;
+Authentication-Results: mx.google.com;
+       dkim=pass header.i=@gmail.com header.s=20230601 header.b=gZ84GJvC;
+       arc=pass (i=1);
+       spf=pass (google.com: domain of parentdataforce@gmail.com designates 209.85.220.41 as permitted sender) smtp.mailfrom=parentdataforce@gmail.com;
+       dmarc=pass (p=NONE sp=QUARANTINE dis=NONE) header.from=gmail.com;
+       dara=pass header.i=@gmail.com
+ARC-Seal: i=1; a=rsa-sha256; t=1773945396; cv=none;
+        d=google.com; s=arc-20240605;
+        b=i7UezXP/cfXEGZnPRp52XhJ7vitjnhrvZXdS59wPtAdR15VjYbLgDEyDUIYB8kwu0v
+         hhUiNAkPN/rR6XYhkj6IqGsNjTXwScKtS+OM4nKsdEVtf7voJPRjqkkmh63gX07qXvzx
+         wLC/Z8Imrhr2K0xZtkLdmV1jXebe8AMm2GO36yV+WweP0pwqmlundEKGCoCc02oTa2lA
+         oZ054p54jSXXJI/D1Dy9ByYElTxRS0OsBm08b/ULfT3ngUdy2mFb6wZHwMBhw1BMidJa
+         qusInoPY+66DcJrwtBkT6MIqAumfypK8OM9JIaUcrwfwSV9rpp9fI9OcrEM02ujvT2aC
+         8umQ==
+ARC-Message-Signature: i=1; a=rsa-sha256; c=relaxed/relaxed; d=google.com; s=arc-20240605;
+        h=to:subject:message-id:date:from:in-reply-to:references:mime-version
+         :dkim-signature;
+        bh=QS95PL+Io9vHxLrRTdOGKHzmvdaVS8viDILGNIKnT0Q=;
+        fh=GCJ8p26IFf7G/Of1CCRHCWidDdBMZmdgCeQOILM04po=;
+        b=OBqkq1lS3dUBlSJnw2kIlBkHWsXcMDB5sibZ2RGGGp2gYg5cm7vv1Mn0s24HeYDBd5
+         3kSmvzz2W41IxYzsvje4l+xsMM2YxQ+rZo0w7splDysLNTrNi2E92FFTd/0qvoruvSbw
+         G1cyWwvPAc+tsE2/KguCMy2U2A9N0ugVBU1StaczWDPF2F4nDGSrSbOhLOf9umIHutbw
+         Ib0OXugmXOiKRmiMLDx4vTmsJjeLdb80FwyY8FNwG9yHlCX5YqA/mswo+h7+sVMk5q9z
+         XVxkDOw4yZQ0Vt3KL8gv+fsg3K82RnKoDrW1ai+/k7k8mktfSP52C3/e+h3Hvkkii8RT
+         DuwA==;
+        dara=google.com
+ARC-Authentication-Results: i=1; mx.google.com; arc=none
+DKIM-Signature: v=1; a=rsa-sha256; c=relaxed/relaxed;
+        d=gmail.com; s=20230601; t=1773945396; x=1774550196; dara=google.com;
+        h=to:subject:message-id:date:from:in-reply-to:references:mime-version
+         :from:to:cc:subject:date:message-id:reply-to;
+        bh=QS95PL+Io9vHxLrRTdOGKHzmvdaVS8viDILGNIKnT0Q=;
+        b=gZ84GJvCGGBE+t+Sw3mwmdpoAOYPOTaHb9Fbqcg1BR3ob3Z7m/j3m7LKRiVO71p/SQ
+         pu3g0wbHu+ssMTIM7etMlPuASSvOkbJ5yPsFg7WV3HTNa8c2+SBS6y8wkXXK/UZU4zQJ
+         OJaIO0luFzw/AQEyb6wYNufacRQoevaD89aBXKtYPNuNw8X0Ks26Aytqh2v8yBfuqklb
+         9p6CxIsJIFPA8Lx/z/YTjVBV9pIosJyNjCHNICsqIqHqGw+MGLdC02gPr11aL64Es4+l
+         nyWKowBqUmDwcZionZyEAqwNXHJ8X0iuUOHQACZDIV14/kH5sU4/H+ZGkd8SdJ3VqOEs
+         O0mg==
+X-Google-DKIM-Signature: v=1; a=rsa-sha256; c=relaxed/relaxed;
+        d=1e100.net; s=20251104; t=1773945396; x=1774550196;
+        h=to:subject:message-id:date:from:in-reply-to:references:mime-version
+         :x-gm-gg:x-gm-message-state:from:to:cc:subject:date:message-id
+         :reply-to;
+        bh=QS95PL+Io9vHxLrRTdOGKHzmvdaVS8viDILGNIKnT0Q=;
+        b=C+jh6gDH88ihb84u5iIjgT6bxmVDj9MxB86UAu2t54Z0t8kDUFidY1/LlXS4NY0WwM
+         8pA8P5uRpFnh6K80gupMTqqDYuSvuqZd12MrAMMxR7E8jqQlOHRzjzJe/pyMa4olUDuY
+         erIrlo4ee2Ok/BQ7AvqrSHM4pFCgyQ7r0JfYINu2GDiA4fFxASD4UhFkrf1kbvIzhGAZ
+         012ZmKdXdhQUAJIgnisD2vV9J/1xZRacHFSR2ZMhV/u7V6tr9WPII7sUivloO75oU92r
+         7y+ziFUEAZUDBo3vFEaXpP+2NL4BdLviWAR5h5HKdgbllbJQ1/KYhYlufHlVF+/dbl0I
+         yHGQ==
+X-Gm-Message-State: AOJu0Yxb6+WPfIlDxoTsQkntjHRYyfB43OYX1RuClj757WrgavHwyYBA
+	x2WsCwIO3nDLO3qjmOtiNF0vQspWAHmrJ2al1VtY6jCilWPicqnRD4rAsXgnUIDUr0IPQhJNhlE
+	+ua6JT8mYM0t/q+Lql3GTRl5Xkgx6Vp3eeQ==
+X-Gm-Gg: ATEYQzwT1bGIFa6q+9Xe66cHBOroYH/s1OLLFTLkwJV7bb/ICVn5+HhOZa3D8Z9qxaE
+	b2atCKStDPF1vk/uHY+x1oUuvN24oAix/hApP/k49KO1Fg5VfsOXijmTcpwhT5B5HLRrDmRV44l
+	vNzZn8yTleZqXJHs5u43eCc9mg4JqdB0Kc0MmDL3jrlhyBRBrNDLVdG2+917pTWL09dipAs5A5I
+	TgOuuYUl1gdZpo+Re3j9zFr5Q51TtWpM/j0Dqs+5GKVrkBTT+AWlnITMN4v9TFaUNg7H950+1yu
+	JxSIcvRvQp8aZnx7KoOZjxOCTGQ+itAduAG1/lIEv7ZwwyjFfto=
+X-Received: by 2002:a05:690e:1583:10b0:649:ae49:f58b with SMTP id
+ 956f58d0204a3-64eaa6df094mr540180d50.25.1773945395498; Thu, 19 Mar 2026
+ 11:36:35 -0700 (PDT)
+MIME-Version: 1.0
+References: <CAJatwqMYt94O8hLe+k7jOGd-dPgiq7Wb38UFCSnLi1aw9jF-dw@mail.gmail.com>
+ <CAJgLm_crJ9WUbQMTfC+0Ou8pQvV0RAUGasA2Tk0bUxDu_cLiPg@mail.gmail.com>
+In-Reply-To: <CAJgLm_crJ9WUbQMTfC+0Ou8pQvV0RAUGasA2Tk0bUxDu_cLiPg@mail.gmail.com>
+From: Parent Data Force <parentdataforce@gmail.com>
+Date: Thu, 19 Mar 2026 14:36:24 -0400
+X-Gm-Features: AaiRm53DCJgjMLgRkHE_xXZdk_Mgy_mRvLBkEKDEM6pjKvY-RPOyIuyiud2_rHk
+Message-ID: <CAJatwqOerFMJsUvFvdGKfvU5kYvtwQdAPpmWs48jbidGpqTXUQ@mail.gmail.com>
+Subject: Fwd: Public Records Request #2
+To: joseph.k.ford@gmail.com
+Content-Type: multipart/alternative; boundary="0000000000002651c3064d64d9ff"
+
+--0000000000002651c3064d64d9ff
+Content-Type: text/plain; charset="UTF-8"
+Content-Transfer-Encoding: quoted-printable
+
+---------- Forwarded message ---------
+From: Debra Cabral <debracabral@fallriverschools.org>
+Date: Wed, Mar 18, 2026, 10:24=E2=80=AFAM
+Subject: Re: Public Records Request #2
+To: Parent Data Force <parentdataforce@gmail.com>
+
+
+Hello,
+Request received.
+
+Thank you
+Debra Cabral
+Administrative Assistant to the
+School Committee
+Fall River Public Schools
+417 Rock Street
+Phone: 508-675-8424
+Fax: 508-675-8462
+
+
+On Fri, Mar 6, 2026 at 2:05=E2=80=AFPM Parent Data Force <parentdataforce@g=
+mail.com>
+wrote:
+
+> *Public Records Request*
+>
+> To: Records Access Officer
+> Fall River Public Schools
+>
+> Pursuant to the *Massachusetts Public Records Law, M.G.L. c.66 =C2=A710*,=
+ I
+> respectfully request copies of the following public records related to *S=
+ilvia
+> Elementary School*.
+>
+> This request concerns safety incidents, staffing practices, and behaviora=
+l
+> interventions involving students during the *2024=E2=80=932025 and 2025=
+=E2=80=932026
+> school years*.
+>
+> Please provide the following records:
+>
+> *1. Incident Reports*
+>
+> All incident reports, behavioral incident reports, and safety reports
+> generated at *Silvia Elementary School* from *August 1, 2024 to present*,
+> including but not limited to incidents involving:
+>
+>    - physical aggression
+>    - classroom destruction
+>    - evacuation of classrooms
+>    - threats to student or staff safety
+>
+> Records should include any written reports, electronic reports, or
+> internal safety documentation.
+>
+> Student identifying information may be redacted pursuant to *FERPA*, but
+> the remainder of the record should be produced.
+> ------------------------------
+>
+> *2. Physical Restraint Reports*
+>
+> All reports and documentation required under *603 CMR 46.06* relating to
+> the use of physical restraint at Silvia Elementary School from *August 1,
+> 2024 to present*, including:
+>
+>    - restraint incident reports
+>    - administrative review documentation
+>    - parent notification records
+>    - restraint logs maintained by the school or district
+>
+> ------------------------------
+>
+> *3. Behavioral Incident Data*
+>
+> Any internal summaries, tracking spreadsheets, or behavioral data logs
+> used by administrators to track student behavioral incidents at Silvia
+> Elementary School for the *2024=E2=80=932025 and 2025=E2=80=932026 school=
+ years*.
+> ------------------------------
+>
+> *4. Staffing Assignments*
+>
+> Records showing *staffing assignments for paraprofessionals and classroom
+> support staff* at Silvia Elementary School for the *2024=E2=80=932025 and
+> 2025=E2=80=932026 school years*, including:
+>
+>    - paraprofessional assignment lists
+>    - classroom staffing schedules
+>    - staffing allocation documents for special education classrooms
+>
+> ------------------------------
+>
+> *5. IEP Service Staffing*
+>
+> Records showing how staffing was allocated to support *IEP service
+> delivery*, including:
+>
+>    - staffing plans
+>    - special education classroom support assignments
+>    - paraprofessional allocation documents
+>
+> Student names may be redacted.
+> ------------------------------
+>
+> *6. Communications Regarding the February 4, 2026 Incident*
+>
+> All emails, internal communications, and administrative correspondence
+> referencing the *February 4, 2026 classroom incident at Silvia Elementary
+> School*, including communications involving:
+>
+>    - the school principal
+>    - assistant principals
+>    - school adjustment counselors
+>    - district administration
+>    - human resources personnel
+>
+> Search terms should include:
+>
+> =E2=80=9CFebruary 4=E2=80=9D
+> =E2=80=9Cincident=E2=80=9D
+> =E2=80=9CSilvia=E2=80=9D
+> =E2=80=9Cclassroom evacuation=E2=80=9D
+> =E2=80=9Cbehavior incident=E2=80=9D
+> ------------------------------
+>
+> *7. Radio Communication or Emergency Response Logs*
+>
+> Any records, logs, or documentation showing *radio calls, emergency
+> calls, or requests for administrative assistance* at Silvia Elementary
+> School on *February 4, 2026*.
+> ------------------------------
+>
+> *8. Crisis Response Policies*
+>
+> Any written policies or procedures used by Silvia Elementary School or
+> Fall River Public Schools regarding:
+>
+>    - behavioral crisis response
+>    - classroom evacuation procedures
+>    - administrative response protocols during safety incidents
+>
+> ------------------------------
+>
+> *9. Paraprofessional Training Records*
+>
+> Records describing *training provided to paraprofessionals related to:*
+>
+>    - crisis intervention
+>    - behavioral de-escalation
+>    - restraint prevention training required under *603 CMR 46.00*
+>
+> for the *2024=E2=80=932025 and 2025=E2=80=932026 school years*.
+> ------------------------------
+>
+> *10. Administrative Incident Response Protocols*
+>
+> Any written procedures, guidance, or policies governing how school
+> administrators are expected to respond to classroom safety incidents or
+> requests for assistance.
+> ------------------------------
+>
+> If any responsive records exist in electronic format, I request that they
+> be provided electronically.
+>
+> If any portion of the requested records is withheld, please provide a *wr=
+itten
+> explanation citing the specific exemption under the Massachusetts Public
+> Records Law* relied upon for the denial.
+>
+> Due to indignant status, please waive all fees.
+>
+> Please acknowledge receipt of this request as required by *M.G.L. c.66
+> =C2=A710*.
+>
+> Thank you for your attention to this request.
+>
+> Joey Ford
+> Parent Data Force
+> 339-213-6110
+> parentdataforce@gmail.com
+>
+
+--0000000000002651c3064d64d9ff
+Content-Type: text/html; charset="UTF-8"
+Content-Transfer-Encoding: quoted-printable
+
+<div dir=3D"auto"><div><br><br><div class=3D"gmail_quote gmail_quote_contai=
+ner"><div dir=3D"ltr" class=3D"gmail_attr">---------- Forwarded message ---=
+------<br>From: <strong class=3D"gmail_sendername" dir=3D"auto">Debra Cabra=
+l</strong> <span dir=3D"auto">&lt;<a href=3D"mailto:debracabral@fallriversc=
+hools.org">debracabral@fallriverschools.org</a>&gt;</span><br>Date: Wed, Ma=
+r 18, 2026, 10:24=E2=80=AFAM<br>Subject: Re: Public Records Request #2<br>T=
+o: Parent Data Force &lt;<a href=3D"mailto:parentdataforce@gmail.com">paren=
+tdataforce@gmail.com</a>&gt;<br></div><br><br><div dir=3D"ltr"><div>Hello,<=
+/div><div>Request received.</div><div><br></div><div>Thank you</div><div><d=
+iv dir=3D"ltr" class=3D"gmail_signature" data-smartmail=3D"gmail_signature"=
+><div dir=3D"ltr"><div><div dir=3D"ltr"><div><div><div><div><div><div>Debra=
+ Cabral<br></div>Administrative Assistant to the<br></div>School Committee<=
+br></div>Fall River Public Schools<br></div>417 Rock Street<br></div>Phone:=
+ 508-675-8424<br></div>Fax: 508-675-8462<br></div></div></div></div></div><=
+br></div><br><div class=3D"gmail_quote"><div dir=3D"ltr" class=3D"gmail_att=
+r">On Fri, Mar 6, 2026 at 2:05=E2=80=AFPM Parent Data Force &lt;<a href=3D"=
+mailto:parentdataforce@gmail.com" target=3D"_blank" rel=3D"noreferrer">pare=
+ntdataforce@gmail.com</a>&gt; wrote:<br></div><blockquote class=3D"gmail_qu=
+ote" style=3D"margin:0px 0px 0px 0.8ex;border-left:1px solid rgb(204,204,20=
+4);padding-left:1ex"><div dir=3D"auto"><p><strong>Public Records Request</s=
+trong></p>
+<p>To: Records Access Officer<br>
+Fall River Public Schools</p>
+<p>Pursuant to the <strong>Massachusetts Public Records Law, M.G.L. c.66 =
+=C2=A710</strong>, I respectfully request copies of the following public re=
+cords related to <strong>Silvia Elementary School</strong>.</p>
+<p>This request concerns safety incidents, staffing practices, and behavior=
+al interventions involving students during the <strong>2024=E2=80=932025 an=
+d 2025=E2=80=932026 school years</strong>.</p>
+<p>Please provide the following records:</p>
+<p><strong>1. Incident Reports</strong></p>
+<p>All incident reports, behavioral incident reports, and safety reports ge=
+nerated at <strong>Silvia Elementary School</strong> from <strong>August 1,=
+ 2024 to present</strong>, including but not limited to incidents involving=
+:</p>
+<ul><li>physical aggression</li><li>classroom destruction</li><li>evacuatio=
+n of classrooms</li><li>threats to student or staff safety</li></ul>
+<p>Records should include any written reports, electronic reports, or inter=
+nal safety documentation.</p>
+<p>Student identifying information may be redacted pursuant to <strong>FERP=
+A</strong>, but the remainder of the record should be produced.</p>
+<hr>
+<p><strong>2. Physical Restraint Reports</strong></p>
+<p>All reports and documentation required under <strong>603 CMR 46.06</stro=
+ng> relating to the use of physical restraint at Silvia Elementary School f=
+rom <strong>August 1, 2024 to present</strong>, including:</p>
+<ul><li>restraint incident reports</li><li>administrative review documentat=
+ion</li><li>parent notification records</li><li>restraint logs maintained b=
+y the school or district</li></ul>
+<hr>
+<p><strong>3. Behavioral Incident Data</strong></p>
+<p>Any internal summaries, tracking spreadsheets, or behavioral data logs u=
+sed by administrators to track student behavioral incidents at Silvia Eleme=
+ntary School for the <strong>2024=E2=80=932025 and 2025=E2=80=932026 school=
+ years</strong>.</p>
+<hr>
+<p><strong>4. Staffing Assignments</strong></p>
+<p>Records showing <strong>staffing assignments for paraprofessionals and c=
+lassroom support staff</strong> at Silvia Elementary School for the <strong=
+>2024=E2=80=932025 and 2025=E2=80=932026 school years</strong>, including:<=
+/p>
+<ul><li>paraprofessional assignment lists</li><li>classroom staffing schedu=
+les</li><li>staffing allocation documents for special education classrooms<=
+/li></ul>
+<hr>
+<p><strong>5. IEP Service Staffing</strong></p>
+<p>Records showing how staffing was allocated to support <strong>IEP servic=
+e delivery</strong>, including:</p>
+<ul><li>staffing plans</li><li>special education classroom support assignme=
+nts</li><li>paraprofessional allocation documents</li></ul>
+<p>Student names may be redacted.</p>
+<hr>
+<p><strong>6. Communications Regarding the February 4, 2026 Incident</stron=
+g></p>
+<p>All emails, internal communications, and administrative correspondence r=
+eferencing the <strong>February 4, 2026 classroom incident at Silvia Elemen=
+tary School</strong>, including communications involving:</p>
+<ul><li>the school principal</li><li>assistant principals</li><li>school ad=
+justment counselors</li><li>district administration</li><li>human resources=
+ personnel</li></ul>
+<p>Search terms should include:</p>
+<p>=E2=80=9CFebruary 4=E2=80=9D<br>
+=E2=80=9Cincident=E2=80=9D<br>
+=E2=80=9CSilvia=E2=80=9D<br>
+=E2=80=9Cclassroom evacuation=E2=80=9D<br>
+=E2=80=9Cbehavior incident=E2=80=9D</p>
+<hr>
+<p><strong>7. Radio Communication or Emergency Response Logs</strong></p>
+<p>Any records, logs, or documentation showing <strong>radio calls, emergen=
+cy calls, or requests for administrative assistance</strong> at Silvia Elem=
+entary School on <strong>February 4, 2026</strong>.</p>
+<hr>
+<p><strong>8. Crisis Response Policies</strong></p>
+<p>Any written policies or procedures used by Silvia Elementary School or F=
+all River Public Schools regarding:</p>
+<ul><li>behavioral crisis response</li><li>classroom evacuation procedures<=
+/li><li>administrative response protocols during safety incidents</li></ul>
+<hr>
+<p><strong>9. Paraprofessional Training Records</strong></p>
+<p>Records describing <strong>training provided to paraprofessionals relate=
+d to:</strong></p>
+<ul><li>crisis intervention</li><li>behavioral de-escalation</li><li>restra=
+int prevention training required under <strong>603 CMR 46.00</strong></li><=
+/ul>
+<p>for the <strong>2024=E2=80=932025 and 2025=E2=80=932026 school years</st=
+rong>.</p>
+<hr>
+<p><strong>10. Administrative Incident Response Protocols</strong></p>
+<p>Any written procedures, guidance, or policies governing how school admin=
+istrators are expected to respond to classroom safety incidents or requests=
+ for assistance.</p>
+<hr>
+<p>If any responsive records exist in electronic format, I request that the=
+y be provided electronically.</p>
+<p>If any portion of the requested records is withheld, please provide a <s=
+trong>written explanation citing the specific exemption under the Massachus=
+etts Public Records Law</strong> relied upon for the denial.</p>
+<p>Due to indignant status, please waive all fees.</p>
+<p>Please acknowledge receipt of this request as required by <strong>M.G.L.=
+ c.66 =C2=A710</strong>.</p>
+<p>Thank you for your attention to this request.</p>
+<p>Joey Ford<br>
+Parent Data Force<br>
+339-213-6110<br>
+<a href=3D"mailto:parentdataforce@gmail.com" target=3D"_blank" rel=3D"noref=
+errer">parentdataforce@gmail.com</a></p></div>
+</blockquote></div>
+</div></div></div>
+
+--0000000000002651c3064d64d9ff--

@@ -1,0 +1,16 @@
+{
+  "id": "rule-correspondence-core",
+  "group": "doc-families",
+  "title": "Correspondence Core Rules",
+  "enabled": true,
+  "priority": 90,
+  "match": {
+    "docFamilies": ["correspondence"]
+  },
+  "then": {
+    "deterministicRequiredFields": ["title"],
+    "preferredLinkTargets": ["case", "organization", "person", "document"],
+    "defaultVisibility": "internal",
+    "defaultPublishEligible": false
+  }
+}

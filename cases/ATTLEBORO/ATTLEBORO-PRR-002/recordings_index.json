@@ -1,0 +1,582 @@
+{
+  "caseId": "ATTLEBORO-PRR-002",
+  "total": 64,
+  "recordings": [
+    {
+      "fileName": "2022-05_Recording_ATTLEBORO-PRR-002_Finance.mp3",
+      "relativePath": "cases/ATTLEBORO/ATTLEBORO-PRR-002/recordings/2022-05_Recording_ATTLEBORO-PRR-002_Finance.mp3",
+      "date": "2022-05",
+      "datePrecision": "month",
+      "dateEstimated": false,
+      "committee": "Finance",
+      "sizeBytes": 42484161
+    },
+    {
+      "fileName": "2022-06_Recording_ATTLEBORO-PRR-002_Finance.mp3",
+      "relativePath": "cases/ATTLEBORO/ATTLEBORO-PRR-002/recordings/2022-06_Recording_ATTLEBORO-PRR-002_Finance.mp3",
+      "date": "2022-06",
+      "datePrecision": "month",
+      "dateEstimated": false,
+      "committee": "Finance",
+      "sizeBytes": 32212396
+    },
+    {
+      "fileName": "2023-01_Recording_ATTLEBORO-PRR-002_Finance.mp3",
+      "relativePath": "cases/ATTLEBORO/ATTLEBORO-PRR-002/recordings/2023-01_Recording_ATTLEBORO-PRR-002_Finance.mp3",
+      "date": "2023-01",
+      "datePrecision": "month",
+      "dateEstimated": false,
+      "committee": "Finance",
+      "sizeBytes": 37232504
+    },
+    {
+      "fileName": "2023-01_Recording_ATTLEBORO-PRR-002_Infrastructure.mp3",
+      "relativePath": "cases/ATTLEBORO/ATTLEBORO-PRR-002/recordings/2023-01_Recording_ATTLEBORO-PRR-002_Infrastructure.mp3",
+      "date": "2023-01",
+      "datePrecision": "month",
+      "dateEstimated": false,
+      "committee": "Infrastructure",
+      "sizeBytes": 25978117
+    },
+    {
+      "fileName": "2023-02_Recording_ATTLEBORO-PRR-002_Finance.mp3",
+      "relativePath": "cases/ATTLEBORO/ATTLEBORO-PRR-002/recordings/2023-02_Recording_ATTLEBORO-PRR-002_Finance.mp3",
+      "date": "2023-02",
+      "datePrecision": "month",
+      "dateEstimated": false,
+      "committee": "Finance",
+      "sizeBytes": 11819331
+    },
+    {
+      "fileName": "2023-03_Recording_ATTLEBORO-PRR-002_Finance.mp3",
+      "relativePath": "cases/ATTLEBORO/ATTLEBORO-PRR-002/recordings/2023-03_Recording_ATTLEBORO-PRR-002_Finance.mp3",
+      "date": "2023-03",
+      "datePrecision": "month",
+      "dateEstimated": false,
+      "committee": "Finance",
+      "sizeBytes": 58781643
+    },
+    {
+      "fileName": "2023-03_Recording_ATTLEBORO-PRR-002_Infrastructure.mp3",
+      "relativePath": "cases/ATTLEBORO/ATTLEBORO-PRR-002/recordings/2023-03_Recording_ATTLEBORO-PRR-002_Infrastructure.mp3",
+      "date": "2023-03",
+      "datePrecision": "month",
+      "dateEstimated": false,
+      "committee": "Infrastructure",
+      "sizeBytes": 62974192
+    },
+    {
+      "fileName": "2023-03_Recording_ATTLEBORO-PRR-002_Policy.mp3",
+      "relativePath": "cases/ATTLEBORO/ATTLEBORO-PRR-002/recordings/2023-03_Recording_ATTLEBORO-PRR-002_Policy.mp3",
+      "date": "2023-03",
+      "datePrecision": "month",
+      "dateEstimated": false,
+      "committee": "Policy",
+      "sizeBytes": 77682593
+    },
+    {
+      "fileName": "2023-03_Recording_ATTLEBORO-PRR-002_Teaching_and_Learning.mp3",
+      "relativePath": "cases/ATTLEBORO/ATTLEBORO-PRR-002/recordings/2023-03_Recording_ATTLEBORO-PRR-002_Teaching_and_Learning.mp3",
+      "date": "2023-03",
+      "datePrecision": "month",
+      "dateEstimated": false,
+      "committee": "Teaching & Learning",
+      "sizeBytes": 78836579
+    },
+    {
+      "fileName": "2023-04_Recording_ATTLEBORO-PRR-002_Finance.mp3",
+      "relativePath": "cases/ATTLEBORO/ATTLEBORO-PRR-002/recordings/2023-04_Recording_ATTLEBORO-PRR-002_Finance.mp3",
+      "date": "2023-04",
+      "datePrecision": "month",
+      "dateEstimated": false,
+      "committee": "Finance",
+      "sizeBytes": 39286773
+    },
+    {
+      "fileName": "2023-05_Recording_ATTLEBORO-PRR-002_Finance.mp3",
+      "relativePath": "cases/ATTLEBORO/ATTLEBORO-PRR-002/recordings/2023-05_Recording_ATTLEBORO-PRR-002_Finance.mp3",
+      "date": "2023-05",
+      "datePrecision": "month",
+      "dateEstimated": false,
+      "committee": "Finance",
+      "sizeBytes": 46167217
+    },
+    {
+      "fileName": "2023-05_Recording_ATTLEBORO-PRR-002_Teaching_and_Learning.mp3",
+      "relativePath": "cases/ATTLEBORO/ATTLEBORO-PRR-002/recordings/2023-05_Recording_ATTLEBORO-PRR-002_Teaching_and_Learning.mp3",
+      "date": "2023-05",
+      "datePrecision": "month",
+      "dateEstimated": false,
+      "committee": "Teaching & Learning",
+      "sizeBytes": 83223896
+    },
+    {
+      "fileName": "2023-06_Recording_ATTLEBORO-PRR-002_Finance.mp3",
+      "relativePath": "cases/ATTLEBORO/ATTLEBORO-PRR-002/recordings/2023-06_Recording_ATTLEBORO-PRR-002_Finance.mp3",
+      "date": "2023-06",
+      "datePrecision": "month",
+      "dateEstimated": false,
+      "committee": "Finance",
+      "sizeBytes": 40664367
+    },
+    {
+      "fileName": "2023-06_Recording_ATTLEBORO-PRR-002_Infrastructure.mp3",
+      "relativePath": "cases/ATTLEBORO/ATTLEBORO-PRR-002/recordings/2023-06_Recording_ATTLEBORO-PRR-002_Infrastructure.mp3",
+      "date": "2023-06",
+      "datePrecision": "month",
+      "dateEstimated": false,
+      "committee": "Infrastructure",
+      "sizeBytes": 65806701
+    },
+    {
+      "fileName": "2023-10-03_Estimated_Recording_ATTLEBORO-PRR-002_and_Learning_2.mp3",
+      "relativePath": "cases/ATTLEBORO/ATTLEBORO-PRR-002/recordings/2023-10-03_Estimated_Recording_ATTLEBORO-PRR-002_and_Learning_2.mp3",
+      "date": "2023-10-03",
+      "datePrecision": "day",
+      "dateEstimated": true,
+      "committee": "Teaching & Learning",
+      "sizeBytes": 108234156
+    },
+    {
+      "fileName": "2023-10-04_Estimated_Recording_ATTLEBORO-PRR-002_11.mp3",
+      "relativePath": "cases/ATTLEBORO/ATTLEBORO-PRR-002/recordings/2023-10-04_Estimated_Recording_ATTLEBORO-PRR-002_11.mp3",
+      "date": "2023-10-04",
+      "datePrecision": "day",
+      "dateEstimated": true,
+      "committee": "Unknown (Estimated)",
+      "sizeBytes": 65037238
+    },
+    {
+      "fileName": "2023-10-11_Estimated_Recording_ATTLEBORO-PRR-002_Infrastructure.mp3",
+      "relativePath": "cases/ATTLEBORO/ATTLEBORO-PRR-002/recordings/2023-10-11_Estimated_Recording_ATTLEBORO-PRR-002_Infrastructure.mp3",
+      "date": "2023-10-11",
+      "datePrecision": "day",
+      "dateEstimated": true,
+      "committee": "Infrastructure",
+      "sizeBytes": 53305124
+    },
+    {
+      "fileName": "2023-11-01_Estimated_Recording_ATTLEBORO-PRR-002_8.mp3",
+      "relativePath": "cases/ATTLEBORO/ATTLEBORO-PRR-002/recordings/2023-11-01_Estimated_Recording_ATTLEBORO-PRR-002_8.mp3",
+      "date": "2023-11-01",
+      "datePrecision": "day",
+      "dateEstimated": true,
+      "committee": "Unknown (Estimated)",
+      "sizeBytes": 45911844
+    },
+    {
+      "fileName": "2023-12-06_Estimated_Recording_ATTLEBORO-PRR-002_2.mp3",
+      "relativePath": "cases/ATTLEBORO/ATTLEBORO-PRR-002/recordings/2023-12-06_Estimated_Recording_ATTLEBORO-PRR-002_2.mp3",
+      "date": "2023-12-06",
+      "datePrecision": "day",
+      "dateEstimated": true,
+      "committee": "Unknown (Estimated)",
+      "sizeBytes": 10304647
+    },
+    {
+      "fileName": "2024-01-09_Estimated_Recording_ATTLEBORO-PRR-002_and_Learning.mp3",
+      "relativePath": "cases/ATTLEBORO/ATTLEBORO-PRR-002/recordings/2024-01-09_Estimated_Recording_ATTLEBORO-PRR-002_and_Learning.mp3",
+      "date": "2024-01-09",
+      "datePrecision": "day",
+      "dateEstimated": true,
+      "committee": "Teaching & Learning",
+      "sizeBytes": 52616327
+    },
+    {
+      "fileName": "2024-01-10_Estimated_Recording_ATTLEBORO-PRR-002_5.mp3",
+      "relativePath": "cases/ATTLEBORO/ATTLEBORO-PRR-002/recordings/2024-01-10_Estimated_Recording_ATTLEBORO-PRR-002_5.mp3",
+      "date": "2024-01-10",
+      "datePrecision": "day",
+      "dateEstimated": true,
+      "committee": "Unknown (Estimated)",
+      "sizeBytes": 42927616
+    },
+    {
+      "fileName": "2024-02-07_Estimated_Recording_ATTLEBORO-PRR-002_4.mp3",
+      "relativePath": "cases/ATTLEBORO/ATTLEBORO-PRR-002/recordings/2024-02-07_Estimated_Recording_ATTLEBORO-PRR-002_4.mp3",
+      "date": "2024-02-07",
+      "datePrecision": "day",
+      "dateEstimated": true,
+      "committee": "Unknown (Estimated)",
+      "sizeBytes": 47021944
+    },
+    {
+      "fileName": "2024-03_Recording_ATTLEBORO-PRR-002_Finance.mp3",
+      "relativePath": "cases/ATTLEBORO/ATTLEBORO-PRR-002/recordings/2024-03_Recording_ATTLEBORO-PRR-002_Finance.mp3",
+      "date": "2024-03",
+      "datePrecision": "month",
+      "dateEstimated": false,
+      "committee": "Finance",
+      "sizeBytes": 59151119
+    },
+    {
+      "fileName": "2024-03_Recording_ATTLEBORO-PRR-002_Teaching_and_Learning.mp3",
+      "relativePath": "cases/ATTLEBORO/ATTLEBORO-PRR-002/recordings/2024-03_Recording_ATTLEBORO-PRR-002_Teaching_and_Learning.mp3",
+      "date": "2024-03",
+      "datePrecision": "month",
+      "dateEstimated": false,
+      "committee": "Teaching & Learning",
+      "sizeBytes": 105144602
+    },
+    {
+      "fileName": "2024-04_Recording_ATTLEBORO-PRR-002_Finance.mp3",
+      "relativePath": "cases/ATTLEBORO/ATTLEBORO-PRR-002/recordings/2024-04_Recording_ATTLEBORO-PRR-002_Finance.mp3",
+      "date": "2024-04",
+      "datePrecision": "month",
+      "dateEstimated": false,
+      "committee": "Finance",
+      "sizeBytes": 48420017
+    },
+    {
+      "fileName": "2024-05_Recording_ATTLEBORO-PRR-002_Finance.mp3",
+      "relativePath": "cases/ATTLEBORO/ATTLEBORO-PRR-002/recordings/2024-05_Recording_ATTLEBORO-PRR-002_Finance.mp3",
+      "date": "2024-05",
+      "datePrecision": "month",
+      "dateEstimated": false,
+      "committee": "Finance",
+      "sizeBytes": 102100187
+    },
+    {
+      "fileName": "2024-05_Recording_ATTLEBORO-PRR-002_Infrastructure.mp3",
+      "relativePath": "cases/ATTLEBORO/ATTLEBORO-PRR-002/recordings/2024-05_Recording_ATTLEBORO-PRR-002_Infrastructure.mp3",
+      "date": "2024-05",
+      "datePrecision": "month",
+      "dateEstimated": false,
+      "committee": "Infrastructure",
+      "sizeBytes": 69325918
+    },
+    {
+      "fileName": "2024-05_Recording_ATTLEBORO-PRR-002_Policy.mp3",
+      "relativePath": "cases/ATTLEBORO/ATTLEBORO-PRR-002/recordings/2024-05_Recording_ATTLEBORO-PRR-002_Policy.mp3",
+      "date": "2024-05",
+      "datePrecision": "month",
+      "dateEstimated": false,
+      "committee": "Policy",
+      "sizeBytes": 95161229
+    },
+    {
+      "fileName": "2024-05_Recording_ATTLEBORO-PRR-002_Teaching_and_Learning.mp3",
+      "relativePath": "cases/ATTLEBORO/ATTLEBORO-PRR-002/recordings/2024-05_Recording_ATTLEBORO-PRR-002_Teaching_and_Learning.mp3",
+      "date": "2024-05",
+      "datePrecision": "month",
+      "dateEstimated": false,
+      "committee": "Teaching & Learning",
+      "sizeBytes": 75219142
+    },
+    {
+      "fileName": "2024-06_Recording_ATTLEBORO-PRR-002_Finance.mp3",
+      "relativePath": "cases/ATTLEBORO/ATTLEBORO-PRR-002/recordings/2024-06_Recording_ATTLEBORO-PRR-002_Finance.mp3",
+      "date": "2024-06",
+      "datePrecision": "month",
+      "dateEstimated": false,
+      "committee": "Finance",
+      "sizeBytes": 50709598
+    },
+    {
+      "fileName": "2024-06-18_Estimated_Recording_ATTLEBORO-PRR-002_12.mp3",
+      "relativePath": "cases/ATTLEBORO/ATTLEBORO-PRR-002/recordings/2024-06-18_Estimated_Recording_ATTLEBORO-PRR-002_12.mp3",
+      "date": "2024-06-18",
+      "datePrecision": "day",
+      "dateEstimated": true,
+      "committee": "Unknown (Estimated)",
+      "sizeBytes": 60109918
+    },
+    {
+      "fileName": "2024-07-16_Estimated_Recording_ATTLEBORO-PRR-002_2.mp3",
+      "relativePath": "cases/ATTLEBORO/ATTLEBORO-PRR-002/recordings/2024-07-16_Estimated_Recording_ATTLEBORO-PRR-002_2.mp3",
+      "date": "2024-07-16",
+      "datePrecision": "day",
+      "dateEstimated": true,
+      "committee": "Unknown (Estimated)",
+      "sizeBytes": 67727642
+    },
+    {
+      "fileName": "2024-08-13_Estimated_Recording_ATTLEBORO-PRR-002_9.mp3",
+      "relativePath": "cases/ATTLEBORO/ATTLEBORO-PRR-002/recordings/2024-08-13_Estimated_Recording_ATTLEBORO-PRR-002_9.mp3",
+      "date": "2024-08-13",
+      "datePrecision": "day",
+      "dateEstimated": true,
+      "committee": "Unknown (Estimated)",
+      "sizeBytes": 59307854
+    },
+    {
+      "fileName": "2024-08-19_Recording_ATTLEBORO-PRR-002_Policy.mp3",
+      "relativePath": "cases/ATTLEBORO/ATTLEBORO-PRR-002/recordings/2024-08-19_Recording_ATTLEBORO-PRR-002_Policy.mp3",
+      "date": "2024-08-19",
+      "datePrecision": "day",
+      "dateEstimated": false,
+      "committee": "Policy",
+      "sizeBytes": 42970665
+    },
+    {
+      "fileName": "2024-09-09_Recording_ATTLEBORO-PRR-002_Policy.mp3",
+      "relativePath": "cases/ATTLEBORO/ATTLEBORO-PRR-002/recordings/2024-09-09_Recording_ATTLEBORO-PRR-002_Policy.mp3",
+      "date": "2024-09-09",
+      "datePrecision": "day",
+      "dateEstimated": false,
+      "committee": "Policy",
+      "sizeBytes": 73388063
+    },
+    {
+      "fileName": "2024-09-10_Estimated_Recording_ATTLEBORO-PRR-002_3.mp3",
+      "relativePath": "cases/ATTLEBORO/ATTLEBORO-PRR-002/recordings/2024-09-10_Estimated_Recording_ATTLEBORO-PRR-002_3.mp3",
+      "date": "2024-09-10",
+      "datePrecision": "day",
+      "dateEstimated": true,
+      "committee": "Unknown (Estimated)",
+      "sizeBytes": 29268709
+    },
+    {
+      "fileName": "2024-10-02_Recording_ATTLEBORO-PRR-002_Policy.mp3",
+      "relativePath": "cases/ATTLEBORO/ATTLEBORO-PRR-002/recordings/2024-10-02_Recording_ATTLEBORO-PRR-002_Policy.mp3",
+      "date": "2024-10-02",
+      "datePrecision": "day",
+      "dateEstimated": false,
+      "committee": "Policy",
+      "sizeBytes": 31864654
+    },
+    {
+      "fileName": "2024-10-09_Estimated_Recording_ATTLEBORO-PRR-002_6.mp3",
+      "relativePath": "cases/ATTLEBORO/ATTLEBORO-PRR-002/recordings/2024-10-09_Estimated_Recording_ATTLEBORO-PRR-002_6.mp3",
+      "date": "2024-10-09",
+      "datePrecision": "day",
+      "dateEstimated": true,
+      "committee": "Unknown (Estimated)",
+      "sizeBytes": 25769137
+    },
+    {
+      "fileName": "2024-10-09_Estimated_Recording_ATTLEBORO-PRR-002_7.mp3",
+      "relativePath": "cases/ATTLEBORO/ATTLEBORO-PRR-002/recordings/2024-10-09_Estimated_Recording_ATTLEBORO-PRR-002_7.mp3",
+      "date": "2024-10-09",
+      "datePrecision": "day",
+      "dateEstimated": true,
+      "committee": "Unknown (Estimated)",
+      "sizeBytes": 926897
+    },
+    {
+      "fileName": "2024-11-12_Estimated_Recording_ATTLEBORO-PRR-002_Finance.mp3",
+      "relativePath": "cases/ATTLEBORO/ATTLEBORO-PRR-002/recordings/2024-11-12_Estimated_Recording_ATTLEBORO-PRR-002_Finance.mp3",
+      "date": "2024-11-12",
+      "datePrecision": "day",
+      "dateEstimated": true,
+      "committee": "Finance",
+      "sizeBytes": 57835802
+    },
+    {
+      "fileName": "2024-11-18_Recording_ATTLEBORO-PRR-002_Policy.mp3",
+      "relativePath": "cases/ATTLEBORO/ATTLEBORO-PRR-002/recordings/2024-11-18_Recording_ATTLEBORO-PRR-002_Policy.mp3",
+      "date": "2024-11-18",
+      "datePrecision": "day",
+      "dateEstimated": false,
+      "committee": "Policy",
+      "sizeBytes": 11072020
+    },
+    {
+      "fileName": "2024-11-25_Recording_ATTLEBORO-PRR-002_Policy.mp3",
+      "relativePath": "cases/ATTLEBORO/ATTLEBORO-PRR-002/recordings/2024-11-25_Recording_ATTLEBORO-PRR-002_Policy.mp3",
+      "date": "2024-11-25",
+      "datePrecision": "day",
+      "dateEstimated": false,
+      "committee": "Policy",
+      "sizeBytes": 98458091
+    },
+    {
+      "fileName": "2024-12-10_Estimated_Recording_ATTLEBORO-PRR-002_School_Comm.mp3",
+      "relativePath": "cases/ATTLEBORO/ATTLEBORO-PRR-002/recordings/2024-12-10_Estimated_Recording_ATTLEBORO-PRR-002_School_Comm.mp3",
+      "date": "2024-12-10",
+      "datePrecision": "day",
+      "dateEstimated": true,
+      "committee": "Emergency School Comm",
+      "sizeBytes": 1980154
+    },
+    {
+      "fileName": "2025-01-13_Recording_ATTLEBORO-PRR-002_Policy.mp3",
+      "relativePath": "cases/ATTLEBORO/ATTLEBORO-PRR-002/recordings/2025-01-13_Recording_ATTLEBORO-PRR-002_Policy.mp3",
+      "date": "2025-01-13",
+      "datePrecision": "day",
+      "dateEstimated": false,
+      "committee": "Policy",
+      "sizeBytes": 75527596
+    },
+    {
+      "fileName": "2025-01-13_Recording_ATTLEBORO-PRR-002_Teaching_and_Learning_January_250113_0086.mp3",
+      "relativePath": "cases/ATTLEBORO/ATTLEBORO-PRR-002/recordings/2025-01-13_Recording_ATTLEBORO-PRR-002_Teaching_and_Learning_January_250113_0086.mp3",
+      "date": "2025-01-13",
+      "datePrecision": "day",
+      "dateEstimated": false,
+      "committee": "Teaching & Learning January 250113 0086",
+      "sizeBytes": 3339358
+    },
+    {
+      "fileName": "2025-02-26_Recording_ATTLEBORO-PRR-002_Policy.mp3",
+      "relativePath": "cases/ATTLEBORO/ATTLEBORO-PRR-002/recordings/2025-02-26_Recording_ATTLEBORO-PRR-002_Policy.mp3",
+      "date": "2025-02-26",
+      "datePrecision": "day",
+      "dateEstimated": false,
+      "committee": "Policy",
+      "sizeBytes": 64304138
+    },
+    {
+      "fileName": "2025-03_Recording_ATTLEBORO-PRR-002_Finance.mp3",
+      "relativePath": "cases/ATTLEBORO/ATTLEBORO-PRR-002/recordings/2025-03_Recording_ATTLEBORO-PRR-002_Finance.mp3",
+      "date": "2025-03",
+      "datePrecision": "month",
+      "dateEstimated": false,
+      "committee": "Finance",
+      "sizeBytes": 27195632
+    },
+    {
+      "fileName": "2025-03-03_Recording_ATTLEBORO-PRR-002_Policy.mp3",
+      "relativePath": "cases/ATTLEBORO/ATTLEBORO-PRR-002/recordings/2025-03-03_Recording_ATTLEBORO-PRR-002_Policy.mp3",
+      "date": "2025-03-03",
+      "datePrecision": "day",
+      "dateEstimated": false,
+      "committee": "Policy",
+      "sizeBytes": 106464517
+    },
+    {
+      "fileName": "2025-04_Recording_ATTLEBORO-PRR-002_Finance.mp3",
+      "relativePath": "cases/ATTLEBORO/ATTLEBORO-PRR-002/recordings/2025-04_Recording_ATTLEBORO-PRR-002_Finance.mp3",
+      "date": "2025-04",
+      "datePrecision": "month",
+      "dateEstimated": false,
+      "committee": "Finance",
+      "sizeBytes": 33768040
+    },
+    {
+      "fileName": "2025-05_Recording_ATTLEBORO-PRR-002_Finance.mp3",
+      "relativePath": "cases/ATTLEBORO/ATTLEBORO-PRR-002/recordings/2025-05_Recording_ATTLEBORO-PRR-002_Finance.mp3",
+      "date": "2025-05",
+      "datePrecision": "month",
+      "dateEstimated": false,
+      "committee": "Finance",
+      "sizeBytes": 32533389
+    },
+    {
+      "fileName": "2025-05_Recording_ATTLEBORO-PRR-002_Infrastructure.mp3",
+      "relativePath": "cases/ATTLEBORO/ATTLEBORO-PRR-002/recordings/2025-05_Recording_ATTLEBORO-PRR-002_Infrastructure.mp3",
+      "date": "2025-05",
+      "datePrecision": "month",
+      "dateEstimated": false,
+      "committee": "Infrastructure",
+      "sizeBytes": 47447844
+    },
+    {
+      "fileName": "2025-05-12_Recording_ATTLEBORO-PRR-002_Policy.mp3",
+      "relativePath": "cases/ATTLEBORO/ATTLEBORO-PRR-002/recordings/2025-05-12_Recording_ATTLEBORO-PRR-002_Policy.mp3",
+      "date": "2025-05-12",
+      "datePrecision": "day",
+      "dateEstimated": false,
+      "committee": "Policy",
+      "sizeBytes": 115272171
+    },
+    {
+      "fileName": "2025-06_Recording_ATTLEBORO-PRR-002_Finance.mp3",
+      "relativePath": "cases/ATTLEBORO/ATTLEBORO-PRR-002/recordings/2025-06_Recording_ATTLEBORO-PRR-002_Finance.mp3",
+      "date": "2025-06",
+      "datePrecision": "month",
+      "dateEstimated": false,
+      "committee": "Finance",
+      "sizeBytes": 38916043
+    },
+    {
+      "fileName": "2025-08-04_Recording_ATTLEBORO-PRR-002_PPSC.mp3",
+      "relativePath": "cases/ATTLEBORO/ATTLEBORO-PRR-002/recordings/2025-08-04_Recording_ATTLEBORO-PRR-002_PPSC.mp3",
+      "date": "2025-08-04",
+      "datePrecision": "day",
+      "dateEstimated": false,
+      "committee": "PPSC",
+      "sizeBytes": 143720145
+    },
+    {
+      "fileName": "2025-09_Recording_ATTLEBORO-PRR-002_Finance.mp3",
+      "relativePath": "cases/ATTLEBORO/ATTLEBORO-PRR-002/recordings/2025-09_Recording_ATTLEBORO-PRR-002_Finance.mp3",
+      "date": "2025-09",
+      "datePrecision": "month",
+      "dateEstimated": false,
+      "committee": "Finance",
+      "sizeBytes": 15912406
+    },
+    {
+      "fileName": "2025-09_Recording_ATTLEBORO-PRR-002_Infrastructure.mp3",
+      "relativePath": "cases/ATTLEBORO/ATTLEBORO-PRR-002/recordings/2025-09_Recording_ATTLEBORO-PRR-002_Infrastructure.mp3",
+      "date": "2025-09",
+      "datePrecision": "month",
+      "dateEstimated": false,
+      "committee": "Infrastructure",
+      "sizeBytes": 76086825
+    },
+    {
+      "fileName": "2025-09-08_Recording_ATTLEBORO-PRR-002_Policy.mp3",
+      "relativePath": "cases/ATTLEBORO/ATTLEBORO-PRR-002/recordings/2025-09-08_Recording_ATTLEBORO-PRR-002_Policy.mp3",
+      "date": "2025-09-08",
+      "datePrecision": "day",
+      "dateEstimated": false,
+      "committee": "Policy",
+      "sizeBytes": 93636096
+    },
+    {
+      "fileName": "2025-10_Recording_ATTLEBORO-PRR-002_Finance.mp3",
+      "relativePath": "cases/ATTLEBORO/ATTLEBORO-PRR-002/recordings/2025-10_Recording_ATTLEBORO-PRR-002_Finance.mp3",
+      "date": "2025-10",
+      "datePrecision": "month",
+      "dateEstimated": false,
+      "committee": "Finance",
+      "sizeBytes": 38444167
+    },
+    {
+      "fileName": "2025-10-20_Recording_ATTLEBORO-PRR-002_Policy.mp3",
+      "relativePath": "cases/ATTLEBORO/ATTLEBORO-PRR-002/recordings/2025-10-20_Recording_ATTLEBORO-PRR-002_Policy.mp3",
+      "date": "2025-10-20",
+      "datePrecision": "day",
+      "dateEstimated": false,
+      "committee": "Policy",
+      "sizeBytes": 17091469
+    },
+    {
+      "fileName": "2025-11-05_Estimated_Recording_ATTLEBORO-PRR-002_10.mp3",
+      "relativePath": "cases/ATTLEBORO/ATTLEBORO-PRR-002/recordings/2025-11-05_Estimated_Recording_ATTLEBORO-PRR-002_10.mp3",
+      "date": "2025-11-05",
+      "datePrecision": "day",
+      "dateEstimated": true,
+      "committee": "Unknown (Estimated)",
+      "sizeBytes": 15628193
+    },
+    {
+      "fileName": "2025-11-24_Recording_ATTLEBORO-PRR-002_Policy.mp3",
+      "relativePath": "cases/ATTLEBORO/ATTLEBORO-PRR-002/recordings/2025-11-24_Recording_ATTLEBORO-PRR-002_Policy.mp3",
+      "date": "2025-11-24",
+      "datePrecision": "day",
+      "dateEstimated": false,
+      "committee": "Policy",
+      "sizeBytes": 139367100
+    },
+    {
+      "fileName": "2025-12_Recording_ATTLEBORO-PRR-002_Finance.mp3",
+      "relativePath": "cases/ATTLEBORO/ATTLEBORO-PRR-002/recordings/2025-12_Recording_ATTLEBORO-PRR-002_Finance.mp3",
+      "date": "2025-12",
+      "datePrecision": "month",
+      "dateEstimated": false,
+      "committee": "Finance",
+      "sizeBytes": 38408641
+    },
+    {
+      "fileName": "2025-12_Recording_ATTLEBORO-PRR-002_Infrastructure.mp3",
+      "relativePath": "cases/ATTLEBORO/ATTLEBORO-PRR-002/recordings/2025-12_Recording_ATTLEBORO-PRR-002_Infrastructure.mp3",
+      "date": "2025-12",
+      "datePrecision": "month",
+      "dateEstimated": false,
+      "committee": "Infrastructure",
+      "sizeBytes": 75803031
+    },
+    {
+      "fileName": "2026-01_Recording_ATTLEBORO-PRR-002_Finance.mp3",
+      "relativePath": "cases/ATTLEBORO/ATTLEBORO-PRR-002/recordings/2026-01_Recording_ATTLEBORO-PRR-002_Finance.mp3",
+      "date": "2026-01",
+      "datePrecision": "month",
+      "dateEstimated": false,
+      "committee": "Finance",
+      "sizeBytes": 44737379
+    }
+  ]
+}

@@ -1,0 +1,17 @@
+{
+  "id": "rule-attachment-core",
+  "group": "doc-families",
+  "title": "Generic Attachment Rules",
+  "enabled": true,
+  "priority": 50,
+  "match": {
+    "docFamilies": ["attachment", "unknown"]
+  },
+  "then": {
+    "deterministicRequiredFields": ["title"],
+    "preferredLinkTargets": ["document", "case", "organization"],
+    "defaultVisibility": "internal",
+    "defaultPublishEligible": false,
+    "routeToMetadataAnalysis": true
+  }
+}

@@ -1,0 +1,24 @@
+{
+  "ftp": {
+    "server": "ftp.parentdataforce.com",
+    "username": "webmaster@parentdataforce.com",
+    "password": "jJUBFSZK1!",
+    "remote_path": "/public_html"
+  },
+  "database": {
+    "name": "g5wwzsi5v4lbdt1q_pdf_db",
+    "user": "g5wwzsi5v4lbdt1q_pdf_user",
+    "password": "jJUBFSZK1!",
+    "host": "localhost",
+    "port": 3306
+  },
+  "site": {
+    "domain": "parentdataforce.com",
+    "admin_email": "admin@parentdataforce.com"
+  },
+  "app": {
+    "secret": "72ca5001aebf9ce0b5acc4be1cfe53e4",
+    "env": "production",
+    "debug": false
+  }
+}

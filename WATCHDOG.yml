@@ -1,0 +1,13 @@
+advisors: 
+  - name: Main Advisor
+    model: ollama/gemma4:12b-256k
+    tools: 
+      - read
+      - ask
+      - debug
+      - eval
+      - glob
+      - grep
+      - inspect_image
+      - browser
+      - web_search

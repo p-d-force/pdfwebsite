@@ -1,0 +1,118 @@
+{
+  "caseId": "SPR26-0842",
+  "prrNumber": "SPR26-0842",
+  "district": "ATTLEBORO",
+  "districtName": "Attleboro Public Schools",
+  "districtCode": "ATTLEBORO",
+  "location": "Attleboro, MA",
+  "type": "Public Records Request",
+  "status": "open",
+  "statusLabel": "Open",
+  "statusReason": "District response package received; full production review and follow-up pending",
+  "priority": "high",
+  "filedDate": "2026-02-18",
+  "statutoryDeadline": "2026-03-04",
+  "appealDeadline": "2026-03-09",
+  "currentStage": "Post-SPR Determination",
+  "subject": "Professional Development Records",
+  "requester": "Joey Ford",
+  "relatedCases": [
+    "ATTLEBORO-PRR-002"
+  ],
+  "relatedDistricts": [],
+  "recurrenceNotes": "Pattern of non-response documented - district has failed to respond within statutory timeline requiring escalation",
+  "caseType": "public-records",
+  "requestedItems": [
+    "Program name/title and series name",
+    "Vendor/provider/consultant and presenter information",
+    "Dates, duration, format, target audience, and location",
+    "Cost records including contracts, invoices, receipts, and funding source",
+    "Training content and objectives, agendas, handouts, and slide decks",
+    "Implementation records including attendance rosters and follow-up artifacts",
+    "Future professional development schedules, contracts, and estimated costs"
+  ],
+  "timeline": [
+    {
+      "entryId": 1,
+      "date": "2026-02-18",
+      "type": "Filed",
+      "title": "PRR Submitted",
+      "description": "Professional Development Records request filed via Massachusetts PRR Form SPR26_0842. Seeking records related to [teacher name]'s professional development activities.",
+      "documents": [
+        "cases/ATTLEBORO/SPR26-0842/original-request/2026-02-18_PRR_SPR26-0842_PD_Records_Request.pdf"
+      ],
+      "deadline": "2026-03-04",
+      "deadlineStatus": "missed"
+    },
+    {
+      "entryId": 2,
+      "date": "2026-03-03",
+      "type": "Appeal",
+      "title": "Appeal Filed - Excessive Fee (C24-0260)",
+      "description": "Filed appeal with Supervisor of Public Records regarding excessive fee estimate. District's fee request was unreasonable and lacked proper documentation.",
+      "documents": [
+        "cases/ATTLEBORO/SPR26-0842/appeals/2026-03-03_Appeal_C24-0260_Excessive_Fee.pdf"
+      ],
+      "appealNumber": "C24-0260",
+      "status": "completed"
+    },
+    {
+      "entryId": 3,
+      "date": "2026-03-19",
+      "type": "Determination",
+      "title": "SPR Determination - Response Ordered",
+      "description": "Supervisor of Public Records issues determination ordering district to provide response and produce records.",
+      "documents": [
+        "cases/ATTLEBORO/SPR26-0842/determinations/2026-03-19_SPR_Determination_SPR26-0842.pdf",
+        "cases/ATTLEBORO/SPR26-0842/correspondence/2026-03-19_EmailNotice_SPR26-0842_Determination.pdf"
+      ],
+      "sprCaseNumber": "SPR26-0842",
+      "status": "completed"
+    },
+    {
+      "entryId": 4,
+      "date": "2026-03-09",
+      "type": "Appeal",
+      "title": "Appeal Filed - Failure to Respond (C24-0713)",
+      "description": "Second appeal filed for district's failure to respond within statutory timeline. Documented pattern of non-compliance with Massachusetts Public Records Law.",
+      "documents": [
+        "cases/ATTLEBORO/SPR26-0842/appeals/2026-03-09_Appeal_C24-0713_Failure_to_Respond.pdf",
+        "cases/ATTLEBORO/SPR26-0842/appeals/2026-03-09_Appeal_C24-0713_Failure_to_Respond.eml"
+      ],
+      "appealNumber": "C24-0713",
+      "notes": "Recurring pattern of non-compliance documented - this represents a systemic issue with district's records response",
+      "status": "completed"
+    },
+    {
+      "entryId": 5,
+      "date": "2026-03-19",
+      "type": "Correspondence",
+      "title": "District Response Letter Received",
+      "description": "Records Access Officer provided district response to narrowed scope request.",
+      "documents": [
+        "cases/ATTLEBORO/SPR26-0842/correspondence/2026-03-19_Correspondence_SPR26-0842_District_Response_to_Narrowed_Scope.eml",
+        "cases/ATTLEBORO/SPR26-0842/correspondence/2026-03-19_Correspondence_SPR26-0842_District_Response_Letter.pdf"
+      ],
+      "status": "completed"
+    },
+    {
+      "entryId": 6,
+      "date": "2026-03-19",
+      "type": "Production",
+      "title": "PD Database Export Produced",
+      "description": "District provided spreadsheet export with section, instructor, targeted demographics, and class schedule fields for professional development sessions.",
+      "documents": [
+        "cases/ATTLEBORO/SPR26-0842/attachments/2026-03-19_Attachment_SPR26-0842_PD_Database_Export.xlsx"
+      ],
+      "status": "completed"
+    }
+  ],
+  "nextDeadline": "2026-04-02",
+  "nextDeadlineDescription": "District must provide response and records (10 business days from 03/19/2026 SPR determination)",
+  "crossReferences": [
+    {
+      "type": "pattern",
+      "description": "Similar pattern of non-response observed in multiple districts"
+    }
+  ]
+}

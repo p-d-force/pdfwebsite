@@ -1,0 +1,54 @@
+{
+  "districts": [
+    {
+      "districtCode": "ATTLEBORO",
+      "districtName": "Attleboro Public Schools",
+      "timezone": "America/New_York",
+      "jurisdiction": "US-MA",
+      "meetingSources": [
+        "https://www.attleboroschools.com/o/sc",
+        "https://www.attleboroschools.com/o/sc/page/school-committee"
+      ]
+    },
+    {
+      "districtCode": "FALLRIVER",
+      "districtName": "Fall River Public Schools",
+      "timezone": "America/New_York",
+      "jurisdiction": "US-MA",
+      "meetingSources": [
+        "https://www.fallriverschools.org/school-committee/locations-and-agendas",
+        "https://www.fallriverschools.org/school-committee/sub-committee"
+      ]
+    },
+    {
+      "districtCode": "WHITMANH",
+      "districtName": "Whitman-Hanson Regional School District",
+      "timezone": "America/New_York",
+      "jurisdiction": "US-MA",
+      "meetingSources": [
+        "https://www.whrsd.org/school_committee_budget/public_meeting_notices/school_committee_meetings",
+        "https://www.whrsd.org/school_committee_budget/public_meeting_notices/subcommittee_meetings"
+      ]
+    },
+    {
+      "districtCode": "BRIDGEWAT",
+      "districtName": "Bridgewater-Raynham Regional School District",
+      "timezone": "America/New_York",
+      "jurisdiction": "US-MA",
+      "meetingSources": [
+        "https://www.brrsd.org/school-committee",
+        "https://www.brrsd.org/committees"
+      ]
+    },
+    {
+      "districtCode": "NORTON",
+      "districtName": "Norton Public Schools",
+      "timezone": "America/New_York",
+      "jurisdiction": "US-MA",
+      "meetingSources": [
+        "https://www.norton.k12.ma.us/13070_2",
+        "https://www.norton.k12.ma.us/13093_2"
+      ]
+    }
+  ]
+}

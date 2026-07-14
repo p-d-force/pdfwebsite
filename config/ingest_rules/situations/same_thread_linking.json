@@ -1,0 +1,17 @@
+{
+  "id": "situation-same-thread-linking",
+  "group": "situations",
+  "title": "Same Thread Linking",
+  "enabled": true,
+  "priority": 70,
+  "match": {
+    "conditions": [
+      "email_thread_key_present",
+      "message_id_chain_detected"
+    ]
+  },
+  "then": {
+    "suggestThreadLinks": true,
+    "preferredLinkTargets": ["message", "document", "case"]
+  }
+}

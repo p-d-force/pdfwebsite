@@ -1,0 +1,310 @@
+{
+  "field_groups": [
+    {
+      "id": 1,
+      "name": "Case Information",
+      "description": "Core information about the case",
+      "display_order": 10,
+      "status": "active"
+    },
+    {
+      "id": 2,
+      "name": "Dates",
+      "description": "Important dates for the case",
+      "display_order": 20,
+      "status": "active"
+    },
+    {
+      "id": 3,
+      "name": "District Information",
+      "description": "Information about the school district",
+      "display_order": 30,
+      "status": "active"
+    },
+    {
+      "id": 4,
+      "name": "Document Information",
+      "description": "Details about the document",
+      "display_order": 40,
+      "status": "active"
+    },
+    {
+      "id": 5,
+      "name": "Person Information",
+      "description": "Extracted person information",
+      "display_order": 50,
+      "status": "active"
+    },
+    {
+      "id": 6,
+      "name": "Organization Information",
+      "description": "Extracted organization information",
+      "display_order": 60,
+      "status": "active"
+    }
+  ],
+  
+  "field_definitions": [
+    {
+      "field_name": "case_code",
+      "display_name": "Case Code",
+      "field_type": "text",
+      "data_type": "varchar",
+      "description": "Unique identifier for the case",
+      "is_required": true,
+      "validation_rules": ["required", "max:50"],
+      "config": {
+        "placeholder": "e.g., PRS-2024-001",
+        "pattern": "^[A-Z0-9\\-]+$"
+      },
+      "default_value": "",
+      "group_id": 1,
+      "display_order": 10,
+      "status": "active"
+    },
+    {
+      "field_name": "case_title",
+      "display_name": "Case Title",
+      "field_type": "text",
+      "data_type": "varchar",
+      "description": "Descriptive title of the case",
+      "is_required": true,
+      "validation_rules": ["required", "max:255"],
+      "config": {
+        "placeholder": "Enter case title"
+      },
+      "default_value": "",
+      "group_id": 1,
+      "display_order": 20,
+      "status": "active"
+    },
+    {
+      "field_name": "case_type",
+      "display_name": "Case Type",
+      "field_type": "select",
+      "data_type": "varchar",
+      "description": "Type of case",
+      "is_required": true,
+      "validation_rules": ["required"],
+      "config": {
+        "options": {
+          "prr": "Public Records Request",
+          "foia": "FOIA Request",
+          "complaint": "Complaint",
+          "appeal": "Appeal",
+          "litigation": "Litigation"
+        }
+      },
+      "default_value": "prr",
+      "group_id": 1,
+      "display_order": 30,
+      "status": "active"
+    },
+    {
+      "field_name": "status",
+      "display_name": "Status",
+      "field_type": "select",
+      "data_type": "varchar",
+      "description": "Current status of the case",
+      "is_required": true,
+      "validation_rules": ["required"],
+      "config": {
+        "options": {
+          "pending": "Pending",
+          "processing": "Processing",
+          "review": "Under Review",
+          "approved": "Approved",
+          "rejected": "Rejected",
+          "closed": "Closed"
+        }
+      },
+      "default_value": "pending",
+      "group_id": 1,
+      "display_order": 40,
+      "status": "active"
+    },
+    {
+      "field_name": "filed_date",
+      "display_name": "Filed Date",
+      "field_type": "date",
+      "data_type": "date",
+      "description": "Date the case was filed",
+      "is_required": true,
+      "validation_rules": ["required", "date"],
+      "config": {
+        "format": "YYYY-MM-DD",
+        "display_format": "F j, Y"
+      },
+      "default_value": "",
+      "group_id": 2,
+      "display_order": 10,
+      "status": "active"
+    },
+    {
+      "field_name": "deadline_date",
+      "display_name": "Deadline Date",
+      "field_type": "date",
+      "data_type": "date",
+      "description": "Next deadline for the case",
+      "is_required": false,
+      "validation_rules": ["date"],
+      "config": {
+        "format": "YYYY-MM-DD",
+        "display_format": "F j, Y"
+      },
+      "default_value": "",
+      "group_id": 2,
+      "display_order": 20,
+      "status": "active"
+    },
+    {
+      "field_name": "district_name",
+      "display_name": "District Name",
+      "field_type": "text",
+      "data_type": "varchar",
+      "description": "Name of the school district",
+      "is_required": true,
+      "validation_rules": ["required", "max:100"],
+      "config": {
+        "placeholder": "Enter district name"
+      },
+      "default_value": "",
+      "group_id": 3,
+      "display_order": 10,
+      "status": "active"
+    },
+    {
+      "field_name": "district_code",
+      "display_name": "District Code",
+      "field_type": "text",
+      "data_type": "varchar",
+      "description": "Unique code for the district",
+      "is_required": false,
+      "validation_rules": ["max:20"],
+      "config": {
+        "placeholder": "Enter district code"
+      },
+      "default_value": "",
+      "group_id": 3,
+      "display_order": 20,
+      "status": "active"
+    },
+    {
+      "field_name": "document_type",
+      "display_name": "Document Type",
+      "field_type": "select",
+      "data_type": "varchar",
+      "description": "Type of document",
+      "is_required": true,
+      "validation_rules": ["required"],
+      "config": {
+        "options": {
+          "request": "Request Letter",
+          "response": "Response",
+          "appeal": "Appeal",
+          "decision": "Decision",
+          "memo": "Memo",
+          "report": "Report",
+          "other": "Other"
+        }
+      },
+      "default_value": "request",
+      "group_id": 4,
+      "display_order": 10,
+      "status": "active"
+    },
+    {
+      "field_name": "document_date",
+      "display_name": "Document Date",
+      "field_type": "date",
+      "data_type": "date",
+      "description": "Date of the document",
+      "is_required": false,
+      "validation_rules": ["date"],
+      "config": {
+        "format": "YYYY-MM-DD",
+        "display_format": "F j, Y"
+      },
+      "default_value": "",
+      "group_id": 4,
+      "display_order": 20,
+      "status": "active"
+    },
+    {
+      "field_name": "person_name",
+      "display_name": "Person Name",
+      "field_type": "text",
+      "data_type": "varchar",
+      "description": "Name of a person mentioned in the document",
+      "is_required": false,
+      "validation_rules": ["max:100"],
+      "config": {
+        "placeholder": "Enter person name"
+      },
+      "default_value": "",
+      "group_id": 5,
+      "display_order": 10,
+      "status": "active"
+    },
+    {
+      "field_name": "person_role",
+      "display_name": "Person Role",
+      "field_type": "select",
+      "data_type": "varchar",
+      "description": "Role of the person",
+      "is_required": false,
+      "validation_rules": [],
+      "config": {
+        "options": {
+          "requestor": "Requestor",
+          "respondent": "Respondent",
+          "attorney": "Attorney",
+          "staff": "Staff",
+          "other": "Other"
+        }
+      },
+      "default_value": "",
+      "group_id": 5,
+      "display_order": 20,
+      "status": "active"
+    },
+    {
+      "field_name": "organization_name",
+      "display_name": "Organization Name",
+      "field_type": "text",
+      "data_type": "varchar",
+      "description": "Name of an organization mentioned in the document",
+      "is_required": false,
+      "validation_rules": ["max:100"],
+      "config": {
+        "placeholder": "Enter organization name"
+      },
+      "default_value": "",
+      "group_id": 6,
+      "display_order": 10,
+      "status": "active"
+    },
+    {
+      "field_name": "organization_type",
+      "display_name": "Organization Type",
+      "field_type": "select",
+      "data_type": "varchar",
+      "description": "Type of organization",
+      "is_required": false,
+      "validation_rules": [],
+      "config": {
+        "options": {
+          "school": "School",
+          "district": "School District",
+          "agency": "Government Agency",
+          "law_firm": "Law Firm",
+          "other": "Other"
+        }
+      },
+      "default_value": "",
+      "group_id": 6,
+      "display_order": 20,
+      "status": "active"
+    }
+  ]
+}

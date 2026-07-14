@@ -1,0 +1,13 @@
+{
+  "district": "FALLRIVER",
+  "districtName": "Fall River Public Schools",
+  "location": "Fall River, MA",
+  "status": "active",
+  "cases": [
+    "FALLRIVER-PRR-001",
+    "FALLRIVER-PRR-002",
+    "PRS-15514"
+  ],
+  "notes": "Active investigation - personnel changes documentation and service delivery concerns",
+  "relatedDistricts": ["ATTLEBORO", "WHITMANH", "BRIDGEWAT", "NORTON"]
+}

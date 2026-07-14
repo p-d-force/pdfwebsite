@@ -1,0 +1,169 @@
+{
+  "records": [
+    {
+      "districtCode": "ATTLEBORO",
+      "reason": "No upcoming meetings extracted with confidence threshold.",
+      "sources": [
+        "https://www.attleboroschools.com/o/sc",
+        "https://www.attleboroschools.com/o/sc/page/school-committee"
+      ],
+      "diagnostic": {
+        "districtCode": "ATTLEBORO",
+        "pagesFetched": 18,
+        "candidateCount": 167,
+        "acceptedCount": 0,
+        "reviewCount": 0,
+        "rejectedByReason": {
+          "parse-failed": 1,
+          "no-date-hint": 166
+        },
+        "visitedPages": [
+          "https://www.attleboroschools.com/",
+          "https://www.attleboroschools.com/o/sc",
+          "https://www.attleboroschools.com/o/sc/page/school-committee",
+          "https://www.attleboroschools.com/staff",
+          "https://www.attleboroschools.com/documents/calendar/future-calendars/748022",
+          "https://www.attleboroschools.com/page/strategic-plan",
+          "https://www.attleboroschools.com/page/aps-district-goals-2019-20",
+          "https://www.attleboroschools.com/page/weather",
+          "https://www.attleboroschools.com/page/public-records-request",
+          "https://www.attleboroschools.com/browse/332660",
+          "https://www.attleboroschools.com/browse/332192",
+          "https://www.attleboroschools.com/page/aps-curriculum",
+          "https://www.attleboroschools.com/page/asepac",
+          "https://www.attleboroschools.com/documents/for-families/aspen-information/332240",
+          "https://www.attleboroschools.com/documents/for-families/aspen-information/how-to-view-student-report-cards/332245",
+          "https://www.attleboroschools.com/documents/for-families/attleboro-anti-bullying-resources/332243",
+          "https://www.attleboroschools.com/o/aps/page/food-services2",
+          "https://www.attleboroschools.com/page/health-services"
+        ],
+        "crawl": {
+          "errors": [],
+          "visited": [
+            "https://www.attleboroschools.com/",
+            "https://www.attleboroschools.com/browse/332192",
+            "https://www.attleboroschools.com/browse/332660",
+            "https://www.attleboroschools.com/documents/calendar/future-calendars/748022",
+            "https://www.attleboroschools.com/documents/for-families/aspen-information/332240",
+            "https://www.attleboroschools.com/documents/for-families/aspen-information/how-to-view-student-report-cards/332245",
+            "https://www.attleboroschools.com/documents/for-families/attleboro-anti-bullying-resources/332243",
+            "https://www.attleboroschools.com/o/aps/page/food-services2",
+            "https://www.attleboroschools.com/o/sc",
+            "https://www.attleboroschools.com/o/sc/page/school-committee",
+            "https://www.attleboroschools.com/page/aps-curriculum",
+            "https://www.attleboroschools.com/page/aps-district-goals-2019-20",
+            "https://www.attleboroschools.com/page/asepac",
+            "https://www.attleboroschools.com/page/health-services",
+            "https://www.attleboroschools.com/page/public-records-request",
+            "https://www.attleboroschools.com/page/strategic-plan",
+            "https://www.attleboroschools.com/page/weather",
+            "https://www.attleboroschools.com/staff"
+          ],
+          "allowedHosts": [
+            "www.attleboroschools.com"
+          ]
+        }
+      }
+    },
+    {
+      "districtCode": "WHITMANH",
+      "reason": "No upcoming meetings extracted with confidence threshold.",
+      "sources": [
+        "https://www.whrsd.org/school_committee_budget/public_meeting_notices/school_committee_meetings",
+        "https://www.whrsd.org/school_committee_budget/public_meeting_notices/subcommittee_meetings"
+      ],
+      "diagnostic": {
+        "districtCode": "WHITMANH",
+        "pagesFetched": 18,
+        "candidateCount": 5726,
+        "acceptedCount": 0,
+        "reviewCount": 0,
+        "rejectedByReason": {
+          "no-date-hint": 4732,
+          "excluded-news": 102,
+          "parse-failed": 889,
+          "past-date": 103,
+          "historic-pdf": 2
+        },
+        "visitedPages": [
+          "https://www.whrsd.org/",
+          "https://www.whrsd.org/school_committee_budget/public_meeting_notices/school_committee_meetings",
+          "https://www.whrsd.org/school_committee_budget/public_meeting_notices/subcommittee_meetings",
+          "https://www.whrsd.org/gateway/Login.aspx?returnUrl=%2f",
+          "https://www.whrsd.org/home",
+          "https://www.whrsd.org/school_news",
+          "https://www.whrsd.org/school_news/whitman_hanson_community_and_current_events",
+          "https://www.whrsd.org/school_news/updates-from-super",
+          "https://www.whrsd.org/school_news/whitman_middle_school_building_project",
+          "https://www.whrsd.org/central_administration",
+          "https://www.whrsd.org/central_administration/administration_contact_list",
+          "https://www.whrsd.org/central_administration/district_departments",
+          "https://www.whrsd.org/central_administration/district_departments/athletics",
+          "https://www.whrsd.org/central_administration/district_departments/business_services",
+          "https://www.whrsd.org/central_administration/district_departments/business_services/business_services_-_bids",
+          "https://www.whrsd.org/central_administration/district_departments/business_services/business_services_-_bids/q_u_e_s_t_i_o_n_s",
+          "https://www.whrsd.org/central_administration/district_departments/business_services/bidder_information_form",
+          "https://www.whrsd.org/central_administration/district_departments/facilities"
+        ],
+        "crawl": {
+          "errors": [],
+          "visited": [
+            "https://www.whrsd.org/",
+            "https://www.whrsd.org/central_administration",
+            "https://www.whrsd.org/central_administration/administration_contact_list",
+            "https://www.whrsd.org/central_administration/district_departments",
+            "https://www.whrsd.org/central_administration/district_departments/athletics",
+            "https://www.whrsd.org/central_administration/district_departments/business_services",
+            "https://www.whrsd.org/central_administration/district_departments/business_services/bidder_information_form",
+            "https://www.whrsd.org/central_administration/district_departments/business_services/business_services_-_bids",
+            "https://www.whrsd.org/central_administration/district_departments/business_services/business_services_-_bids/q_u_e_s_t_i_o_n_s",
+            "https://www.whrsd.org/central_administration/district_departments/facilities",
+            "https://www.whrsd.org/gateway/Login.aspx?returnUrl=%2f",
+            "https://www.whrsd.org/home",
+            "https://www.whrsd.org/school_committee_budget/public_meeting_notices/school_committee_meetings",
+            "https://www.whrsd.org/school_committee_budget/public_meeting_notices/subcommittee_meetings",
+            "https://www.whrsd.org/school_news",
+            "https://www.whrsd.org/school_news/updates-from-super",
+            "https://www.whrsd.org/school_news/whitman_hanson_community_and_current_events",
+            "https://www.whrsd.org/school_news/whitman_middle_school_building_project"
+          ],
+          "allowedHosts": [
+            "www.whrsd.org"
+          ]
+        }
+      }
+    },
+    {
+      "districtCode": "BRIDGEWAT",
+      "reason": "No upcoming meetings extracted with confidence threshold.",
+      "sources": [
+        "https://www.brrsd.org/school-committee",
+        "https://www.brrsd.org/committees"
+      ],
+      "diagnostic": {
+        "districtCode": "BRIDGEWAT",
+        "pagesFetched": 3,
+        "candidateCount": 0,
+        "acceptedCount": 0,
+        "reviewCount": 0,
+        "rejectedByReason": {},
+        "visitedPages": [
+          "https://www.brrsd.org/",
+          "https://www.brrsd.org/committees",
+          "https://www.brrsd.org/school-committee"
+        ],
+        "crawl": {
+          "errors": [],
+          "visited": [
+            "https://www.brrsd.org/",
+            "https://www.brrsd.org/committees",
+            "https://www.brrsd.org/school-committee"
+          ],
+          "allowedHosts": [
+            "www.brrsd.org"
+          ]
+        }
+      }
+    }
+  ]
+}

@@ -1,0 +1,16 @@
+{
+  "events": [
+    {
+      "id": "manual-governance-review",
+      "title": "Governance packet review window",
+      "type": "deadline",
+      "districtCode": "DESE",
+      "jurisdiction": "US-MA",
+      "date": "2026-04-01",
+      "source": {
+        "method": "manual",
+        "note": "Seeded manual calendar placeholder"
+      }
+    }
+  ]
+}

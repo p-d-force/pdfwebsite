@@ -1,0 +1,324 @@
+{
+  "total": 1108,
+  "total_size": 1162559504,
+  "by_ext": {
+    ".ics": 3,
+    ".jpeg": 51,
+    ".pdf": 807,
+    ".jpg": 32,
+    ".zip": 12,
+    ".png": 61,
+    ".txt": 2,
+    ".docx": 107,
+    ".xlsx": 2,
+    ".mht": 2,
+    ".7z": 1,
+    ".xls": 1,
+    ".mov": 2,
+    ".pptx": 1,
+    ".26": 1,
+    ".md": 23
+  },
+  "files": [
+    {
+      "name": "1001_invite.ics",
+      "size": 3489,
+      "ext": ".ics",
+      "relpath": "attachments\\1001_invite.ics"
+    },
+    {
+      "name": "1002_invite.ics",
+      "size": 3631,
+      "ext": ".ics",
+      "relpath": "attachments\\1002_invite.ics"
+    },
+    {
+      "name": "1005_Arg Transition Letter.jpeg",
+      "size": 288709,
+      "ext": ".jpeg",
+      "relpath": "attachments\\1005_Arg Transition Letter.jpeg"
+    },
+    {
+      "name": "1005_Gmail - Follow-Up_ Defective N1 and Evaluation Consent \u2013 Matthew Duarte.pdf",
+      "size": 131681,
+      "ext": ".pdf",
+      "relpath": "attachments\\1005_Gmail - Follow-Up_ Defective N1 and Evaluation Consent \u2013 Matthew Duarte.pdf"
+    },
+    {
+      "name": "1005_MD Consent.pdf",
+      "size": 85669,
+      "ext": ".pdf",
+      "relpath": "attachments\\1005_MD Consent.pdf"
+    },
+    {
+      "name": "1005_MD N1 (1).pdf",
+      "size": 26982,
+      "ext": ".pdf",
+      "relpath": "attachments\\1005_MD N1 (1).pdf"
+    },
+    {
+      "name": "1005_Page 1 Mattie 2025 IEP.jpg",
+      "size": 1312618,
+      "ext": ".jpg",
+      "relpath": "attachments\\1005_Page 1 Mattie 2025 IEP.jpg"
+    },
+    {
+      "name": "1014_RT data report HRES 5.pdf",
+      "size": 114600,
+      "ext": ".pdf",
+      "relpath": "attachments\\1014_RT data report HRES 5.pdf"
+    },
+    {
+      "name": "1017_Grid.jpg",
+      "size": 933295,
+      "ext": ".jpg",
+      "relpath": "attachments\\1017_Grid.jpg"
+    },
+    {
+      "name": "1018_Nathan's Revised IEP.pdf",
+      "size": 244572,
+      "ext": ".pdf",
+      "relpath": "attachments\\1018_Nathan's Revised IEP.pdf"
+    },
+    {
+      "name": "1019_DeSousa-Barreto, N. Behavior Summary May 2026 (1).pdf",
+      "size": 127407,
+      "ext": ".pdf",
+      "relpath": "attachments\\1019_DeSousa-Barreto, N. Behavior Summary May 2026 (1).pdf"
+    },
+    {
+      "name": "1031_Written Citizen Input from 3.04.26.pdf",
+      "size": 4331388,
+      "ext": ".pdf",
+      "relpath": "attachments\\1031_Written Citizen Input from 3.04.26.pdf"
+    },
+    {
+      "name": "1054_Alvarado_Victoria_Raquel_2021_04_29_2000007254_65493_Reevaluation_Report_RR copy.pdf",
+      "size": 210246,
+      "ext": ".pdf",
+      "relpath": "attachments\\1054_Alvarado_Victoria_Raquel_2021_04_29_2000007254_65493_Reevaluation_Report_RR copy.pdf"
+    },
+    {
+      "name": "1079_NaDeSB's FAIR Plan.pdf",
+      "size": 8315953,
+      "ext": ".pdf",
+      "relpath": "attachments\\1079_NaDeSB's FAIR Plan.pdf"
+    },
+    {
+      "name": "109_1000008167.jpg",
+      "size": 2470607,
+      "ext": ".jpg",
+      "relpath": "attachments\\109_1000008167.jpg"
+    },
+    {
+      "name": "109_1000008168.jpg",
+      "size": 2745961,
+      "ext": ".jpg",
+      "relpath": "attachments\\109_1000008168.jpg"
+    },
+    {
+      "name": "109_1000008169.jpg",
+      "size": 2437552,
+      "ext": ".jpg",
+      "relpath": "attachments\\109_1000008169.jpg"
+    },
+    {
+      "name": "109_1000008170.jpg",
+      "size": 2345642,
+      "ext": ".jpg",
+      "relpath": "attachments\\109_1000008170.jpg"
+    },
+    {
+      "name": "109_1000008171.jpg",
+      "size": 2230041,
+      "ext": ".jpg",
+      "relpath": "attachments\\109_1000008171.jpg"
+    },
+    {
+      "name": "1119_RT data report HRES May 22.pdf",
+      "size": 130102,
+      "ext": ".pdf",
+      "relpath": "attachments\\1119_RT data report HRES May 22.pdf"
+    },
+    {
+      "name": "111_Financial Statement-June 2025.pdf",
+      "size": 1852119,
+      "ext": ".pdf",
+      "relpath": "attachments\\111_Financial Statement-June 2025.pdf"
+    },
+    {
+      "name": "111_October 2025 Five Year Forecast (1).pdf",
+      "size": 1890229,
+      "ext": ".pdf",
+      "relpath": "attachments\\111_October 2025 Five Year Forecast (1).pdf"
+    },
+    {
+      "name": "112_Financial Statement-October 2025.pdf",
+      "size": 1944151,
+      "ext": ".pdf",
+      "relpath": "attachments\\112_Financial Statement-October 2025.pdf"
+    },
+    {
+      "name": "1130_PPSC - 12-15-2025.zip",
+      "size": 229558,
+      "ext": ".zip",
+      "relpath": "attachments\\1130_PPSC - 12-15-2025.zip"
+    },
+    {
+      "name": "1130_PRR - Response JF - 05-22-26.pdf",
+      "size": 271955,
+      "ext": ".pdf",
+      "relpath": "attachments\\1130_PRR - Response JF - 05-22-26.pdf"
+    },
+    {
+      "name": "1130_Reports-Content_Search-Ford_Policy_SubCom-StartDirectExport-Ford_Policy_Dec_2025-2026-05-21_15-49-55.zip",
+      "size": 14438375,
+      "ext": ".zip",
+      "relpath": "attachments\\1130_Reports-Content_Search-Ford_Policy_SubCom-StartDirectExport-Ford_Policy_Dec_2025-2026-05-21_15-49-55.zip"
+    },
+    {
+      "name": "1130_SC - 12-15-25.zip",
+      "size": 2896920,
+      "ext": ".zip",
+      "relpath": "attachments\\1130_SC - 12-15-25.zip"
+    },
+    {
+      "name": "1177_DESE - Chambers Emails.pdf",
+      "size": 559825,
+      "ext": ".pdf",
+      "relpath": "attachments\\1177_DESE - Chambers Emails.pdf"
+    },
+    {
+      "name": "1178_parent data force release of info.pdf",
+      "size": 2813249,
+      "ext": ".pdf",
+      "relpath": "attachments\\1178_parent data force release of info.pdf"
+    },
+    {
+      "name": "1186_Symposium Flyer.png.pdf",
+      "size": 2217039,
+      "ext": ".pdf",
+      "relpath": "attachments\\1186_Symposium Flyer.png.pdf"
+    },
+    {
+      "name": "1191_Symposium Flyer..pdf",
+      "size": 2220856,
+      "ext": ".pdf",
+      "relpath": "attachments\\1191_Symposium Flyer..pdf"
+    },
+    {
+      "name": "1196_DESE - Chambers Emails.pdf",
+      "size": 559825,
+      "ext": ".pdf",
+      "relpath": "attachments\\1196_DESE - Chambers Emails.pdf"
+    },
+    {
+      "name": "1198_McKenna et al. 2026 PRS Experiences.pdf",
+      "size": 687398,
+      "ext": ".pdf",
+      "relpath": "attachments\\1198_McKenna et al. 2026 PRS Experiences.pdf"
+    },
+    {
+      "name": "1209_137C266C-405A-4EA2-8F43-B7809D9D9838.png",
+      "size": 494748,
+      "ext": ".png",
+      "relpath": "attachments\\1209_137C266C-405A-4EA2-8F43-B7809D9D9838.png"
+    },
+    {
+      "name": "1209_doc note.pdf",
+      "size": 57041,
+      "ext": ".pdf",
+      "relpath": "attachments\\1209_doc note.pdf"
+    },
+    {
+      "name": "1210_Gmail - Assessmets and grades.pdf",
+      "size": 121404,
+      "ext": ".pdf",
+      "relpath": "attachments\\1210_Gmail - Assessmets and grades.pdf"
+    },
+    {
+      "name": "1210_Gmail - Math.pdf",
+      "size": 94160,
+      "ext": ".pdf",
+      "relpath": "attachments\\1210_Gmail - Math.pdf"
+    },
+    {
+      "name": "1210_Gmail - Math2.pdf",
+      "size": 122391,
+      "ext": ".pdf",
+      "relpath": "attachments\\1210_Gmail - Math2.pdf"
+    },
+    {
+      "name": "1210_Gmail - Math3.pdf",
+      "size": 118597,
+      "ext": ".pdf",
+      "relpath": "attachments\\1210_Gmail - Math3.pdf"
+    },
+    {
+      "name": "1210_Gmail - Math4.pdf",
+      "size": 454534,
+      "ext": ".pdf",
+      "relpath": "attachments\\1210_Gmail - Math4.pdf"
+    },
+    {
+      "name": "1210_Gmail - weekly reports.pdf",
+      "size": 100944,
+      "ext": ".pdf",
+      "relpath": "attachments\\1210_Gmail - weekly reports.pdf"
+    },
+    {
+      "name": "1210_Gmail - weekly reports2.pdf",
+      "size": 114487,
+      "ext": ".pdf",
+      "relpath": "attachments\\1210_Gmail - weekly reports2.pdf"
+    },
+    {
+      "name": "1210_Gmail - weekly reports3.pdf",
+      "size": 103865,
+      "ext": ".pdf",
+      "relpath": "attachments\\1210_Gmail - weekly reports3.pdf"
+    },
+    {
+      "name": "1210_Gmail - weekly reports4.pdf",
+      "size": 117481,
+      "ext": ".pdf",
+      "relpath": "attachments\\1210_Gmail - weekly reports4.pdf"
+    },
+    {
+      "name": "1215_McKenna et al. 2026 PRS Experiences.pdf",
+      "size": 687398,
+      "ext": ".pdf",
+      "relpath": "attachments\\1215_McKenna et al. 2026 PRS Experiences.pdf"
+    },
+    {
+      "name": "1217_RT data report HRES 6.pdf",
+      "size": 148173,
+      "ext": ".pdf",
+      "relpath": "attachments\\1217_RT data report HRES 6.pdf"
+    },
+    {
+      "name": "1220_Emails regarding Mar 20 incident.pdf",
+      "size": 366554,
+      "ext": ".pdf",
+      "relpath": "attachments\\1220_Emails regarding Mar 20 incident.pdf"
+    },
+    {
+      "name": "1220_HL texts to CC.jpeg",
+      "size": 226052,
+      "ext": ".jpeg",
+      "relpath": "attachments\\1220_HL texts to CC.jpeg"
+    },
+    {
+      "name": "1220_HL texts to CW.png",
+      "size": 705352,
+      "ext": ".png",
+      "relpath": "attachments\\1220_HL texts to CW.png"
+    },
+    {
+      "name": "1220_Implementation of Accommodations.pdf",
+      "size": 118353,
+      "ext": ".pdf",
+      "relpath": "attachments\\1220_Implementation of Accommodations.pdf"
+    }
+  ]
+}

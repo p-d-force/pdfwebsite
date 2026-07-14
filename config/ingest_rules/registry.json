@@ -1,0 +1,17 @@
+{
+  "version": "1.0",
+  "docFamilyRuleDir": "config/ingest_rules/doc_families",
+  "situationRuleDir": "config/ingest_rules/situations",
+  "groups": [
+    {
+      "id": "doc-families",
+      "title": "Document Family Rules",
+      "description": "Rules keyed primarily by document family or document type."
+    },
+    {
+      "id": "situations",
+      "title": "Situation Rules",
+      "description": "Cross-cutting rules based on OCR needs, metadata findings, visibility, table content, and relationship situations."
+    }
+  ]
+}

@@ -1,0 +1,68 @@
+__pycache__/
+*.pyc
+*.pyo
+*.pyd
+.DS_Store
+Thumbs.db
+
+public/data/derived/ingest/fetch_cache/
+data/derived/dese_enrichment/fetch_cache/
+
+# Windows reserved name
+nul
+data/derived/ingest/*.tmp
+
+.env
+.venv/
+venv/
+node_modules/
+docker/php/sessions/*
+docker/phpmyadmin/sessions/*
+admin_server.log
+
+**/.local/share/opencode/tool-output/
+.aider*
+dev.db
+dev.db-shm
+dev.db-wal
+
+# CocoIndex Code (ccc)
+/.cocoindex_code/
+
+# Scraper (separate repo: github.com/p-d-force/pdf-scraper)
+scraper/
+
+# Environment files (except example)
+.env
+.env.*
+!.env.example
+
+# Database files
+*.db
+*.db-shm
+*.db-wal
+*.sqlite
+*.sqlite3
+
+# Intake (raw emails/PDFs with PII)
+intake/raw/
+intake/email_analysis/
+
+# Case evidence (recordings, attachments, exhibits — large + PII)
+cases/*/recordings/
+cases/*/documents/
+cases/*/exhibits/
+cases/*/attachments/
+cases/*/*.mp3
+cases/*/*.pdf
+cases/*/*.zip
+
+# Backups (large, potentially stale)
+backups/
+
+# Processed/derived data (not source code)
+data/raw/
+data/optimized/
+data/derived/
+data/entities/
+data/edges/

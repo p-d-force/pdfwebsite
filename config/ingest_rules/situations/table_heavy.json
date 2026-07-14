@@ -1,0 +1,18 @@
+{
+  "id": "situation-table-heavy",
+  "group": "situations",
+  "title": "Table-Heavy Document",
+  "enabled": true,
+  "priority": 90,
+  "match": {
+    "conditions": [
+      "spreadsheet_family",
+      "pdf_contains_table_like_layout",
+      "ocr_output_contains_consistent_columnar_patterns"
+    ]
+  },
+  "then": {
+    "preferTableExtraction": true,
+    "reviewFlags": ["table-analysis-needed"]
+  }
+}

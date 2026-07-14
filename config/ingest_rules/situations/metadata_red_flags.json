@@ -1,0 +1,21 @@
+{
+  "id": "situation-metadata-red-flags",
+  "group": "situations",
+  "title": "Metadata Red Flags",
+  "enabled": true,
+  "priority": 110,
+  "match": {
+    "conditions": [
+      "hidden_content_detected",
+      "timestamp_mismatch_detected",
+      "author_or_producer_anomaly_detected",
+      "encrypted_or_password_protected",
+      "embedded_objects_detected"
+    ]
+  },
+  "then": {
+    "queueSubstates": ["awaiting-privacy-review"],
+    "priorityOverride": "high",
+    "reviewFlags": ["metadata-red-flag"]
+  }
+}

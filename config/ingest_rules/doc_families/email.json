@@ -1,0 +1,23 @@
+{
+  "id": "rule-email-core",
+  "group": "doc-families",
+  "title": "Email Core Rules",
+  "enabled": true,
+  "priority": 100,
+  "match": {
+    "docFamilies": ["email"],
+    "extensions": [".eml"]
+  },
+  "then": {
+    "deterministicRequiredFields": ["documentDate", "sender", "recipients", "subjectLine"],
+    "preferredLinkTargets": ["case", "organization", "person", "message", "document"],
+    "generateMessageEntity": true,
+    "attachmentInventoryRequired": true,
+    "defaultVisibility": "internal",
+    "defaultPublishEligible": false
+  },
+  "aiPromptHints": [
+    "Preserve thread relationships and participant roles.",
+    "Do not invent deadlines unless clearly present in body text or headers."
+  ]
+}

@@ -1,0 +1,598 @@
+{
+  "cases": [
+    {
+      "id": "attleboro-prr-002",
+      "caseId": "ATTLEBORO-PRR-002",
+      "districtCode": "ATTLEBORO",
+      "districtName": "Attleboro Public Schools",
+      "location": "Attleboro, MA",
+      "type": "Public Records Request",
+      "caseType": "case",
+      "status": "open",
+      "statusLabel": "Open",
+      "statusReason": "",
+      "currentStage": "Awaiting district production",
+      "subject": "Recordings, Transcripts, Minutes, Materials, Executive Session Releasable Records, and Financials",
+      "filedDate": "2026-01-31",
+      "nextDeadline": "2026-04-02",
+      "nextDeadlineDescription": "District portal/link production expected following active records tracking",
+      "notes": "",
+      "recurrenceNotes": "",
+      "crossReferences": [],
+      "requestedItems": [
+        "Open meeting recordings, transcripts/captions, and minutes (all meetings and subcommittees)",
+        "Meeting notices, agendas, packets, and exhibits",
+        "Executive session releasable portions and segregable records",
+        "ACFR/CAFR reports, auditor reports, management letters, CAPs, and interim financial records"
+      ],
+      "relatedCases": [],
+      "timeline": [
+        {
+          "entryId": 1,
+          "date": "2026-01-31",
+          "sortDate": "2026-01-31T00:00:00",
+          "type": "Filed",
+          "title": "Broad PRR Submitted",
+          "description": "Comprehensive request submitted for recordings, transcripts, meeting materials, releasable executive session records, and FY2022-present financial records.",
+          "notes": "",
+          "documents": [
+            "cases/ATTLEBORO/ATTLEBORO-PRR-002/correspondence/2026-01-31_Correspondence_ATTLEBORO-PRR-002_Broad_Meeting_Records_Request.eml"
+          ]
+        },
+        {
+          "entryId": 2,
+          "date": "2026-03-19",
+          "sortDate": "2026-03-19T00:00:00",
+          "type": "Production",
+          "title": "Audio Archive Logged",
+          "description": "Responsive meeting audio files were organized and indexed for public archive access pending full district delivery package.",
+          "notes": "",
+          "documents": [
+            "cases/ATTLEBORO/ATTLEBORO-PRR-002/attachments/2026-03-19_Attachment_ATTLEBORO-PRR-002_Audio_Manifest.txt",
+            "cases/ATTLEBORO/ATTLEBORO-PRR-002/recordings_index.json"
+          ]
+        }
+      ],
+      "sourceMetadata": "cases/ATTLEBORO/ATTLEBORO-PRR-002/metadata.json",
+      "statusComputed": "open",
+      "statusLabelComputed": "Open",
+      "deadlineStatus": "upcoming",
+      "deadlineLabel": "9 business day(s) remaining",
+      "businessDaysDelta": 9
+    },
+    {
+      "id": "spr26-0842",
+      "caseId": "SPR26-0842",
+      "districtCode": "ATTLEBORO",
+      "districtName": "Attleboro Public Schools",
+      "location": "Attleboro, MA",
+      "type": "Public Records Request",
+      "caseType": "public-records",
+      "status": "open",
+      "statusLabel": "Open",
+      "statusReason": "District response package received; full production review and follow-up pending",
+      "currentStage": "Post-SPR Determination",
+      "subject": "Professional Development Records",
+      "filedDate": "2026-02-18",
+      "nextDeadline": "2026-04-02",
+      "nextDeadlineDescription": "District must provide response and records (10 business days from 03/19/2026 SPR determination)",
+      "notes": "",
+      "recurrenceNotes": "Pattern of non-response documented - district has failed to respond within statutory timeline requiring escalation",
+      "crossReferences": [
+        {
+          "type": "pattern",
+          "description": "Similar pattern of non-response observed in multiple districts"
+        }
+      ],
+      "requestedItems": [
+        "Program name/title and series name",
+        "Vendor/provider/consultant and presenter information",
+        "Dates, duration, format, target audience, and location",
+        "Cost records including contracts, invoices, receipts, and funding source",
+        "Training content and objectives, agendas, handouts, and slide decks",
+        "Implementation records including attendance rosters and follow-up artifacts",
+        "Future professional development schedules, contracts, and estimated costs"
+      ],
+      "relatedCases": [
+        "ATTLEBORO-PRR-002"
+      ],
+      "timeline": [
+        {
+          "entryId": "event:spr26-0842:doc-sha256-7b02e44533c06513616939c5cd7187f2c6491ac0f477115851d0e5bebacd315f",
+          "date": "2026-02-03",
+          "sortDate": "2026-02-03T00:00:00",
+          "type": "email",
+          "title": "Request to Add DESE Student Restraint Trend Review to Superintendent\u2019s Report Agenda",
+          "description": "Dear Chairman Geddes & Committee Members,\r\n\r\nI am writing to formally request that the Committee include an item under\r\nthe *Superintendent\u2019s Report* at the next regular committee meeting to\r\nreview and explain *DESE-reported student restraint trends for Attleboro\r\nPublic Schools...",
+          "notes": "Approved from ingest review queue",
+          "documents": [
+            "doc:sha256:7b02e44533c06513616939c5cd7187f2c6491ac0f477115851d0e5bebacd315f"
+          ],
+          "source": "ingest",
+          "visibility": "internal"
+        },
+        {
+          "entryId": 1,
+          "date": "2026-02-18",
+          "sortDate": "2026-02-18T00:00:00",
+          "type": "Filed",
+          "title": "PRR Submitted",
+          "description": "Professional Development Records request filed via Massachusetts PRR Form SPR26_0842. Seeking records related to [teacher name]'s professional development activities.",
+          "notes": "",
+          "documents": [
+            "cases/ATTLEBORO/SPR26-0842/original-request/2026-02-18_PRR_SPR26-0842_PD_Records_Request.pdf"
+          ]
+        },
+        {
+          "entryId": 2,
+          "date": "2026-03-03",
+          "sortDate": "2026-03-03T00:00:00",
+          "type": "Appeal",
+          "title": "Appeal Filed - Excessive Fee (C24-0260)",
+          "description": "Filed appeal with Supervisor of Public Records regarding excessive fee estimate. District's fee request was unreasonable and lacked proper documentation.",
+          "notes": "",
+          "documents": [
+            "cases/ATTLEBORO/SPR26-0842/appeals/2026-03-03_Appeal_C24-0260_Excessive_Fee.pdf"
+          ]
+        },
+        {
+          "entryId": 4,
+          "date": "2026-03-09",
+          "sortDate": "2026-03-09T00:00:00",
+          "type": "Appeal",
+          "title": "Appeal Filed - Failure to Respond (C24-0713)",
+          "description": "Second appeal filed for district's failure to respond within statutory timeline. Documented pattern of non-compliance with Massachusetts Public Records Law.",
+          "notes": "Recurring pattern of non-compliance documented - this represents a systemic issue with district's records response",
+          "documents": [
+            "cases/ATTLEBORO/SPR26-0842/appeals/2026-03-09_Appeal_C24-0713_Failure_to_Respond.pdf",
+            "cases/ATTLEBORO/SPR26-0842/appeals/2026-03-09_Appeal_C24-0713_Failure_to_Respond.eml"
+          ]
+        },
+        {
+          "entryId": 3,
+          "date": "2026-03-19",
+          "sortDate": "2026-03-19T00:00:00",
+          "type": "Determination",
+          "title": "SPR Determination - Response Ordered",
+          "description": "Supervisor of Public Records issues determination ordering district to provide response and produce records.",
+          "notes": "",
+          "documents": [
+            "cases/ATTLEBORO/SPR26-0842/determinations/2026-03-19_SPR_Determination_SPR26-0842.pdf",
+            "cases/ATTLEBORO/SPR26-0842/correspondence/2026-03-19_EmailNotice_SPR26-0842_Determination.pdf"
+          ]
+        },
+        {
+          "entryId": 5,
+          "date": "2026-03-19",
+          "sortDate": "2026-03-19T00:00:00",
+          "type": "Correspondence",
+          "title": "District Response Letter Received",
+          "description": "Records Access Officer provided district response to narrowed scope request.",
+          "notes": "",
+          "documents": [
+            "cases/ATTLEBORO/SPR26-0842/correspondence/2026-03-19_Correspondence_SPR26-0842_District_Response_to_Narrowed_Scope.eml",
+            "cases/ATTLEBORO/SPR26-0842/correspondence/2026-03-19_Correspondence_SPR26-0842_District_Response_Letter.pdf"
+          ]
+        },
+        {
+          "entryId": 6,
+          "date": "2026-03-19",
+          "sortDate": "2026-03-19T00:00:00",
+          "type": "Production",
+          "title": "PD Database Export Produced",
+          "description": "District provided spreadsheet export with section, instructor, targeted demographics, and class schedule fields for professional development sessions.",
+          "notes": "",
+          "documents": [
+            "cases/ATTLEBORO/SPR26-0842/attachments/2026-03-19_Attachment_SPR26-0842_PD_Database_Export.xlsx"
+          ]
+        }
+      ],
+      "sourceMetadata": "cases/ATTLEBORO/SPR26-0842/metadata.json",
+      "statusComputed": "open",
+      "statusLabelComputed": "Open",
+      "deadlineStatus": "upcoming",
+      "deadlineLabel": "9 business day(s) remaining",
+      "businessDaysDelta": 9
+    },
+    {
+      "id": "fallriver-prr-001",
+      "caseId": "FALLRIVER-PRR-001",
+      "districtCode": "FALLRIVER",
+      "districtName": "Fall River Public Schools",
+      "location": "Fall River, MA",
+      "type": "Public Records Request",
+      "caseType": "case",
+      "status": "open",
+      "statusLabel": "Open",
+      "statusReason": "",
+      "currentStage": "Clarification in Progress",
+      "subject": "Hiring Records for School Adjustment Counselor Position at Silvia Elementary",
+      "filedDate": "2026-03-05",
+      "nextDeadline": "2026-03-20",
+      "nextDeadlineDescription": "District response expected after clarification sequence",
+      "notes": "",
+      "recurrenceNotes": "",
+      "crossReferences": [],
+      "requestedItems": [
+        "Job posting or vacancy announcement",
+        "Recruitment records for licensed candidate outreach",
+        "Interview schedules, candidate lists, notes, and scoring",
+        "Any licensure or hardship waiver records sent to DESE",
+        "Employment start date documentation or appointment letter",
+        "Internal communications regarding hiring decision"
+      ],
+      "relatedCases": [],
+      "timeline": [
+        {
+          "entryId": 1,
+          "date": "2026-03-05",
+          "sortDate": "2026-03-05T00:00:00",
+          "type": "Filed",
+          "title": "Public Records Request Submitted",
+          "description": "Initial request submitted regarding Andrea Souza hiring records for Silvia Elementary.",
+          "notes": "",
+          "documents": [
+            "cases/FALLRIVER/FALLRIVER-PRR-001/correspondence/2026-03-19_Correspondence_FALLRIVER-PRR-001_Hiring_Records_Clarification.eml"
+          ]
+        },
+        {
+          "entryId": 2,
+          "date": "2026-03-18",
+          "sortDate": "2026-03-18T00:00:00",
+          "type": "Correspondence",
+          "title": "District Requests Clarification",
+          "description": "District requested clarification for custodians and timeframe for item #6 communications.",
+          "notes": "",
+          "documents": [
+            "cases/FALLRIVER/FALLRIVER-PRR-001/correspondence/2026-03-19_Correspondence_FALLRIVER-PRR-001_Hiring_Records_Clarification.eml"
+          ]
+        },
+        {
+          "entryId": 3,
+          "date": "2026-03-19",
+          "sortDate": "2026-03-19T00:00:00",
+          "type": "Correspondence",
+          "title": "Clarification Provided",
+          "description": "Requester narrowed/clarified administrator and administrative employee scope with specific timeframe adjustment.",
+          "notes": "",
+          "documents": [
+            "cases/FALLRIVER/FALLRIVER-PRR-001/correspondence/2026-03-19_Correspondence_FALLRIVER-PRR-001_Hiring_Records_Clarification.eml"
+          ]
+        }
+      ],
+      "sourceMetadata": "cases/FALLRIVER/FALLRIVER-PRR-001/metadata.json",
+      "statusComputed": "overdue",
+      "statusLabelComputed": "Overdue",
+      "deadlineStatus": "overdue",
+      "deadlineLabel": "1 business day(s) overdue",
+      "businessDaysDelta": -1
+    },
+    {
+      "id": "fallriver-prr-002",
+      "caseId": "FALLRIVER-PRR-002",
+      "districtCode": "FALLRIVER",
+      "districtName": "Fall River Public Schools",
+      "location": "Fall River, MA",
+      "type": "Public Records Request",
+      "caseType": "case",
+      "status": "open",
+      "statusLabel": "Open",
+      "statusReason": "",
+      "currentStage": "Acknowledged",
+      "subject": "Silvia Elementary Incident, Restraint, Staffing, and Safety Records",
+      "filedDate": "2026-03-06",
+      "nextDeadline": "2026-03-20",
+      "nextDeadlineDescription": "Initial records response timeline after district acknowledgement",
+      "notes": "",
+      "recurrenceNotes": "",
+      "crossReferences": [],
+      "requestedItems": [
+        "Incident and safety reports from Aug 1, 2024 to present",
+        "Physical restraint reports under 603 CMR 46.06",
+        "Behavioral data logs and internal summaries",
+        "Paraprofessional and classroom staffing assignments",
+        "IEP service staffing allocation records",
+        "Communications regarding Feb 4, 2026 Silvia incident",
+        "Radio/emergency logs and crisis response protocols",
+        "Paraprofessional training records and administrative response guidance"
+      ],
+      "relatedCases": [],
+      "timeline": [
+        {
+          "entryId": 1,
+          "date": "2026-03-06",
+          "sortDate": "2026-03-06T00:00:00",
+          "type": "Filed",
+          "title": "Public Records Request Submitted",
+          "description": "Comprehensive request filed for incident, restraint, staffing, and communications records related to Silvia Elementary.",
+          "notes": "",
+          "documents": [
+            "cases/FALLRIVER/FALLRIVER-PRR-002/correspondence/2026-03-19_Correspondence_FALLRIVER-PRR-002_Request_Acknowledgement.eml"
+          ]
+        },
+        {
+          "entryId": 2,
+          "date": "2026-03-18",
+          "sortDate": "2026-03-18T00:00:00",
+          "type": "Correspondence",
+          "title": "District Acknowledgement Received",
+          "description": "District confirmed request receipt.",
+          "notes": "",
+          "documents": [
+            "cases/FALLRIVER/FALLRIVER-PRR-002/correspondence/2026-03-19_Correspondence_FALLRIVER-PRR-002_Request_Acknowledgement.eml"
+          ]
+        }
+      ],
+      "sourceMetadata": "cases/FALLRIVER/FALLRIVER-PRR-002/metadata.json",
+      "statusComputed": "overdue",
+      "statusLabelComputed": "Overdue",
+      "deadlineStatus": "overdue",
+      "deadlineLabel": "1 business day(s) overdue",
+      "businessDaysDelta": -1
+    },
+    {
+      "id": "prs-15514",
+      "caseId": "PRS-15514",
+      "districtCode": "FALLRIVER",
+      "districtName": "Fall River Public Schools",
+      "location": "Fall River, MA",
+      "type": "DESE PRS Complaint",
+      "caseType": "case",
+      "status": "open",
+      "statusLabel": "Open",
+      "statusReason": "",
+      "currentStage": "Request for Local Response Issued",
+      "subject": "DESE PRS 15514 - Request for Local Response",
+      "filedDate": "2026-03-19",
+      "nextDeadline": "2026-04-07",
+      "nextDeadlineDescription": "District local response due to DESE and complainant supplemental submission deadline",
+      "notes": "",
+      "recurrenceNotes": "",
+      "crossReferences": [],
+      "requestedItems": [
+        "District local response package",
+        "Complainant supplemental information and supporting documents",
+        "Any additional information requested by DESE PRS"
+      ],
+      "relatedCases": [],
+      "timeline": [
+        {
+          "entryId": 1,
+          "date": "2026-03-19",
+          "sortDate": "2026-03-19T00:00:00",
+          "type": "Determination",
+          "title": "DESE Request for Local Response Issued",
+          "description": "DESE PRS issued local response request with an April 7, 2026 deadline for district response and complainant supplemental submissions.",
+          "notes": "",
+          "documents": [
+            "cases/FALLRIVER/PRS-15514/correspondence/2026-03-19_Correspondence_PRS-15514_Request_for_Local_Response.eml",
+            "cases/FALLRIVER/PRS-15514/determinations/2026-03-19_Determination_PRS-15514_Request_for_Local_Response.pdf"
+          ]
+        }
+      ],
+      "sourceMetadata": "cases/FALLRIVER/PRS-15514/metadata.json",
+      "statusComputed": "open",
+      "statusLabelComputed": "Open",
+      "deadlineStatus": "upcoming",
+      "deadlineLabel": "12 business day(s) remaining",
+      "businessDaysDelta": 12
+    }
+  ],
+  "events": [
+    {
+      "id": "attleboro-prr-002-1-2026-01-31-broad-prr-submitted",
+      "caseId": "ATTLEBORO-PRR-002",
+      "districtCode": "ATTLEBORO",
+      "type": "Filed",
+      "title": "Broad PRR Submitted",
+      "date": "2026-01-31",
+      "description": "Comprehensive request submitted for recordings, transcripts, meeting materials, releasable executive session records, and FY2022-present financial records.",
+      "documents": [
+        "cases/ATTLEBORO/ATTLEBORO-PRR-002/correspondence/2026-01-31_Correspondence_ATTLEBORO-PRR-002_Broad_Meeting_Records_Request.eml"
+      ],
+      "source": "metadata",
+      "visibility": "public"
+    },
+    {
+      "id": "spr26-0842-event-spr26-0842-doc-sha256-7b02e44533c06513616939c5cd7187f2c6491ac0f477115851d0e5bebacd315f-2026-02-03-request-to-add-dese-student-restraint-trend-review-to-superintendent-s-report-agenda",
+      "caseId": "SPR26-0842",
+      "districtCode": "ATTLEBORO",
+      "type": "email",
+      "title": "Request to Add DESE Student Restraint Trend Review to Superintendent\u2019s Report Agenda",
+      "date": "2026-02-03",
+      "description": "Dear Chairman Geddes & Committee Members,\r\n\r\nI am writing to formally request that the Committee include an item under\r\nthe *Superintendent\u2019s Report* at the next regular committee meeting to\r\nreview and explain *DESE-reported student restraint trends for Attleboro\r\nPublic Schools...",
+      "documents": [
+        "doc:sha256:7b02e44533c06513616939c5cd7187f2c6491ac0f477115851d0e5bebacd315f"
+      ],
+      "source": "ingest",
+      "visibility": "internal"
+    },
+    {
+      "id": "spr26-0842-1-2026-02-18-prr-submitted",
+      "caseId": "SPR26-0842",
+      "districtCode": "ATTLEBORO",
+      "type": "Filed",
+      "title": "PRR Submitted",
+      "date": "2026-02-18",
+      "description": "Professional Development Records request filed via Massachusetts PRR Form SPR26_0842. Seeking records related to [teacher name]'s professional development activities.",
+      "documents": [
+        "cases/ATTLEBORO/SPR26-0842/original-request/2026-02-18_PRR_SPR26-0842_PD_Records_Request.pdf"
+      ],
+      "source": "metadata",
+      "visibility": "public"
+    },
+    {
+      "id": "spr26-0842-2-2026-03-03-appeal-filed-excessive-fee-c24-0260",
+      "caseId": "SPR26-0842",
+      "districtCode": "ATTLEBORO",
+      "type": "Appeal",
+      "title": "Appeal Filed - Excessive Fee (C24-0260)",
+      "date": "2026-03-03",
+      "description": "Filed appeal with Supervisor of Public Records regarding excessive fee estimate. District's fee request was unreasonable and lacked proper documentation.",
+      "documents": [
+        "cases/ATTLEBORO/SPR26-0842/appeals/2026-03-03_Appeal_C24-0260_Excessive_Fee.pdf"
+      ],
+      "source": "metadata",
+      "visibility": "public"
+    },
+    {
+      "id": "fallriver-prr-001-1-2026-03-05-public-records-request-submitted",
+      "caseId": "FALLRIVER-PRR-001",
+      "districtCode": "FALLRIVER",
+      "type": "Filed",
+      "title": "Public Records Request Submitted",
+      "date": "2026-03-05",
+      "description": "Initial request submitted regarding Andrea Souza hiring records for Silvia Elementary.",
+      "documents": [
+        "cases/FALLRIVER/FALLRIVER-PRR-001/correspondence/2026-03-19_Correspondence_FALLRIVER-PRR-001_Hiring_Records_Clarification.eml"
+      ],
+      "source": "metadata",
+      "visibility": "public"
+    },
+    {
+      "id": "fallriver-prr-002-1-2026-03-06-public-records-request-submitted",
+      "caseId": "FALLRIVER-PRR-002",
+      "districtCode": "FALLRIVER",
+      "type": "Filed",
+      "title": "Public Records Request Submitted",
+      "date": "2026-03-06",
+      "description": "Comprehensive request filed for incident, restraint, staffing, and communications records related to Silvia Elementary.",
+      "documents": [
+        "cases/FALLRIVER/FALLRIVER-PRR-002/correspondence/2026-03-19_Correspondence_FALLRIVER-PRR-002_Request_Acknowledgement.eml"
+      ],
+      "source": "metadata",
+      "visibility": "public"
+    },
+    {
+      "id": "spr26-0842-4-2026-03-09-appeal-filed-failure-to-respond-c24-0713",
+      "caseId": "SPR26-0842",
+      "districtCode": "ATTLEBORO",
+      "type": "Appeal",
+      "title": "Appeal Filed - Failure to Respond (C24-0713)",
+      "date": "2026-03-09",
+      "description": "Second appeal filed for district's failure to respond within statutory timeline. Documented pattern of non-compliance with Massachusetts Public Records Law.",
+      "documents": [
+        "cases/ATTLEBORO/SPR26-0842/appeals/2026-03-09_Appeal_C24-0713_Failure_to_Respond.pdf",
+        "cases/ATTLEBORO/SPR26-0842/appeals/2026-03-09_Appeal_C24-0713_Failure_to_Respond.eml"
+      ],
+      "source": "metadata",
+      "visibility": "public"
+    },
+    {
+      "id": "fallriver-prr-001-2-2026-03-18-district-requests-clarification",
+      "caseId": "FALLRIVER-PRR-001",
+      "districtCode": "FALLRIVER",
+      "type": "Correspondence",
+      "title": "District Requests Clarification",
+      "date": "2026-03-18",
+      "description": "District requested clarification for custodians and timeframe for item #6 communications.",
+      "documents": [
+        "cases/FALLRIVER/FALLRIVER-PRR-001/correspondence/2026-03-19_Correspondence_FALLRIVER-PRR-001_Hiring_Records_Clarification.eml"
+      ],
+      "source": "metadata",
+      "visibility": "public"
+    },
+    {
+      "id": "fallriver-prr-002-2-2026-03-18-district-acknowledgement-received",
+      "caseId": "FALLRIVER-PRR-002",
+      "districtCode": "FALLRIVER",
+      "type": "Correspondence",
+      "title": "District Acknowledgement Received",
+      "date": "2026-03-18",
+      "description": "District confirmed request receipt.",
+      "documents": [
+        "cases/FALLRIVER/FALLRIVER-PRR-002/correspondence/2026-03-19_Correspondence_FALLRIVER-PRR-002_Request_Acknowledgement.eml"
+      ],
+      "source": "metadata",
+      "visibility": "public"
+    },
+    {
+      "id": "attleboro-prr-002-2-2026-03-19-audio-archive-logged",
+      "caseId": "ATTLEBORO-PRR-002",
+      "districtCode": "ATTLEBORO",
+      "type": "Production",
+      "title": "Audio Archive Logged",
+      "date": "2026-03-19",
+      "description": "Responsive meeting audio files were organized and indexed for public archive access pending full district delivery package.",
+      "documents": [
+        "cases/ATTLEBORO/ATTLEBORO-PRR-002/attachments/2026-03-19_Attachment_ATTLEBORO-PRR-002_Audio_Manifest.txt",
+        "cases/ATTLEBORO/ATTLEBORO-PRR-002/recordings_index.json"
+      ],
+      "source": "metadata",
+      "visibility": "public"
+    },
+    {
+      "id": "spr26-0842-3-2026-03-19-spr-determination-response-ordered",
+      "caseId": "SPR26-0842",
+      "districtCode": "ATTLEBORO",
+      "type": "Determination",
+      "title": "SPR Determination - Response Ordered",
+      "date": "2026-03-19",
+      "description": "Supervisor of Public Records issues determination ordering district to provide response and produce records.",
+      "documents": [
+        "cases/ATTLEBORO/SPR26-0842/determinations/2026-03-19_SPR_Determination_SPR26-0842.pdf",
+        "cases/ATTLEBORO/SPR26-0842/correspondence/2026-03-19_EmailNotice_SPR26-0842_Determination.pdf"
+      ],
+      "source": "metadata",
+      "visibility": "public"
+    },
+    {
+      "id": "spr26-0842-5-2026-03-19-district-response-letter-received",
+      "caseId": "SPR26-0842",
+      "districtCode": "ATTLEBORO",
+      "type": "Correspondence",
+      "title": "District Response Letter Received",
+      "date": "2026-03-19",
+      "description": "Records Access Officer provided district response to narrowed scope request.",
+      "documents": [
+        "cases/ATTLEBORO/SPR26-0842/correspondence/2026-03-19_Correspondence_SPR26-0842_District_Response_to_Narrowed_Scope.eml",
+        "cases/ATTLEBORO/SPR26-0842/correspondence/2026-03-19_Correspondence_SPR26-0842_District_Response_Letter.pdf"
+      ],
+      "source": "metadata",
+      "visibility": "public"
+    },
+    {
+      "id": "spr26-0842-6-2026-03-19-pd-database-export-produced",
+      "caseId": "SPR26-0842",
+      "districtCode": "ATTLEBORO",
+      "type": "Production",
+      "title": "PD Database Export Produced",
+      "date": "2026-03-19",
+      "description": "District provided spreadsheet export with section, instructor, targeted demographics, and class schedule fields for professional development sessions.",
+      "documents": [
+        "cases/ATTLEBORO/SPR26-0842/attachments/2026-03-19_Attachment_SPR26-0842_PD_Database_Export.xlsx"
+      ],
+      "source": "metadata",
+      "visibility": "public"
+    },
+    {
+      "id": "fallriver-prr-001-3-2026-03-19-clarification-provided",
+      "caseId": "FALLRIVER-PRR-001",
+      "districtCode": "FALLRIVER",
+      "type": "Correspondence",
+      "title": "Clarification Provided",
+      "date": "2026-03-19",
+      "description": "Requester narrowed/clarified administrator and administrative employee scope with specific timeframe adjustment.",
+      "documents": [
+        "cases/FALLRIVER/FALLRIVER-PRR-001/correspondence/2026-03-19_Correspondence_FALLRIVER-PRR-001_Hiring_Records_Clarification.eml"
+      ],
+      "source": "metadata",
+      "visibility": "public"
+    },
+    {
+      "id": "prs-15514-1-2026-03-19-dese-request-for-local-response-issued",
+      "caseId": "PRS-15514",
+      "districtCode": "FALLRIVER",
+      "type": "Determination",
+      "title": "DESE Request for Local Response Issued",
+      "date": "2026-03-19",
+      "description": "DESE PRS issued local response request with an April 7, 2026 deadline for district response and complainant supplemental submissions.",
+      "documents": [
+        "cases/FALLRIVER/PRS-15514/correspondence/2026-03-19_Correspondence_PRS-15514_Request_for_Local_Response.eml",
+        "cases/FALLRIVER/PRS-15514/determinations/2026-03-19_Determination_PRS-15514_Request_for_Local_Response.pdf"
+      ],
+      "source": "metadata",
+      "visibility": "public"
+    }
+  ]
+}

@@ -1,0 +1,22 @@
+{
+  "id": "rule-determination-core",
+  "group": "doc-families",
+  "title": "Determination Core Rules",
+  "enabled": true,
+  "priority": 100,
+  "match": {
+    "docFamilies": ["determination"]
+  },
+  "then": {
+    "deterministicRequiredFields": ["title", "documentDate"],
+    "preferredLinkTargets": ["case", "organization", "event"],
+    "deadlineExtractionMode": "strict",
+    "publicReviewRequired": true,
+    "defaultVisibility": "internal",
+    "defaultPublishEligible": false
+  },
+  "aiPromptHints": [
+    "Extract findings, ordered actions, and deadlines conservatively.",
+    "Do not assume non-compliance unless explicit in the document."
+  ]
+}

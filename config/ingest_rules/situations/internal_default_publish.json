@@ -1,0 +1,16 @@
+{
+  "id": "situation-internal-default-publish",
+  "group": "situations",
+  "title": "Internal By Default",
+  "enabled": true,
+  "priority": 80,
+  "match": {
+    "conditions": [
+      "approved_ingest_event_without_explicit_publish_toggle"
+    ]
+  },
+  "then": {
+    "defaultVisibility": "internal",
+    "defaultPublishEligible": false
+  }
+}

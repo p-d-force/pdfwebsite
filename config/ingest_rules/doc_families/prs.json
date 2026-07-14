@@ -1,0 +1,21 @@
+{
+  "id": "rule-prs-core",
+  "group": "doc-families",
+  "title": "PRS Core Rules",
+  "enabled": true,
+  "priority": 100,
+  "match": {
+    "docFamilies": ["prs"]
+  },
+  "then": {
+    "deterministicRequiredFields": ["title"],
+    "preferredLinkTargets": ["case", "organization", "event"],
+    "deadlineExtractionMode": "strict",
+    "statusSignalBias": ["complaint-filed", "local-response-requested"],
+    "defaultVisibility": "internal",
+    "defaultPublishEligible": false
+  },
+  "aiPromptHints": [
+    "Emphasize local response deadlines, district obligations, and complainant response windows."
+  ]
+}

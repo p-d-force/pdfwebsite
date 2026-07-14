@@ -1,0 +1,22 @@
+{
+  "id": "rule-spreadsheet-core",
+  "group": "doc-families",
+  "title": "Spreadsheet Core Rules",
+  "enabled": true,
+  "priority": 95,
+  "match": {
+    "docFamilies": ["spreadsheet"],
+    "extensions": [".xlsx", ".xls", ".csv"]
+  },
+  "then": {
+    "deterministicRequiredFields": ["title"],
+    "preferredLinkTargets": ["case", "organization", "document"],
+    "tableExtractionPreferred": true,
+    "metadataChecks": ["hiddenSheets", "workbookProperties"],
+    "defaultVisibility": "internal",
+    "defaultPublishEligible": false
+  },
+  "aiPromptHints": [
+    "Treat sheets and tables as structured data candidates before summarizing."
+  ]
+}

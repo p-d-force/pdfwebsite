@@ -1,0 +1,18 @@
+{
+  "id": "situation-ocr-needed",
+  "group": "situations",
+  "title": "OCR Needed",
+  "enabled": true,
+  "priority": 100,
+  "match": {
+    "conditions": [
+      "pdf_has_little_or_no_extractable_text",
+      "metadata_indicates_scanned_or_image_based"
+    ]
+  },
+  "then": {
+    "runOCR": true,
+    "queueSubstates": ["needs-work"],
+    "reviewFlags": ["ocr-needed"]
+  }
+}
